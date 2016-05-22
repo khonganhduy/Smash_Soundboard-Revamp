@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">Smash Soundboard</string>
     <string name="fox_cheer">android.resource://memes.smashsoundboard/raw/fox_cheer</string>
+    <string name="fox_mission_complete">android.resource://memes.smashsoundboard/raw/fox_mission_complete</string>
+    <string name="fox_taunt">android.resource://memes.smashsoundboard/raw/fox_taunt</string>
+    <string name="fox_jp_taunt">android.resource://memes.smashsoundboard/raw/fox_jp_taunt</string>
+    <string name="fox_smash1">android.resource://memes.smashsoundboard/raw/fox_smash1</string>
+    <string name="fox_smash2">android.resource://memes.smashsoundboard/raw/fox_smash2</string>
+    <string name="fox_smash3">android.resource://memes.smashsoundboard/raw/fox_smash3</string>
+    <string name="fox_smash4">android.resource://memes.smashsoundboard/raw/fox_smash4</string>
+    <string name="fox_smash5">android.resource://memes.smashsoundboard/raw/fox_smash5</string>
+    <string name="fox_shine">android.resource://memes.smashsoundboard/raw/fox_shine</string>
+    <string name="fox_firefox">android.resource://memes.smashsoundboard/raw/fox_firefox</string>
+    <string name="audience_cheer">audience cheer</string>
+    <string name="victory">victory line</string>
+    <string name="taunt">Taunt</string>
+    <string name="jp_taunt">JpTaunt</string>
+    <string name="smash1">Smash Attack 1</string>
+    <string name="smash2">Smash Attack 2</string>
+    <string name="smash3">Smash Attack 3</string>
+    <string name="smash4">Smash Attack 4</string>
+    <string name="smash5">Smash Attack 5</string>
+    <string name="up_special">up special</string>
+    <string name="down_special">down special</string>
+
 </resources>

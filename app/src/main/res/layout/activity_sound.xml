@@ -6,11 +6,128 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="memes.smashsoundboard.SoundActivity">
 
+    <Space
+        android:id="@+id/align"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fox"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/fox_banner"/>
+
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/fax"
-        android:id="@+id/fax_cheer"
-        app:soundID="@string/fox_cheer" />
+        android:text="@string/audience_cheer"
+        android:id="@+id/fox_cheer"
+        app:soundID="@string/fox_cheer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@id/align"
+        android:layout_below="@id/fox_banner"/>
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/victory"
+        android:id="@+id/fox_mission_complete"
+        app:soundID="@string/fox_mission_complete"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@id/align"
+        android:layout_below="@id/fox_banner"/>
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/taunt"
+        android:id="@+id/fox_taunt"
+        app:soundID="@string/fox_taunt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@id/align"
+        android:layout_below="@id/fox_cheer"/>
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jp_taunt"
+        android:id="@+id/fox_jp_taunt"
+        app:soundID="@string/fox_jp_taunt"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@id/align"
+        android:layout_below="@id/fox_mission_complete" />
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/smash1"
+        android:id="@+id/fox_smash1"
+        app:soundID="@string/fox_smash1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@id/align"
+        android:layout_below="@id/fox_taunt"/>
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/smash2"
+        android:id="@+id/fox_smash2"
+        app:soundID="@string/fox_smash2"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@id/align"
+        android:layout_below="@id/fox_jp_taunt"/>
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/smash3"
+        android:id="@+id/fox_smash3"
+        app:soundID="@string/fox_smash3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@id/align"
+        android:layout_below="@id/fox_smash1"/>
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/smash4"
+        android:id="@+id/fox_smash4"
+        app:soundID="@string/fox_smash4"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@id/align"
+        android:layout_below="@id/fox_smash2"/>
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/smash5"
+        android:id="@+id/fox_smash5"
+        app:soundID="@string/fox_smash5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@id/align"
+        android:layout_below="@id/fox_smash3"/>
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/up_special"
+        android:id="@+id/fox_firefox"
+        app:soundID="@string/fox_firefox"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@id/align"
+        android:layout_below="@id/fox_smash3"/>
+
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/down_special"
+        android:id="@+id/fox_shine"
+        app:soundID="@string/fox_shine"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@id/align"
+        android:layout_below="@id/fox_smash5"/>
+
 
 </RelativeLayout>
