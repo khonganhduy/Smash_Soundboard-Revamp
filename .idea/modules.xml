@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SmashSoundboard.iml" filepath="$PROJECT_DIR$/SmashSoundboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Smash_Soundboard.iml" filepath="$PROJECT_DIR$/Smash_Soundboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
