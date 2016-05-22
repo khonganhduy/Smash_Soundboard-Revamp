@@ -18,6 +18,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/fox"
-        android:id="@+id/fax_section" />
+        android:id="@+id/fox_section" />
 
 </RelativeLayout>

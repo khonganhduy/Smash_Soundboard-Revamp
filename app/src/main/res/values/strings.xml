@@ -1,4 +1,5 @@
 <resources>
+    <!--Fox strings-->
     <string name="app_name">Smash Soundboard</string>
     <string name="fox_cheer">android.resource://memes.smashsoundboard/raw/fox_cheer</string>
     <string name="fox_mission_complete">android.resource://memes.smashsoundboard/raw/fox_mission_complete</string>
@@ -9,8 +10,22 @@
     <string name="fox_smash3">android.resource://memes.smashsoundboard/raw/fox_smash3</string>
     <string name="fox_smash4">android.resource://memes.smashsoundboard/raw/fox_smash4</string>
     <string name="fox_smash5">android.resource://memes.smashsoundboard/raw/fox_smash5</string>
+    <string name="fox_spot_dodge">android.resource://memes.smashsoundboard/raw/fox_spot_dodge</string>
+    <string name ="fox_laser">android.resource://memes.smashsoundboard/raw/fox_laser</string>
+    <string name ="fox_illusion">android.resource://memes.smashsoundboard/raw/fox_illusion</string>
     <string name="fox_shine">android.resource://memes.smashsoundboard/raw/fox_shine</string>
     <string name="fox_firefox">android.resource://memes.smashsoundboard/raw/fox_firefox</string>
+    <string name="fox_damage1">android.resource://memes.smashsoundboard/raw/fox_damage1</string>
+    <string name="fox_damage2">android.resource://memes.smashsoundboard/raw/fox_damage2</string>
+    <string name="fox_damage3">android.resource://memes.smashsoundboard/raw/fox_damage3</string>
+    <string name="fox_death1">android.resource://memes.smashsoundboard/raw/fox_death1</string>
+    <string name="fox_death2">android.resource://memes.smashsoundboard/raw/fox_death2</string>
+    <string name="fox_death3">android.resource://memes.smashsoundboard/raw/fox_death3</string>
+    <string name="fox_off_top">android.resource://memes.smashsoundboard/raw/fox_off_top</string>
+    <string name="fox_double_jump">android.resource://memes.smashsoundboard/raw/fox_double_jump</string>
+    <string name="fox_gun_draw">android.resource://memes.smashsoundboard/raw/fox_gun_draw</string>
+    <string name="fox_gun_withdrawal">android.resource://memes.smashsoundboard/raw/fox_gun_withdrawal</string>
+    <!--Universal/Misc Strings-->
     <string name="audience_cheer">audience cheer</string>
     <string name="victory">victory line</string>
     <string name="taunt">Taunt</string>
@@ -20,7 +35,20 @@
     <string name="smash3">Smash Attack 3</string>
     <string name="smash4">Smash Attack 4</string>
     <string name="smash5">Smash Attack 5</string>
+    <string name="spot_dodge">Spot Dodge</string>
+    <string name="neutral_special">neutral special</string>
+    <string name="side_special">side special</string>
     <string name="up_special">up special</string>
     <string name="down_special">down special</string>
+    <string name="damage1">damage 1</string>
+    <string name="damage2">damage 2</string>
+    <string name="damage3">damage 3</string>
+    <string name="death1">death 1</string>
+    <string name="death2">death 2</string>
+    <string name="death3">death 3</string>
+    <string name="off_top">off top</string>
+    <string name="double_jump">double jump</string>
+    <string name="gun_draw">gun draw</string>
+    <string name="gun_withdrawal">gun withdrawal</string>
 
 </resources>
