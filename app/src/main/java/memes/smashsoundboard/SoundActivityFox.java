@@ -1,19 +1,29 @@
 package memes.smashsoundboard;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 
 import java.io.IOException;
 
-public class SoundActivity extends AppCompatActivity {
+public class SoundActivityFox extends AppCompatActivity {
 
     private static final MediaPlayer player = new MediaPlayer();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound_fox);
+        final Intent exitIntent = new Intent(this, MainActivity.class);
+        Button foxPalette = (Button)this.findViewById(R.id.fox_banner);
+        foxPalette.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(exitIntent);
+            }
+        });
 
 //        Fox variables
         final SoundButton cheer = (SoundButton)this.findViewById(R.id.fox_cheer);
@@ -40,9 +50,6 @@ public class SoundActivity extends AppCompatActivity {
         final SoundButton foxDoubleJump = (SoundButton)this.findViewById(R.id.fox_double_jump);
         final SoundButton foxGunDraw = (SoundButton)this.findViewById(R.id.fox_gun_draw);
         final SoundButton foxGunWithdrawal = (SoundButton)this.findViewById(R.id.fox_gun_withdrawal);
-
-//        Falco
-//        setContentView(R.layout.activity_sound_falco);
 
 //        Fox sounds
         cheer.setOnClickListener(new View.OnClickListener() {

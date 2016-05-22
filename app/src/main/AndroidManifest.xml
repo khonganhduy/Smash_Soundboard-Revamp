@@ -15,7 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SoundActivity">
+        <activity android:name=".SoundActivityFox">
+        </activity>
+        <activity android:name=".SoundActivityFalco">
+        </activity>
+        <activity android:name=".SoundActivitySheik">
+        </activity>
+        <activity android:name=".SoundActivityMarth">
         </activity>
     </application>
 

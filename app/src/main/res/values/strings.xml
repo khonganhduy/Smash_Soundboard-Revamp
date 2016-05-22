@@ -1,6 +1,6 @@
 <resources>
-    <!--Fox strings-->
     <string name="app_name">Smash Soundboard</string>
+    <!--Fox strings-->
     <string name="fox_cheer">android.resource://memes.smashsoundboard/raw/fox_cheer</string>
     <string name="fox_mission_complete">android.resource://memes.smashsoundboard/raw/fox_mission_complete</string>
     <string name="fox_taunt">android.resource://memes.smashsoundboard/raw/fox_taunt</string>
@@ -11,8 +11,8 @@
     <string name="fox_smash4">android.resource://memes.smashsoundboard/raw/fox_smash4</string>
     <string name="fox_smash5">android.resource://memes.smashsoundboard/raw/fox_smash5</string>
     <string name="fox_spot_dodge">android.resource://memes.smashsoundboard/raw/fox_spot_dodge</string>
-    <string name ="fox_laser">android.resource://memes.smashsoundboard/raw/fox_laser</string>
-    <string name ="fox_illusion">android.resource://memes.smashsoundboard/raw/fox_illusion</string>
+    <string name="fox_laser">android.resource://memes.smashsoundboard/raw/fox_laser</string>
+    <string name="fox_illusion">android.resource://memes.smashsoundboard/raw/fox_illusion</string>
     <string name="fox_shine">android.resource://memes.smashsoundboard/raw/fox_shine</string>
     <string name="fox_firefox">android.resource://memes.smashsoundboard/raw/fox_firefox</string>
     <string name="fox_damage1">android.resource://memes.smashsoundboard/raw/fox_damage1</string>
@@ -25,6 +25,75 @@
     <string name="fox_double_jump">android.resource://memes.smashsoundboard/raw/fox_double_jump</string>
     <string name="fox_gun_draw">android.resource://memes.smashsoundboard/raw/fox_gun_draw</string>
     <string name="fox_gun_withdrawal">android.resource://memes.smashsoundboard/raw/fox_gun_withdrawal</string>
+    <!--Falco strings-->
+    <string name="falco_cheer">android.resource://memes.smashsoundboard/raw/falco_cheer</string>
+    <string name="falco_mission_complete">android.resource://memes.smashsoundboard/raw/falco_mission_complete</string>
+    <string name="falco_taunt">android.resource://memes.smashsoundboard/raw/falco_taunt</string>
+    <string name="falco_smash1">android.resource://memes.smashsoundboard/raw/falco_smash1</string>
+    <string name="falco_smash2">android.resource://memes.smashsoundboard/raw/falco_smash2</string>
+    <string name="falco_smash3">android.resource://memes.smashsoundboard/raw/falco_smash3</string>
+    <string name="falco_smash4">android.resource://memes.smashsoundboard/raw/falco_smash4</string>
+    <string name="falco_smash5">android.resource://memes.smashsoundboard/raw/falco_smash5</string>
+    <string name="falco_spot_dodge">android.resource://memes.smashsoundboard/raw/falco_spot_dodge</string>
+    <string name="falco_laser">android.resource://memes.smashsoundboard/raw/falco_laser</string>
+    <string name="falco_phantasm">android.resource://memes.smashsoundboard/raw/falco_phantasm</string>
+    <string name="falco_shine">android.resource://memes.smashsoundboard/raw/falco_shine</string>
+    <string name="falco_firebird">android.resource://memes.smashsoundboard/raw/falco_firebird</string>
+    <string name="falco_damage1">android.resource://memes.smashsoundboard/raw/falco_damage1</string>
+    <string name="falco_damage2">android.resource://memes.smashsoundboard/raw/falco_damage2</string>
+    <string name="falco_damage3">android.resource://memes.smashsoundboard/raw/falco_damage3</string>
+    <string name="falco_death1">android.resource://memes.smashsoundboard/raw/falco_death1</string>
+    <string name="falco_death2">android.resource://memes.smashsoundboard/raw/falco_death2</string>
+    <string name="falco_death3">android.resource://memes.smashsoundboard/raw/falco_death3</string>
+    <string name="falco_off_top">android.resource://memes.smashsoundboard/raw/falco_off_top</string>
+    <string name="falco_double_jump">android.resource://memes.smashsoundboard/raw/falco_double_jump</string>
+    <string name="falco_gun_draw">android.resource://memes.smashsoundboard/raw/falco_gun_draw</string>
+    <string name="falco_gun_withdrawal">android.resource://memes.smashsoundboard/raw/falco_gun_withdrawal</string>
+    <!--Sheik strings-->
+    <string name="sheik_cheer">android.resource://memes.smashsoundboard/raw/sheik_cheer</string>
+    <string name="sheik_victory">android.resource://memes.smashsoundboard/raw/sheik_victory</string>
+    <string name="sheik_taunt">android.resource://memes.smashsoundboard/raw/sheik_taunt</string>
+    <string name="sheik_smash1">android.resource://memes.smashsoundboard/raw/sheik_smash1</string>
+    <string name="sheik_smash2">android.resource://memes.smashsoundboard/raw/sheik_smash2</string>
+    <string name="sheik_smash3">android.resource://memes.smashsoundboard/raw/sheik_smash3</string>
+    <string name="sheik_smash4">android.resource://memes.smashsoundboard/raw/sheik_smash4</string>
+    <string name="sheik_smash5">android.resource://memes.smashsoundboard/raw/sheik_smash5</string>
+    <string name="sheik_spot_dodge">android.resource://memes.smashsoundboard/raw/sheik_spot_dodge</string>
+    <string name="sheik_neutral_b">android.resource://memes.smashsoundboard/raw/sheik_neutral_b</string>
+    <string name="sheik_side_b">android.resource://memes.smashsoundboard/raw/sheik_side_b</string>
+    <string name="sheik_down_b">android.resource://memes.smashsoundboard/raw/sheik_down_b</string>
+    <string name="sheik_up_b">android.resource://memes.smashsoundboard/raw/sheik_up_b</string>
+    <string name="sheik_damage1">android.resource://memes.smashsoundboard/raw/sheik_damage1</string>
+    <string name="sheik_damage2">android.resource://memes.smashsoundboard/raw/sheik_damage2</string>
+    <string name="sheik_damage3">android.resource://memes.smashsoundboard/raw/sheik_damage3</string>
+    <string name="sheik_death1">android.resource://memes.smashsoundboard/raw/sheik_death1</string>
+    <string name="sheik_death2">android.resource://memes.smashsoundboard/raw/sheik_death2</string>
+    <string name="sheik_death3">android.resource://memes.smashsoundboard/raw/sheik_death3</string>
+    <string name="sheik_off_top">android.resource://memes.smashsoundboard/raw/sheik_off_top</string>
+    <string name="sheik_jump">android.resource://memes.smashsoundboard/raw/sheik_jump</string>
+    <!--Marth strings-->
+    <string name="marth_cheer">android.resource://memes.smashsoundboard/raw/marth_cheer</string>
+    <string name="marth_victory">android.resource://memes.smashsoundboard/raw/marth_victory</string>
+    <string name="marth_taunt">android.resource://memes.smashsoundboard/raw/marth_taunt</string>
+    <string name="marth_smash1">android.resource://memes.smashsoundboard/raw/marth_smash1</string>
+    <string name="marth_smash2">android.resource://memes.smashsoundboard/raw/marth_smash2</string>
+    <string name="marth_smash3">android.resource://memes.smashsoundboard/raw/marth_smash3</string>
+    <string name="marth_smash4">android.resource://memes.smashsoundboard/raw/marth_smash4</string>
+    <string name="marth_smash5">android.resource://memes.smashsoundboard/raw/marth_smash5</string>
+    <string name="marth_spot_dodge">android.resource://memes.smashsoundboard/raw/marth_spot_dodge</string>
+    <string name="marth_neutral_b">android.resource://memes.smashsoundboard/raw/marth_neutral_b</string>
+    <string name="marth_side_b">android.resource://memes.smashsoundboard/raw/marth_side_b</string>
+    <string name="marth_down_b">android.resource://memes.smashsoundboard/raw/marth_down_b</string>
+    <string name="marth_up_b">android.resource://memes.smashsoundboard/raw/marth_up_b</string>
+    <string name="marth_damage1">android.resource://memes.smashsoundboard/raw/marth_damage1</string>
+    <string name="marth_damage2">android.resource://memes.smashsoundboard/raw/marth_damage2</string>
+    <string name="marth_damage3">android.resource://memes.smashsoundboard/raw/marth_damage3</string>
+    <string name="marth_death1">android.resource://memes.smashsoundboard/raw/marth_death1</string>
+    <string name="marth_death2">android.resource://memes.smashsoundboard/raw/marth_death2</string>
+    <string name="marth_quote">android.resource://memes.smashsoundboard/raw/marth_quote</string>
+    <string name="marth_off_top">android.resource://memes.smashsoundboard/raw/marth_off_top</string>
+    <string name="marth_counter1">android.resource://memes.smashsoundboard/raw/marth_counter1</string>
+    <string name="marth_counter2">android.resource://memes.smashsoundboard/raw/marth_counter2</string>
     <!--Universal/Misc Strings-->
     <string name="audience_cheer">audience cheer</string>
     <string name="victory">victory line</string>
@@ -46,7 +115,10 @@
     <string name="death1">death 1</string>
     <string name="death2">death 2</string>
     <string name="death3">death 3</string>
+    <string name="quote">quote</string>
+    <string name="more_counters">more counters</string>
     <string name="off_top">off top</string>
+    <string name="jump">jump</string>
     <string name="double_jump">double jump</string>
     <string name="gun_draw">gun draw</string>
     <string name="gun_withdrawal">gun withdrawal</string>

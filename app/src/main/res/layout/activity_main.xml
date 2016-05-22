@@ -17,14 +17,29 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/fox"
+        android:text="Fox"
         android:id="@+id/fox_section" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/fox"
+        android:text="Falco"
         android:id="@+id/falco_section"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sheik"
+        android:id="@+id/sheik_section"
         android:layout_alignParentRight="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marth"
+        android:id="@+id/marth_section"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/fox_section"/>
 
 </RelativeLayout>
