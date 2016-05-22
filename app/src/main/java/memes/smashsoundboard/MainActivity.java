@@ -1,32 +1,25 @@
 package memes.smashsoundboard;
 
-import android.content.res.XmlResourceParser;
-import android.media.MediaPlayer;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
-import java.io.IOException;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final MediaPlayer player = new MediaPlayer();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SoundButton fax = (SoundButton)this.findViewById(R.id.fax_cheer);
-        try {
-            player.setDataSource(this.getApplicationContext(),fax.getSoundID());
-            player.prepare();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        fax.setOnClickListener(new View.OnClickListener() {
+        final Intent soundIntent = new Intent(this, SoundActivity.class);
+        Button foxButton = (Button)this.findViewById(R.id.fax_section);
+        foxButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                player.start();
+                startActivity(soundIntent);
             }
         });
     }
