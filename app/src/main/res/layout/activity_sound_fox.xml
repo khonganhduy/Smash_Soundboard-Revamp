@@ -19,7 +19,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/fox"
+        android:background="@drawable/fox_palette"
         android:layout_centerHorizontal="true"
         android:id="@+id/fox_banner"/>
 

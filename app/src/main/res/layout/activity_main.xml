@@ -20,4 +20,11 @@
         android:background="@drawable/fox"
         android:id="@+id/fox_section" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fox"
+        android:id="@+id/falco_section"
+        android:layout_alignParentRight="true"/>
+
 </RelativeLayout>

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Intent soundIntent = new Intent(this, SoundActivity.class);
         Button foxButton = (Button)this.findViewById(R.id.fox_section);
-        Button falcoButton = (Button)this.findViewById(R.id.falco_section)
+//        Button falcoButton = (Button)this.findViewById(R.id.falco_section)
         foxButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

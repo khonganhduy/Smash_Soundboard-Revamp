@@ -42,7 +42,7 @@ public class SoundActivity extends AppCompatActivity {
         final SoundButton foxGunWithdrawal = (SoundButton)this.findViewById(R.id.fox_gun_withdrawal);
 
 //        Falco
-        setContentView(R.layout.activity_sound_falco);
+//        setContentView(R.layout.activity_sound_falco);
 
 //        Fox sounds
         cheer.setOnClickListener(new View.OnClickListener() {
