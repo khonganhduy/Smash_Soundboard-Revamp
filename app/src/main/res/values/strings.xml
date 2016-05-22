@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Smash Soundboard</string>
+    <string name="fox_cheer">android.resource://memes.smashsoundboard/raw/fox_cheer</string>
 </resources>
