@@ -263,5 +263,14 @@
         android:layout_alignLeft="@id/align"
         android:layout_below="@id/fox_double_jump"/>
 
+    <memes.smashsoundboard.SoundButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/multishine"
+        android:id="@+id/fox_multishine"
+        app:soundID="@string/fox_multishine"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fox_gun_draw"/>
+
 </RelativeLayout>
 </ScrollView>

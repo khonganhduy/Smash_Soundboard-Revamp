@@ -3,7 +3,9 @@ package memes.smashsoundboard;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -50,6 +52,7 @@ public class SoundActivityFox extends AppCompatActivity {
         final SoundButton foxDoubleJump = (SoundButton)this.findViewById(R.id.fox_double_jump);
         final SoundButton foxGunDraw = (SoundButton)this.findViewById(R.id.fox_gun_draw);
         final SoundButton foxGunWithdrawal = (SoundButton)this.findViewById(R.id.fox_gun_withdrawal);
+        final SoundButton blips = (SoundButton)this.findViewById(R.id.fox_multishine);
 
 //        Fox sounds
         cheer.setOnClickListener(new View.OnClickListener() {
@@ -194,6 +197,24 @@ public class SoundActivityFox extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 playSound(foxGunWithdrawal, v);
+            }
+        });
+        blips.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        playSound(blips,v);
+                        player.setLooping(true);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        player.reset();
+                        break;
+                    case MotionEvent.ACTION_CANCEL:
+                        player.reset();
+                        break;
+                }
+                return false;
             }
         });
 

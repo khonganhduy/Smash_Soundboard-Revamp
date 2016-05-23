@@ -25,6 +25,8 @@
     <string name="fox_double_jump">android.resource://memes.smashsoundboard/raw/fox_double_jump</string>
     <string name="fox_gun_draw">android.resource://memes.smashsoundboard/raw/fox_gun_draw</string>
     <string name="fox_gun_withdrawal">android.resource://memes.smashsoundboard/raw/fox_gun_withdrawal</string>
+    <string name="fox_multishine">android.resource://memes.smashsoundboard/raw/fox_shine</string>
+    <string name="multishine">multishine</string>
     <!--Falco strings-->
     <string name="falco_cheer">android.resource://memes.smashsoundboard/raw/falco_cheer</string>
     <string name="falco_mission_complete">android.resource://memes.smashsoundboard/raw/falco_mission_complete</string>
@@ -49,6 +51,8 @@
     <string name="falco_double_jump">android.resource://memes.smashsoundboard/raw/falco_double_jump</string>
     <string name="falco_gun_draw">android.resource://memes.smashsoundboard/raw/falco_gun_draw</string>
     <string name="falco_gun_withdrawal">android.resource://memes.smashsoundboard/raw/falco_gun_withdrawal</string>
+    <string name="falco_multishine">android.resource://memes.smashsoundboard/raw/falco_shine</string>
+    <string name="multishine1">multishine</string>
     <!--Sheik strings-->
     <string name="sheik_cheer">android.resource://memes.smashsoundboard/raw/sheik_cheer</string>
     <string name="sheik_victory">android.resource://memes.smashsoundboard/raw/sheik_victory</string>
