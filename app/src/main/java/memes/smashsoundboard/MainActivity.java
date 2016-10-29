@@ -1,50 +1,75 @@
 package memes.smashsoundboard;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
-
-
+    private static MediaPlayer player = new MediaPlayer();
+    MediaPlayer music = new MediaPlayer();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final Intent soundIntentFox = new Intent(this, SoundActivityFox.class);
-        final Intent soundIntentFalco = new Intent(this, SoundActivityFalco.class);
-        final Intent soundIntentSheik = new Intent(this, SoundActivitySheik.class);
-        final Intent soundIntentMarth = new Intent(this, SoundActivityMarth.class);
-        Button foxButton = (Button)this.findViewById(R.id.fox_section);
-        Button falcoButton = (Button)this.findViewById(R.id.falco_section);
-        Button sheikButton = (Button)this.findViewById(R.id.sheik_section);
-        Button marthButton = (Button)this.findViewById(R.id.marth_section);
-        foxButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(soundIntentFox);
-            }
-        });
-        falcoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(soundIntentFalco);
-            }
-        });
-        sheikButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(soundIntentSheik);
-            }
-        });
-        marthButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(soundIntentMarth);
-            }
-        });
+        music = MediaPlayer.create(MainActivity.this, R.raw.menu_1);
+        music.start();
+        music.setLooping(true);
+
+        ArrayList<Integer> sectionId = new ArrayList<Integer>();
+        sectionId.add(R.id.fox_section);
+        sectionId.add(R.id.falco_section);
+        sectionId.add(R.id.sheik_section);
+        sectionId.add(R.id.marth_section);
+
+        ArrayList<Class> intentName = new ArrayList<Class>();
+        intentName.add(SoundActivityFox.class);
+        intentName.add(SoundActivityFalco.class);
+        intentName.add(SoundActivitySheik.class);
+        intentName.add(SoundActivityMarth.class);
+
+        for (int i = 0; i < sectionId.size(); i++) {
+            final SoundButton aButton = (SoundButton) this.findViewById(sectionId.get(i));
+            final Intent intent = new Intent(this,intentName.get(i));
+            aButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    playSound(aButton, v);
+                    startActivity(intent);
+                }
+            });
+
+        }
+    }
+    private void playSound(SoundButton button, View view)
+    {
+        try {
+            player.reset();
+            player.setDataSource(view.getContext(), button.getSoundID());
+            player.prepare();
+            player.start();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void onPause() {
+        super.onPause();
+        music.pause();
+    }
+    public void onResume() {
+        super.onResume();
+        music.start();
+    }
+    public void onDestroy(){
+        super.onDestroy();
+        music.release();
+        music = null;
+        player.release();
+        player = null;
     }
 }
