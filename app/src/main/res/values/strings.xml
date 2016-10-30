@@ -107,6 +107,7 @@
     <string name="marth_off_top">android.resource://memes.smashsoundboard/raw/marth_off_top</string>
     <string name="marth_counter1">android.resource://memes.smashsoundboard/raw/marth_counter1</string>
     <string name="marth_counter2">android.resource://memes.smashsoundboard/raw/marth_counter2</string>
+<<<<<<< Updated upstream
 
     <!--Pika String-->
     <string name="pika_char_call">android.resource://memes.smashsoundboard/raw/pika_char_call</string>
@@ -130,6 +131,52 @@
     <string name="pika_death3">android.resource://memes.smashsoundboard/raw/fox_death3</string>
     <string name="pika_off_top">android.resource://memes.smashsoundboard/raw/fox_off_top</string>
     <string name="pika_double_jump">android.resource://memes.smashsoundboard/raw/fox_double_jump</string>
+=======
+    <!--Jigglypuff strings-->
+    <string name="jigglypuff_char_call">android.resource://memes.smashsoundboard/raw/jigglypuff_char_call</string>
+    <string name="jigglypuff_cheer">android.resource://memes.smashsoundboard/raw/jigglypuff_cheer</string>
+    <string name="jigglypuff_victory">android.resource://memes.smashsoundboard/raw/jigglypuff_victory</string>
+    <string name="jigglypuff_taunt">android.resource://memes.smashsoundboard/raw/jigglypuff_taunt</string>
+    <string name="jigglypuff_smash1">android.resource://memes.smashsoundboard/raw/jigglypuff_smash1</string>
+    <string name="jigglypuff_smash2">android.resource://memes.smashsoundboard/raw/jigglypuff_smash2</string>
+    <string name="jigglypuff_smash3">android.resource://memes.smashsoundboard/raw/jigglypuff_smash3</string>
+    <string name="jigglypuff_smash4">android.resource://memes.smashsoundboard/raw/jigglypuff_smash4</string>
+    <string name="jigglypuff_smash5">android.resource://memes.smashsoundboard/raw/jigglypuff_smash5</string>
+    <string name="jigglypuff_initial_rollout">android.resource://memes.smashsoundboard/raw/jigglypuff_initial_rollout</string>
+    <string name="jigglypuff_rollout_charge">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_charge</string>
+    <string name="jigglypuff_rollout_release">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_release</string>
+    <string name="jigglypuff_pound">android.resource://memes.smashsoundboard/raw/jigglypuff_pound</string>
+    <string name="jigglypuff_rest">android.resource://memes.smashsoundboard/raw/jigglypuff_rest</string>
+    <string name="jigglypuff_rest_bubbles">android.resource://memes.smashsoundboard/raw/jigglypuff_rest_bubbles</string>
+    <string name="jigglypuff_death1">android.resource://memes.smashsoundboard/raw/jigglypuff_death1</string>
+    <string name="jigglypuff_death2">android.resource://memes.smashsoundboard/raw/jigglypuff_death2</string>
+    <string name="jigglypuff_star_ko">android.resource://memes.smashsoundboard/raw/jigglypuff_star_ko</string>
+    <string name="jigglypuff_screen_ko">android.resource://memes.smashsoundboard/raw/jigglypuff_screen_ko</string>
+    <!--Peach strings-->
+    <string name="peach_char_call">android.resource://memes.smashsoundboard/raw/peach_char_call</string>
+    <string name="peach_cheer">android.resource://memes.smashsoundboard/raw/peach_cheer</string>
+    <string name="peach_victory">android.resource://memes.smashsoundboard/raw/peach_victory</string>
+    <string name="peach_victory2">android.resource://memes.smashsoundboard/raw/peach_victory2</string>
+    <string name="peach_taunt">android.resource://memes.smashsoundboard/raw/peach_taunt</string>
+    <string name="peach_smash1">android.resource://memes.smashsoundboard/raw/peach_smash1</string>
+    <string name="peach_smash2">android.resource://memes.smashsoundboard/raw/peach_smash2</string>
+    <string name="peach_smash3">android.resource://memes.smashsoundboard/raw/peach_smash3</string>
+    <string name="peach_smash4">android.resource://memes.smashsoundboard/raw/peach_smash4</string>
+    <string name="peach_smash5">android.resource://memes.smashsoundboard/raw/peach_smash5</string>
+    <string name="peach_pan">android.resource://memes.smashsoundboard/raw/peach_pan</string>
+    <string name="peach_golf_club">android.resource://memes.smashsoundboard/raw/peach_golf_club</string>
+    <string name="peach_tennis_racket">android.resource://memes.smashsoundboard/raw/peach_tennis_racket</string>
+    <string name="peach_jump">android.resource://memes.smashsoundboard/raw/peach_jump</string>
+    <string name="peach_double_jump">android.resource://memes.smashsoundboard/raw/peach_double_jump</string>
+    <string name="peach_toad">android.resource://memes.smashsoundboard/raw/peach_toad</string>
+    <string name="peach_bomber">android.resource://memes.smashsoundboard/raw/peach_bomber</string>
+    <string name="peach_pull">android.resource://memes.smashsoundboard/raw/peach_rest_pull</string>
+    <string name="peach_parasol">android.resource://memes.smashsoundboard/raw/peach_parasol</string>
+    <string name="peach_damage">android.resource://memes.smashsoundboard/raw/peach_damage</string>
+    <string name="peach_death">android.resource://memes.smashsoundboard/raw/peach_death</string>
+    <string name="peach_star_ko">android.resource://memes.smashsoundboard/raw/peach_star_ko</string>
+    <string name="peach_screen_ko">android.resource://memes.smashsoundboard/raw/peach_screen_ko</string>
+>>>>>>> Stashed changes
 
     <!--Universal/Misc Strings-->
     <string name="audience_cheer">audience cheer</string>
