@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SoundActivitySheik">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <Space
+            android:id="@+id/align"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sheik_palette"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/sheik_banner"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/audience_cheer"
+            android:id="@+id/sheik_cheer"
+            app:soundID="@string/sheik_cheer"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_banner"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/victory"
+            android:id="@+id/sheik_victory"
+            app:soundID="@string/sheik_victory"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_banner"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/taunt"
+            android:id="@+id/sheik_taunt"
+            app:soundID="@string/sheik_taunt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_cheer"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smash1"
+            android:id="@+id/sheik_smash1"
+            app:soundID="@string/sheik_smash1"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_victory"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smash2"
+            android:id="@+id/sheik_smash2"
+            app:soundID="@string/sheik_smash2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_taunt"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smash3"
+            android:id="@+id/sheik_smash3"
+            app:soundID="@string/sheik_smash3"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_smash1"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smash4"
+            android:id="@+id/sheik_smash4"
+            app:soundID="@string/sheik_smash4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_smash2"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smash5"
+            android:id="@+id/sheik_smash5"
+            app:soundID="@string/sheik_smash5"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_smash3"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spot_dodge"
+            android:id="@+id/sheik_spot_dodge"
+            app:soundID="@string/sheik_spot_dodge"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_smash4"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/neutral_special"
+            android:id="@+id/sheik_neutral_b"
+            app:soundID="@string/sheik_neutral_b"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_smash5"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/side_special"
+            android:id="@+id/sheik_side_b"
+            app:soundID="@string/sheik_side_b"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_spot_dodge"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/up_special"
+            android:id="@+id/sheik_up_b"
+            app:soundID="@string/sheik_up_b"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_neutral_b"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/down_special"
+            android:id="@+id/sheik_down_b"
+            app:soundID="@string/sheik_down_b"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_side_b"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/damage1"
+            android:id="@+id/sheik_damage1"
+            app:soundID="@string/sheik_damage1"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_up_b"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/damage2"
+            android:id="@+id/sheik_damage2"
+            app:soundID="@string/sheik_damage2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_down_b"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/damage3"
+            android:id="@+id/sheik_damage3"
+            app:soundID="@string/sheik_damage3"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_damage1"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/death1"
+            android:id="@+id/sheik_death1"
+            app:soundID="@string/sheik_death1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_damage2"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/death2"
+            android:id="@+id/sheik_death2"
+            app:soundID="@string/sheik_death2"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_damage3"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/death3"
+            android:id="@+id/sheik_death3"
+            app:soundID="@string/sheik_death3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_death1"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/off_top"
+            android:id="@+id/sheik_off_top"
+            app:soundID="@string/sheik_off_top"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@id/align"
+            android:layout_below="@id/sheik_death2"/>
+
+        <memes.smashsoundboard.SoundButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jump"
+            android:id="@+id/sheik_jump"
+            app:soundID="@string/sheik_jump"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@id/align"
+            android:layout_below="@id/sheik_death3"/>
+
+
+    </RelativeLayout>
+</ScrollView>

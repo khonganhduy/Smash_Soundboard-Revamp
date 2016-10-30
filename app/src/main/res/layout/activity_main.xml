@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,32 +15,38 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" /> -->
 
-    <Button
+    <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fox"
-        android:id="@+id/fox_section" />
+        android:id="@+id/fox_section"
+        android:onClick="playAudio"
+        android:background="@drawable/fox_icon"
+        app:soundID="@string/fox_char_call"/>
 
-    <Button
+    <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Falco"
+        android:background="@drawable/falco_icon"
         android:id="@+id/falco_section"
+        app:soundID="@string/falco_char_call"
         android:layout_centerHorizontal="true"/>
 
-    <Button
+    <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sheik"
+        android:background="@drawable/sheik_icon"
         android:id="@+id/sheik_section"
+        app:soundID="@string/sheik_char_call"
         android:layout_alignParentRight="true"/>
 
-    <Button
+    <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Marth"
+        android:background="@drawable/marth_icon"
         android:id="@+id/marth_section"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/fox_section"/>
+        app:soundID="@string/marth_char_call"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/fox_section"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
