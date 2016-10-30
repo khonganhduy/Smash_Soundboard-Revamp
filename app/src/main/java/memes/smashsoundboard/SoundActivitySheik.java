@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class SoundActivitySheik extends AppCompatActivity {
 
@@ -18,7 +19,31 @@ public class SoundActivitySheik extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound_sheik);
         final Intent exitIntent = new Intent(this, MainActivity.class);
-        Button sheikPalette = (Button)this.findViewById(R.id.sheik_banner);
+
+        ArrayList<Integer> sheikSoundIds = new ArrayList<Integer>();
+        sheikSoundIds.add(R.id.sheik_cheer);
+        sheikSoundIds.add(R.id.sheik_victory);
+        sheikSoundIds.add(R.id.sheik_taunt);
+        sheikSoundIds.add(R.id.sheik_smash1);
+        sheikSoundIds.add(R.id.sheik_smash2);
+        sheikSoundIds.add(R.id.sheik_smash3);
+        sheikSoundIds.add(R.id.sheik_smash4);
+        sheikSoundIds.add(R.id.sheik_smash5);
+        sheikSoundIds.add(R.id.sheik_spot_dodge);
+        sheikSoundIds.add(R.id.sheik_neutral_b);
+        sheikSoundIds.add(R.id.sheik_side_b);
+        sheikSoundIds.add(R.id.sheik_down_b);
+        sheikSoundIds.add(R.id.sheik_up_b);
+        sheikSoundIds.add(R.id.sheik_damage1);
+        sheikSoundIds.add(R.id.sheik_damage2);
+        sheikSoundIds.add(R.id.sheik_damage3);
+        sheikSoundIds.add(R.id.sheik_death1);
+        sheikSoundIds.add(R.id.sheik_death2);
+        sheikSoundIds.add(R.id.sheik_death3);
+        sheikSoundIds.add(R.id.sheik_off_top);
+        sheikSoundIds.add(R.id.sheik_jump);
+
+        Button sheikPalette = (Button) this.findViewById(R.id.sheik_banner);
         sheikPalette.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,7 +51,39 @@ public class SoundActivitySheik extends AppCompatActivity {
                 startActivity(exitIntent);
             }
         });
+        for (int i = 0; i < sheikSoundIds.size(); i++) {
+            final SoundButton sheikSoundButton = (SoundButton) this.findViewById(sheikSoundIds.get(i));
+            if (i == 10) {
+                sheikSoundButton.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        switch (event.getAction()) {
+                            case MotionEvent.ACTION_DOWN:
+                                playSound(sheikSoundButton, v);
+                                player.setLooping(true);
+                                break;
+                            case MotionEvent.ACTION_UP:
+                                player.reset();
+                                break;
+                            case MotionEvent.ACTION_CANCEL:
+                                player.reset();
+                                break;
+                        }
+                        return false;
+                    }
+                });
+            } else {
+                sheikSoundButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        playSound(sheikSoundButton, v);
+                    }
+                });
+            }
+        }
+    }
 
+       /*
 //        Sheik variables
         final SoundButton cheer = (SoundButton)this.findViewById(R.id.sheik_cheer);
         final SoundButton victory = (SoundButton)this.findViewById(R.id.sheik_victory);
@@ -203,6 +260,7 @@ public class SoundActivitySheik extends AppCompatActivity {
         });
 
     }
+    */
     private void playSound(SoundButton button, View view)
     {
         try {

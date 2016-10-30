@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class SoundActivityMarth extends AppCompatActivity {
 
@@ -17,7 +20,32 @@ public class SoundActivityMarth extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound_marth);
         final Intent exitIntent = new Intent(this, MainActivity.class);
-        Button marthPalette = (Button)this.findViewById(R.id.marth_banner);
+
+        ArrayList<Integer> marthSoundIds = new ArrayList<Integer>();
+        marthSoundIds.add(R.id.marth_cheer);
+        marthSoundIds.add(R.id.marth_victory);
+        marthSoundIds.add(R.id.marth_taunt);
+        marthSoundIds.add(R.id.marth_smash1);
+        marthSoundIds.add(R.id.marth_smash2);
+        marthSoundIds.add(R.id.marth_smash3);
+        marthSoundIds.add(R.id.marth_smash4);
+        marthSoundIds.add(R.id.marth_smash5);
+        marthSoundIds.add(R.id.marth_spot_dodge);
+        marthSoundIds.add(R.id.marth_neutral_b);
+        marthSoundIds.add(R.id.marth_side_b);
+        marthSoundIds.add(R.id.marth_down_b);
+        marthSoundIds.add(R.id.marth_counter1);
+        marthSoundIds.add(R.id.marth_counter2);
+        marthSoundIds.add(R.id.marth_up_b);
+        marthSoundIds.add(R.id.marth_damage1);
+        marthSoundIds.add(R.id.marth_damage2);
+        marthSoundIds.add(R.id.marth_damage3);
+        marthSoundIds.add(R.id.marth_death1);
+        marthSoundIds.add(R.id.marth_death2);
+        marthSoundIds.add(R.id.marth_off_top);
+        marthSoundIds.add(R.id.marth_quote);
+
+        Button marthPalette = (Button) this.findViewById(R.id.marth_banner);
         marthPalette.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,9 +53,49 @@ public class SoundActivityMarth extends AppCompatActivity {
                 startActivity(exitIntent);
             }
         });
+        final MediaPlayer release = MediaPlayer.create(SoundActivityMarth.this, R.raw.marth_neutral_b_release);
+        for (int i = 0; i < marthSoundIds.size(); i++) {
+            final SoundButton marthSoundButton = (SoundButton) this.findViewById(marthSoundIds.get(i));
+            if (i == 9) {
+                marthSoundButton.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        switch (event.getAction()) {
+                            case MotionEvent.ACTION_DOWN:
+                                playSound(marthSoundButton, v);
+                                player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                    @Override
+                                    public void onCompletion(MediaPlayer mp) {
+                                        release.start();
+                                    }
+                                });
+                                break;
+                            case MotionEvent.ACTION_UP:
+                                    release.start();
+                                player.reset();
+                                break;
+                            case MotionEvent.ACTION_CANCEL:
+                                    release.start();
+                                player.reset();
+                                break;
+                        }
+                        return false;
+                    }
+                });
+            } else {
+                marthSoundButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        playSound(marthSoundButton, v);
+                    }
+                });
+            }
+        }
+    }
+
 
 //        Marth variables
-        final SoundButton cheer = (SoundButton)this.findViewById(R.id.marth_cheer);
+        /*final SoundButton cheer = (SoundButton)this.findViewById(R.id.marth_cheer);
         final SoundButton victory = (SoundButton)this.findViewById(R.id.marth_victory);
         final SoundButton taunt = (SoundButton)this.findViewById(R.id.marth_taunt);
         final SoundButton smash1 = (SoundButton)this.findViewById(R.id.marth_smash1);
@@ -184,9 +252,9 @@ public class SoundActivityMarth extends AppCompatActivity {
             }
         });
 
-    }
-    private void playSound(SoundButton button, View view)
-    {
+    }*/
+
+    private void playSound(SoundButton button, View view) {
         try {
             player.reset();
             player.setDataSource(view.getContext(), button.getSoundID());

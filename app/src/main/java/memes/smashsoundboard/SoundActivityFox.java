@@ -3,13 +3,11 @@ package memes.smashsoundboard;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -50,7 +48,7 @@ public class SoundActivityFox extends AppCompatActivity {
         foxSoundIds.add(R.id.fox_gun_withdrawal);
         foxSoundIds.add(R.id.fox_multishine);
 
-        Button foxPalette = (Button)this.findViewById(R.id.fox_banner);
+        Button foxPalette = (Button) this.findViewById(R.id.fox_banner);
         foxPalette.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,15 +56,15 @@ public class SoundActivityFox extends AppCompatActivity {
                 startActivity(exitIntent);
             }
         });
-        for (int i = 0; i < foxSoundIds.size(); i++){
-        final SoundButton foxSoundButton = (SoundButton)this.findViewById(foxSoundIds.get(i));
-            if (foxSoundIds.size()-1 == i){
+        for (int i = 0; i < foxSoundIds.size(); i++) {
+            final SoundButton foxSoundButton = (SoundButton) this.findViewById(foxSoundIds.get(i));
+            if (foxSoundIds.size() - 1 == i) {
                 foxSoundButton.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
-                        switch(event.getAction()) {
+                        switch (event.getAction()) {
                             case MotionEvent.ACTION_DOWN:
-                                playSound(foxSoundButton,v);
+                                playSound(foxSoundButton, v);
                                 player.setLooping(true);
                                 break;
                             case MotionEvent.ACTION_UP:
@@ -79,8 +77,7 @@ public class SoundActivityFox extends AppCompatActivity {
                         return false;
                     }
                 });
-            }
-            else {
+            } else {
                 foxSoundButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -282,16 +279,16 @@ public class SoundActivityFox extends AppCompatActivity {
 
 */
     }
-private void playSound(SoundButton button, View view)
-{
-    try {
-        player.reset();
-        player.setDataSource(view.getContext(), button.getSoundID());
-        player.prepare();
-        player.start();
 
-    } catch (IOException e) {
-        e.printStackTrace();
+    private void playSound(SoundButton button, View view) {
+        try {
+            player.reset();
+            player.setDataSource(view.getContext(), button.getSoundID());
+            player.prepare();
+            player.start();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-}
 }
