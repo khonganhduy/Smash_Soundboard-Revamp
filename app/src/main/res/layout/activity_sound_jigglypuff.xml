@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SoundActivityJigglypuff">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/jigglypuff_banner"
+            android:background="@drawable/jigglypuff_palette" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/audience_cheer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_cheer"
+                    app:soundID="@string/jigglypuff_cheer"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/victory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_victory"
+                    app:soundID="@string/jigglypuff_victory"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/taunt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_taunt"
+                    app:soundID="@string/jigglypuff_taunt"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/smash1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_smash1"
+                    app:soundID="@string/jigglypuff_smash1"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/smash2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_smash2"
+                    app:soundID="@string/jigglypuff_smash2"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/smash3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_smash3"
+                    app:soundID="@string/jigglypuff_smash3"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/smash4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_smash4"
+                    app:soundID="@string/jigglypuff_smash4"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/smash5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_smash5"
+                    app:soundID="@string/jigglypuff_smash5"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/neutral_special"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_rollout"
+                    app:soundID="@string/jigglypuff_initial_rollout"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/side_special"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_pound"
+                    app:soundID="@string/jigglypuff_pound"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/down_special"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_rest"
+                    app:soundID="@string/jigglypuff_rest"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/up_special"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_sing"
+                    app:soundID="@string/jigglypuff_sing"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/death1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_death1"
+                    app:soundID="@string/jigglypuff_death1"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/death2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_death2"
+                    app:soundID="@string/jigglypuff_death2"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/star_ko"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_star_ko"
+                    app:soundID="@string/jigglypuff_star_ko"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/screen_ko"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jigglypuff_screen_ko"
+                    app:soundID="@string/jigglypuff_screen_ko"/>
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

@@ -107,33 +107,9 @@
     <string name="marth_off_top">android.resource://memes.smashsoundboard/raw/marth_off_top</string>
     <string name="marth_counter1">android.resource://memes.smashsoundboard/raw/marth_counter1</string>
     <string name="marth_counter2">android.resource://memes.smashsoundboard/raw/marth_counter2</string>
-<<<<<<< Updated upstream
 
-    <!--Pika String-->
-    <string name="pika_char_call">android.resource://memes.smashsoundboard/raw/pika_char_call</string>
-    <string name="pika_cheer">android.resource://memes.smashsoundboard/raw/fox_cheer</string>
-    <string name="pika_taunt">android.resource://memes.smashsoundboard/raw/fox_mission_complete</string>
-    <string name="pika_smash1">android.resource://memes.smashsoundboard/raw/fox_smash1</string>
-    <string name="pika_smash2">android.resource://memes.smashsoundboard/raw/fox_smash2</string>
-    <string name="pika_smash3">android.resource://memes.smashsoundboard/raw/fox_smash3</string>
-    <string name="pika_smash4">android.resource://memes.smashsoundboard/raw/fox_smash4</string>
-    <string name="pika_smash5">android.resource://memes.smashsoundboard/raw/fox_smash5</string>
-    <string name="pika_spot_dodge">android.resource://memes.smashsoundboard/raw/fox_spot_dodge</string>
-    <string name="pika_tjolt">android.resource://memes.smashsoundboard/raw/fox_laser</string>
-    <string name="pika_sbash">android.resource://memes.smashsoundboard/raw/fox_illusion</string>
-    <string name="pika_thunder">android.resource://memes.smashsoundboard/raw/fox_shine</string>
-    <string name="pika_qatk">android.resource://memes.smashsoundboard/raw/fox_firefox</string>
-    <string name="pika_damage1">android.resource://memes.smashsoundboard/raw/fox_damage1</string>
-    <string name="pika_damage2">android.resource://memes.smashsoundboard/raw/fox_damage2</string>
-    <string name="pika_damage3">android.resource://memes.smashsoundboard/raw/fox_damage3</string>
-    <string name="pika_death1">android.resource://memes.smashsoundboard/raw/fox_death1</string>
-    <string name="pika_death2">android.resource://memes.smashsoundboard/raw/fox_death2</string>
-    <string name="pika_death3">android.resource://memes.smashsoundboard/raw/fox_death3</string>
-    <string name="pika_off_top">android.resource://memes.smashsoundboard/raw/fox_off_top</string>
-    <string name="pika_double_jump">android.resource://memes.smashsoundboard/raw/fox_double_jump</string>
-=======
     <!--Jigglypuff strings-->
-    <string name="jigglypuff_char_call">android.resource://memes.smashsoundboard/raw/jigglypuff_char_call</string>
+    <string name="puff_char_call">android.resource://memes.smashsoundboard/raw/puff_char_call</string>
     <string name="jigglypuff_cheer">android.resource://memes.smashsoundboard/raw/jigglypuff_cheer</string>
     <string name="jigglypuff_victory">android.resource://memes.smashsoundboard/raw/jigglypuff_victory</string>
     <string name="jigglypuff_taunt">android.resource://memes.smashsoundboard/raw/jigglypuff_taunt</string>
@@ -143,15 +119,14 @@
     <string name="jigglypuff_smash4">android.resource://memes.smashsoundboard/raw/jigglypuff_smash4</string>
     <string name="jigglypuff_smash5">android.resource://memes.smashsoundboard/raw/jigglypuff_smash5</string>
     <string name="jigglypuff_initial_rollout">android.resource://memes.smashsoundboard/raw/jigglypuff_initial_rollout</string>
-    <string name="jigglypuff_rollout_charge">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_charge</string>
-    <string name="jigglypuff_rollout_release">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_release</string>
     <string name="jigglypuff_pound">android.resource://memes.smashsoundboard/raw/jigglypuff_pound</string>
     <string name="jigglypuff_rest">android.resource://memes.smashsoundboard/raw/jigglypuff_rest</string>
-    <string name="jigglypuff_rest_bubbles">android.resource://memes.smashsoundboard/raw/jigglypuff_rest_bubbles</string>
+    <string name="jigglypuff_sing">android.resource://memes.smashsoundboard/raw/jigglypuff_sing</string>
     <string name="jigglypuff_death1">android.resource://memes.smashsoundboard/raw/jigglypuff_death1</string>
     <string name="jigglypuff_death2">android.resource://memes.smashsoundboard/raw/jigglypuff_death2</string>
     <string name="jigglypuff_star_ko">android.resource://memes.smashsoundboard/raw/jigglypuff_star_ko</string>
     <string name="jigglypuff_screen_ko">android.resource://memes.smashsoundboard/raw/jigglypuff_screen_ko</string>
+
     <!--Peach strings-->
     <string name="peach_char_call">android.resource://memes.smashsoundboard/raw/peach_char_call</string>
     <string name="peach_cheer">android.resource://memes.smashsoundboard/raw/peach_cheer</string>
@@ -176,11 +151,34 @@
     <string name="peach_death">android.resource://memes.smashsoundboard/raw/peach_death</string>
     <string name="peach_star_ko">android.resource://memes.smashsoundboard/raw/peach_star_ko</string>
     <string name="peach_screen_ko">android.resource://memes.smashsoundboard/raw/peach_screen_ko</string>
->>>>>>> Stashed changes
+
+    <!--Pika String-->
+    <string name="pika_char_call">android.resource://memes.smashsoundboard/raw/pika_char_call</string>
+    <string name="pika_cheer">android.resource://memes.smashsoundboard/raw/fox_cheer</string>
+    <string name="pika_taunt">android.resource://memes.smashsoundboard/raw/fox_mission_complete</string>
+    <string name="pika_smash1">android.resource://memes.smashsoundboard/raw/fox_smash1</string>
+    <string name="pika_smash2">android.resource://memes.smashsoundboard/raw/fox_smash2</string>
+    <string name="pika_smash3">android.resource://memes.smashsoundboard/raw/fox_smash3</string>
+    <string name="pika_smash4">android.resource://memes.smashsoundboard/raw/fox_smash4</string>
+    <string name="pika_smash5">android.resource://memes.smashsoundboard/raw/fox_smash5</string>
+    <string name="pika_spot_dodge">android.resource://memes.smashsoundboard/raw/fox_spot_dodge</string>
+    <string name="pika_tjolt">android.resource://memes.smashsoundboard/raw/fox_laser</string>
+    <string name="pika_sbash">android.resource://memes.smashsoundboard/raw/fox_illusion</string>
+    <string name="pika_thunder">android.resource://memes.smashsoundboard/raw/fox_shine</string>
+    <string name="pika_qatk">android.resource://memes.smashsoundboard/raw/fox_firefox</string>
+    <string name="pika_damage1">android.resource://memes.smashsoundboard/raw/fox_damage1</string>
+    <string name="pika_damage2">android.resource://memes.smashsoundboard/raw/fox_damage2</string>
+    <string name="pika_damage3">android.resource://memes.smashsoundboard/raw/fox_damage3</string>
+    <string name="pika_death1">android.resource://memes.smashsoundboard/raw/fox_death1</string>
+    <string name="pika_death2">android.resource://memes.smashsoundboard/raw/fox_death2</string>
+    <string name="pika_death3">android.resource://memes.smashsoundboard/raw/fox_death3</string>
+    <string name="pika_off_top">android.resource://memes.smashsoundboard/raw/fox_off_top</string>
+    <string name="pika_double_jump">android.resource://memes.smashsoundboard/raw/fox_double_jump</string>
 
     <!--Universal/Misc Strings-->
     <string name="audience_cheer">audience cheer</string>
-    <string name="victory">victory line</string>
+    <string name="victory">victory line 1</string>
+    <string name="victory1">victory line 2</string>
     <string name="taunt">Taunt</string>
     <string name="jp_taunt">JpTaunt</string>
     <string name="smash1">Smash Attack 1</string>
@@ -199,12 +197,19 @@
     <string name="death1">death 1</string>
     <string name="death2">death 2</string>
     <string name="death3">death 3</string>
-    <string name="quote">quote</string>
-    <string name="more_counters">more counters</string>
-    <string name="off_top">off top</string>
+    <string name="star_ko">star KO</string>
+    <string name="screen_ko">screen KO</string>
     <string name="jump">jump</string>
     <string name="double_jump">double jump</string>
+        <!-- Marth Misc-->
+    <string name="quote">quote</string>
+    <string name="more_counters">more counters</string>
+        <!--Fox Misc-->
     <string name="gun_draw">gun draw</string>
     <string name="gun_withdrawal">gun withdrawal</string>
+        <!--Peach Misc-->
+    <string name="peach_frying_pan">frying pan</string>
+    <string name="peach_club"> golf club</string>
+    <string name="peach_racket">tennis racket</string>
 
 </resources>

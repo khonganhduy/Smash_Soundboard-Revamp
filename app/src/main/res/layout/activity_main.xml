@@ -1,52 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="memes.smashsoundboard.MainActivity">
+    tools:context=".SoundActivityPeach">
 
-    <!--<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" /> -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <memes.smashsoundboard.SoundButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fox_section"
-        android:onClick="playAudio"
-        android:background="@drawable/fox_icon"
-        app:soundID="@string/fox_char_call"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <memes.smashsoundboard.SoundButton
+            android:background="@drawable/fox_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fox_section"
+            app:soundID="@string/fox_char_call"/>
 
-    <memes.smashsoundboard.SoundButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/falco_icon"
-        android:id="@+id/falco_section"
-        app:soundID="@string/falco_char_call"
-        android:layout_centerHorizontal="true"/>
+        <memes.smashsoundboard.SoundButton
+            android:background="@drawable/sheik_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sheik_section"
+            app:soundID="@string/sheik_char_call"/>
 
-    <memes.smashsoundboard.SoundButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/sheik_icon"
-        android:id="@+id/sheik_section"
-        app:soundID="@string/sheik_char_call"
-        android:layout_alignParentRight="true"/>
+        <memes.smashsoundboard.SoundButton
+            android:background="@drawable/falco_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/falco_section"
+            app:soundID="@string/falco_char_call"/>
 
-    <memes.smashsoundboard.SoundButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/marth_icon"
-        android:id="@+id/marth_section"
-        app:soundID="@string/marth_char_call"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/fox_section"
-        android:layout_alignParentStart="true" />
+        <memes.smashsoundboard.SoundButton
+            android:background="@drawable/marth_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/marth_section"
+            app:soundID="@string/marth_char_call"/>
 
-</RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <memes.smashsoundboard.SoundButton
+                android:background="@drawable/peach_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/peach_section"
+                app:soundID="@string/peach_char_call"/>
+
+            <memes.smashsoundboard.SoundButton
+                android:background="@drawable/jigglypuff_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/jigglypuff_section"
+                app:soundID="@string/puff_char_call"/>
+
+        </TableRow>
+    </TableLayout>
+</ScrollView>

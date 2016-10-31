@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private static MediaPlayer player = new MediaPlayer();
-    MediaPlayer music = new MediaPlayer();
+    private MediaPlayer music = new MediaPlayer();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +25,16 @@ public class MainActivity extends AppCompatActivity {
         sectionId.add(R.id.falco_section);
         sectionId.add(R.id.sheik_section);
         sectionId.add(R.id.marth_section);
+        sectionId.add(R.id.peach_section);
+        sectionId.add(R.id.jigglypuff_section);
 
         ArrayList<Class> intentName = new ArrayList<Class>();
         intentName.add(SoundActivityFox.class);
         intentName.add(SoundActivityFalco.class);
         intentName.add(SoundActivitySheik.class);
         intentName.add(SoundActivityMarth.class);
+        intentName.add(SoundActivityPeach.class);
+        intentName.add(SoundActivityJigglypuff.class);
 
         for (int i = 0; i < sectionId.size(); i++) {
             final SoundButton aButton = (SoundButton) this.findViewById(sectionId.get(i));

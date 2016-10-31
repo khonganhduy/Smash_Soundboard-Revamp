@@ -216,7 +216,7 @@
         <memes.smashsoundboard.SoundButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/off_top"
+            android:text="@string/star_ko"
             android:id="@+id/falco_off_top"
             app:soundID="@string/falco_off_top"
             android:layout_alignParentRight="true"
