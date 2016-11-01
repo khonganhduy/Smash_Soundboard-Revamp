@@ -1,7 +1,6 @@
 package memes.smashsoundboard;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,8 +22,6 @@ public class SoundActivityFox extends AppCompatActivity {
 
 //        Fox variables
         ArrayList<Integer> foxSoundIds = new ArrayList<Integer>();
-        Resources res = getResources();
-
         foxSoundIds.add(R.id.fox_cheer_button);
         foxSoundIds.add(R.id.fox_mission_complete_button);
         foxSoundIds.add(R.id.fox_taunt_button);
