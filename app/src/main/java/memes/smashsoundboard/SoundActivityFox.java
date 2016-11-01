@@ -11,7 +11,6 @@ import android.widget.Button;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class SoundActivityFox extends AppCompatActivity {
 
