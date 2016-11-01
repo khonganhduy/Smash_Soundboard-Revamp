@@ -16,7 +16,6 @@
         <item>@id/fox_illusion_button</item>
         <item>@id/fox_firefox_button</item>
         <item>@id/fox_shine_button</item>
-        <item>@id/fox_multishine_button</item>
         <item>@id/fox_smash1_button</item>
         <item>@id/fox_smash2_button</item>
         <item>@id/fox_smash3_button</item>
@@ -26,5 +25,6 @@
         <item>@id/fox_taunt_button</item>
         <item>@id/fox_jp_taunt_button</item>
         <item>@id/fox_mission_complete_button</item>
+        <item>@id/fox_multishine_button</item>
     </integer-array>
 </resources>
