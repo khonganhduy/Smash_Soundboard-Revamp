@@ -22,30 +22,30 @@ public class SoundActivityFalco extends AppCompatActivity {
 
 //        Falco variables
         ArrayList<Integer> falcoSoundIds = new ArrayList<Integer>();
-        falcoSoundIds.add(R.id.falco_cheer);
-        falcoSoundIds.add(R.id.falco_mission_complete);
-        falcoSoundIds.add(R.id.falco_taunt);
-        falcoSoundIds.add(R.id.falco_smash1);
-        falcoSoundIds.add(R.id.falco_smash2);
-        falcoSoundIds.add(R.id.falco_smash3);
-        falcoSoundIds.add(R.id.falco_smash4);
-        falcoSoundIds.add(R.id.falco_smash5);
-        falcoSoundIds.add(R.id.falco_spot_dodge);
-        falcoSoundIds.add(R.id.falco_laser);
-        falcoSoundIds.add(R.id.falco_phantasm);
-        falcoSoundIds.add(R.id.falco_shine);
-        falcoSoundIds.add(R.id.falco_firebird);
-        falcoSoundIds.add(R.id.falco_damage1);
-        falcoSoundIds.add(R.id.falco_damage2);
-        falcoSoundIds.add(R.id.falco_damage3);
-        falcoSoundIds.add(R.id.falco_death1);
-        falcoSoundIds.add(R.id.falco_death2);
-        falcoSoundIds.add(R.id.falco_death3);
-        falcoSoundIds.add(R.id.falco_off_top);
-        falcoSoundIds.add(R.id.falco_double_jump);
-        falcoSoundIds.add(R.id.falco_gun_draw);
-        falcoSoundIds.add(R.id.falco_gun_withdrawal);
-        falcoSoundIds.add(R.id.falco_multishine);
+        falcoSoundIds.add(R.id.falco_cheer_button);
+        falcoSoundIds.add(R.id.falco_mission_complete_button);
+        falcoSoundIds.add(R.id.falco_taunt_button);
+        falcoSoundIds.add(R.id.falco_smash1_button);
+        falcoSoundIds.add(R.id.falco_smash2_button);
+        falcoSoundIds.add(R.id.falco_smash3_button);
+        falcoSoundIds.add(R.id.falco_smash4_button);
+        falcoSoundIds.add(R.id.falco_smash5_button);
+        falcoSoundIds.add(R.id.falco_spot_dodge_button);
+        falcoSoundIds.add(R.id.falco_laser_button);
+        falcoSoundIds.add(R.id.falco_phantasm_button);
+        falcoSoundIds.add(R.id.falco_shine_button);
+        falcoSoundIds.add(R.id.falco_firebird_button);
+        falcoSoundIds.add(R.id.falco_damage1_button);
+        falcoSoundIds.add(R.id.falco_damage2_button);
+        falcoSoundIds.add(R.id.falco_damage3_button);
+        falcoSoundIds.add(R.id.falco_death1_button);
+        falcoSoundIds.add(R.id.falco_death2_button);
+        falcoSoundIds.add(R.id.falco_death3_button);
+        falcoSoundIds.add(R.id.falco_off_top_button);
+        falcoSoundIds.add(R.id.falco_double_jump_button);
+        falcoSoundIds.add(R.id.falco_gun_draw_button);
+        falcoSoundIds.add(R.id.falco_gun_withdrawal_button);
+        falcoSoundIds.add(R.id.falco_multishine_button);
 
         Button falcoPalette = (Button)this.findViewById(R.id.falco_banner);
         falcoPalette.setOnClickListener(new View.OnClickListener() {

@@ -18,28 +18,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/fox_section"
-            app:soundID="@string/fox_char_call"/>
+            app:soundID="@string/FOX_CHAR_CALL"/>
 
         <memes.smashsoundboard.SoundButton
             android:background="@drawable/sheik_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sheik_section"
-            app:soundID="@string/sheik_char_call"/>
+            app:soundID="@string/SHEIK_CHAR_CALL"/>
 
         <memes.smashsoundboard.SoundButton
             android:background="@drawable/falco_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/falco_section"
-            app:soundID="@string/falco_char_call"/>
+            app:soundID="@string/FALCO_CHAR_CALL"/>
 
         <memes.smashsoundboard.SoundButton
             android:background="@drawable/marth_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/marth_section"
-            app:soundID="@string/marth_char_call"/>
+            app:soundID="@string/MARTH_CHAR_CALL"/>
 
         </TableRow>
 
@@ -52,14 +52,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/peach_section"
-                app:soundID="@string/peach_char_call"/>
+                app:soundID="@string/PEACH_CHAR_CALL"/>
 
             <memes.smashsoundboard.SoundButton
                 android:background="@drawable/jigglypuff_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/jigglypuff_section"
-                app:soundID="@string/puff_char_call"/>
+                app:soundID="@string/PUFF_CHAR_CALL"/>
+
+            <memes.smashsoundboard.SoundButton
+                android:background="@drawable/pika_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pika_section"
+                app:soundID="@string/PIKA_CHAR_CALL"/>
 
         </TableRow>
     </TableLayout>

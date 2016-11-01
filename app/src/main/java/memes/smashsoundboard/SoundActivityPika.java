@@ -15,8 +15,9 @@ import java.util.ArrayList;
  * Created by Akabe on 10/29/2016.
  */
 
-/*public class SoundActivityPika extends AppCompatActivity {
+public class SoundActivityPika extends AppCompatActivity {
     private static final MediaPlayer player = new MediaPlayer();
+    MediaPlayer sBashRelese = new MediaPlayer();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,30 +26,22 @@ import java.util.ArrayList;
 
 //        Fox variables
         ArrayList<Integer> pikaSoundIds = new ArrayList<Integer>();
-        pikaSoundIds.add(R.id.pika_cheer);
-        pikaSoundIds.add(R.id.pika_mission_complete);
-        pikaSoundIds.add(R.id.pika_taunt);
-        pikaSoundIds.add(R.id.pika_smash1);
-        pikaSoundIds.add(R.id.pika_smash2);
-        pikaSoundIds.add(R.id.pika_smash3);
-        pikaSoundIds.add(R.id.pika_smash4);
-        pikaSoundIds.add(R.id.pika_smash5);
-        pikaSoundIds.add(R.id.pika_spot_dodge);
-        pikaSoundIds.add(R.id.pika_laser);
-        pikaSoundIds.add(R.id.pika_illusion);
-        pikaSoundIds.add(R.id.pika_shine);
-        pikaSoundIds.add(R.id.pika_firefox);
-        pikaSoundIds.add(R.id.pika_damage1);
-        pikaSoundIds.add(R.id.pika_damage2);
-        pikaSoundIds.add(R.id.pika_damage3);
-        pikaSoundIds.add(R.id.pika_death1);
-        pikaSoundIds.add(R.id.pika_death2);
-        pikaSoundIds.add(R.id.pika_death3);
-        pikaSoundIds.add(R.id.pika_off_top);
-        pikaSoundIds.add(R.id.pika_double_jump);
-        pikaSoundIds.add(R.id.pika_gun_draw);
-        pikaSoundIds.add(R.id.pika_gun_withdrawal);
-        pikaSoundIds.add(R.id.pika_multishine);
+        pikaSoundIds.add(R.id.pika_cheer_button);
+        pikaSoundIds.add(R.id.pika_victory_button);
+        pikaSoundIds.add(R.id.pika_taunt_button);
+        pikaSoundIds.add(R.id.pika_smash1_button);
+        pikaSoundIds.add(R.id.pika_smash2_button);
+        pikaSoundIds.add(R.id.pika_smash3_button);
+        pikaSoundIds.add(R.id.pika_smash4_button);
+        pikaSoundIds.add(R.id.pika_smash5_button);
+        pikaSoundIds.add(R.id.pika_tjolt_button);
+        pikaSoundIds.add(R.id.pika_sbash_button);
+        pikaSoundIds.add(R.id.pika_thunder_button);
+        pikaSoundIds.add(R.id.pika_qatk_button);
+        pikaSoundIds.add(R.id.pika_damage1_button);
+        pikaSoundIds.add(R.id.pika_death1_button);
+        pikaSoundIds.add(R.id.pika_death2_button);
+        pikaSoundIds.add(R.id.pika_star_ko_button);
 
         Button pikaPalette = (Button) this.findViewById(R.id.pika_banner);
         pikaPalette.setOnClickListener(new View.OnClickListener() {
@@ -58,22 +51,29 @@ import java.util.ArrayList;
                 startActivity(exitIntent);
             }
         });
+
+        sBashRelese = MediaPlayer.create(SoundActivityPika.this, R.raw.pika_skullbash_release);
         for (int i = 0; i < pikaSoundIds.size(); i++) {
             final SoundButton pikaSoundButton = (SoundButton) this.findViewById(pikaSoundIds.get(i));
-            if (pikaSoundIds.size() - 1 == i) {
+            if (pikaSoundIds.get(i) == R.id.pika_sbash_button) {
                 pikaSoundButton.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
                         switch (event.getAction()) {
                             case MotionEvent.ACTION_DOWN:
                                 playSound(pikaSoundButton, v);
-                                player.setLooping(true);
+                                player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                    @Override
+                                    public void onCompletion(MediaPlayer mp) {
+                                        playPikaSBashRelease();
+                                    }
+                                });
                                 break;
                             case MotionEvent.ACTION_UP:
-                                player.reset();
+                                playSoundOnRelease();
                                 break;
                             case MotionEvent.ACTION_CANCEL:
-                                player.reset();
+                                playSoundOnRelease();
                                 break;
                         }
                         return false;
@@ -83,7 +83,7 @@ import java.util.ArrayList;
                 pikaSoundButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        playSound(foxSoundButton, v);
+                        playSound(pikaSoundButton, v);
                     }
                 });
             }
@@ -101,4 +101,22 @@ import java.util.ArrayList;
             e.printStackTrace();
         }
     }
-}*/
+
+    private void playPikaSBashRelease(){
+        try {
+            sBashRelese.stop();
+            sBashRelese.prepare();
+            sBashRelese.start();
+            player.reset();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void playSoundOnRelease() {
+        sBashRelese.start();
+        player.reset();
+        player.setOnCompletionListener(null);
+    }
+}

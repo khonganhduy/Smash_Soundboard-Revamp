@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SoundActivityJigglypuff">
+    tools:context=".SoundActivityPika">
 
 
     <LinearLayout
@@ -15,8 +15,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/jigglypuff_banner"
-            android:background="@drawable/jigglypuff_palette" />
+            android:id="@+id/pika_banner"
+            android:background="@drawable/pika_palette" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -31,15 +31,15 @@
                     android:text="@string/AUDIENCE_CHEER"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_cheer_button"
-                    app:soundID="@string/JIGGLYPUFF_CHEER"/>
+                    android:id="@+id/pika_cheer_button"
+                    app:soundID="@string/PIKA_CHEER"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/VICTORY1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_victory_button"
-                    app:soundID="@string/JIGGLYPUFF_VICTORY"/>
+                    android:id="@+id/pika_victory_button"
+                    app:soundID="@string/PIKA_VICTORY"/>
 
             </TableRow>
 
@@ -51,15 +51,15 @@
                     android:text="@string/TAUNT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_taunt_button"
-                    app:soundID="@string/JIGGLYPUFF_TAUNT"/>
+                    android:id="@+id/pika_taunt_button"
+                    app:soundID="@string/PIKA_TAUNT"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SMASH1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_smash1_button"
-                    app:soundID="@string/JIGGLYPUFF_SMASH1"/>
+                    android:id="@+id/pika_smash1_button"
+                    app:soundID="@string/PIKA_SMASH1"/>
             </TableRow>
 
             <TableRow
@@ -70,15 +70,15 @@
                     android:text="@string/SMASH2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_smash2_button"
-                    app:soundID="@string/JIGGLYPUFF_SMASH2"/>
+                    android:id="@+id/pika_smash2_button"
+                    app:soundID="@string/PIKA_SMASH2"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SMASH3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_smash3_button"
-                    app:soundID="@string/JIGGLYPUFF_SMASH3"/>
+                    android:id="@+id/pika_smash3_button"
+                    app:soundID="@string/PIKA_SMASH3"/>
 
             </TableRow>
 
@@ -90,15 +90,15 @@
                     android:text="@string/SMASH4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_smash4_button"
-                    app:soundID="@string/JIGGLYPUFF_SMASH4"/>
+                    android:id="@+id/pika_smash4_button"
+                    app:soundID="@string/PIKA_SMASH4"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SMASH5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_smash5_button"
-                    app:soundID="@string/JIGGLYPUFF_SMASH5"/>
+                    android:id="@+id/pika_smash5_button"
+                    app:soundID="@string/PIKA_SMASH5"/>
             </TableRow>
 
             <TableRow
@@ -109,15 +109,15 @@
                     android:text="@string/NEUTRAL_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_rollout_button"
-                    app:soundID="@string/JIGGLYPUFF_INITIAL_ROLLOUT"/>
+                    android:id="@+id/pika_tjolt_button"
+                    app:soundID="@string/PIKA_TJOLT"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SIDE_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_pound_button"
-                    app:soundID="@string/JIGGLYPUFF_POUND"/>
+                    android:id="@+id/pika_sbash_button"
+                    app:soundID="@string/PIKA_SBASH"/>
 
             </TableRow>
 
@@ -129,35 +129,35 @@
                     android:text="@string/DOWN_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_rest_button"
-                    app:soundID="@string/JIGGLYPUFF_REST"/>
+                    android:id="@+id/pika_thunder_button"
+                    app:soundID="@string/PIKA_THUNDER"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/UP_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_sing_button"
-                    app:soundID="@string/JIGGLYPUFF_SING"/>
+                    android:id="@+id/pika_qatk_button"
+                    app:soundID="@string/PIKA_QATK"/>
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/DAMAGE1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pika_damage1_button"
+                    app:soundID="@string/PIKA_DAMAGE1"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/DEATH1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_death1_button"
-                    app:soundID="@string/JIGGLYPUFF_DEATH1"/>
-
-                <memes.smashsoundboard.SoundButton
-                    android:text="@string/DEATH2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_death2_button"
-                    app:soundID="@string/JIGGLYPUFF_DEATH2"/>
+                    android:id="@+id/pika_death1_button"
+                    app:soundID="@string/PIKA_DEATH1"/>
 
             </TableRow>
 
@@ -166,18 +166,19 @@
                 android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
+                    android:text="@string/DEATH2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pika_death2_button"
+                    app:soundID="@string/PIKA_DEATH2"/>
+
+                <memes.smashsoundboard.SoundButton
                     android:text="@string/STAR_KO"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_star_ko_button"
-                    app:soundID="@string/JIGGLYPUFF_STAR_KO"/>
+                    android:id="@+id/pika_star_ko_button"
+                    app:soundID="@string/PIKA_STAR_KO"/>
 
-                <memes.smashsoundboard.SoundButton
-                    android:text="@string/SCREEN_KO"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/jigglypuff_screen_ko_button"
-                    app:soundID="@string/JIGGLYPUFF_SCREEN_KO"/>
 
             </TableRow>
         </TableLayout>

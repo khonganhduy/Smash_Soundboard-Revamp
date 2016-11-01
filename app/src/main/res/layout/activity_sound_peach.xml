@@ -28,18 +28,18 @@
             android:layout_height="match_parent" >
 
             <memes.smashsoundboard.SoundButton
-                android:text="@string/audience_cheer"
+                android:text="@string/AUDIENCE_CHEER"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/peach_cheer"
-                app:soundID="@string/peach_cheer"/>
+                android:id="@+id/peach_cheer_button"
+                app:soundID="@string/PEACH_CHEER"/>
 
             <memes.smashsoundboard.SoundButton
-                android:text="@string/victory"
+                android:text="@string/VICTORY1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/peach_victory1"
-                app:soundID="@string/peach_victory"/>
+                android:id="@+id/peach_victory1_button"
+                app:soundID="@string/PEACH_VICTORY"/>
 
         </TableRow>
 
@@ -48,18 +48,18 @@
             android:layout_height="match_parent" >
 
             <memes.smashsoundboard.SoundButton
-                android:text="@string/victory1"
+                android:text="@string/VICTORY2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/peach_victory2"
-                app:soundID="@string/peach_victory2"/>
+                android:id="@+id/peach_victory2_button"
+                app:soundID="@string/PEACH_VICTORY2"/>
 
             <memes.smashsoundboard.SoundButton
-                android:text="@string/taunt"
+                android:text="@string/TAUNT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/peach_taunt"
-                app:soundID="@string/peach_taunt"/>
+                android:id="@+id/peach_taunt_button"
+                app:soundID="@string/PEACH_TAUNT"/>
         </TableRow>
 
         <TableRow
@@ -67,18 +67,18 @@
             android:layout_height="match_parent" >
 
             <memes.smashsoundboard.SoundButton
-                android:text="@string/smash1"
+                android:text="@string/SMASH1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/peach_smash1"
-                app:soundID="@string/peach_smash1"/>
+                android:id="@+id/peach_smash1_button"
+                app:soundID="@string/PEACH_SMASH1"/>
 
             <memes.smashsoundboard.SoundButton
-                android:text="@string/smash2"
+                android:text="@string/SMASH2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/peach_smash2"
-                app:soundID="@string/peach_smash2"/>
+                android:id="@+id/peach_smash2_button"
+                app:soundID="@string/PEACH_SMASH2"/>
 
         </TableRow>
 
@@ -87,18 +87,18 @@
             android:layout_height="match_parent" >
 
             <memes.smashsoundboard.SoundButton
-                android:text="@string/smash3"
+                android:text="@string/SMASH3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/peach_smash3"
-                app:soundID="@string/peach_smash3"/>
+                android:id="@+id/peach_smash3_button"
+                app:soundID="@string/PEACH_SMASH3"/>
 
             <memes.smashsoundboard.SoundButton
-                android:text="@string/smash4"
+                android:text="@string/SMASH4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/peach_smash4"
-                app:soundID="@string/peach_smash4"/>
+                android:id="@+id/peach_smash4_button"
+                app:soundID="@string/PEACH_SMASH4"/>
         </TableRow>
 
             <TableRow
@@ -106,18 +106,18 @@
                 android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/smash5"
+                    android:text="@string/SMASH5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_smash5"
-                    app:soundID="@string/peach_smash5"/>
+                    android:id="@+id/peach_smash5_button"
+                    app:soundID="@string/PEACH_SMASH5"/>
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/peach_frying_pan"
+                    android:text="@string/PEACH_FRYING_PAN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_pan"
-                    app:soundID="@string/peach_pan"/>
+                    android:id="@+id/peach_pan_button"
+                    app:soundID="@string/PEACH_PAN"/>
 
             </TableRow>
 
@@ -126,18 +126,18 @@
                 android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/peach_club"
+                    android:text="@string/PEACH_CLUB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_golf_club"
-                    app:soundID="@string/peach_golf_club"/>
+                    android:id="@+id/peach_golf_club_button"
+                    app:soundID="@string/PEACH_GOLF_CLUB"/>
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/peach_racket"
+                    android:text="@string/PEACH_RACKET"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_tennis_racket"
-                    app:soundID="@string/peach_tennis_racket"/>
+                    android:id="@+id/peach_tennis_racket_button"
+                    app:soundID="@string/PEACH_TENNIS_RACKET"/>
 
             </TableRow>
 
@@ -146,18 +146,18 @@
                 android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/jump"
+                    android:text="@string/JUMP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_jump"
-                    app:soundID="@string/peach_jump"/>
+                    android:id="@+id/peach_jump_button"
+                    app:soundID="@string/PEACH_JUMP"/>
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/double_jump"
+                    android:text="@string/DOUBLE_JUMP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_double_jump"
-                    app:soundID="@string/peach_double_jump"/>
+                    android:id="@+id/peach_double_jump_button"
+                    app:soundID="@string/PEACH_DOUBLE_JUMP"/>
 
             </TableRow>
 
@@ -166,18 +166,18 @@
                 android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/neutral_special"
+                    android:text="@string/NEUTRAL_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_toad"
-                    app:soundID="@string/peach_toad"/>
+                    android:id="@+id/peach_toad_button"
+                    app:soundID="@string/PEACH_TOAD"/>
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/side_special"
+                    android:text="@string/SIDE_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_bomber"
-                    app:soundID="@string/peach_bomber"/>
+                    android:id="@+id/peach_bomber_button"
+                    app:soundID="@string/PEACH_BOMBER"/>
 
             </TableRow>
 
@@ -186,18 +186,18 @@
                 android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/down_special"
+                    android:text="@string/DOWN_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_pull"
-                    app:soundID="@string/peach_pull"/>
+                    android:id="@+id/peach_pull_button"
+                    app:soundID="@string/PEACH_PULL"/>
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/up_special"
+                    android:text="@string/UP_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_parasol"
-                    app:soundID="@string/peach_parasol"/>
+                    android:id="@+id/peach_parasol_button"
+                    app:soundID="@string/PEACH_PARASOL"/>
 
             </TableRow>
 
@@ -206,18 +206,18 @@
                 android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/damage1"
+                    android:text="@string/DAMAGE1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_damage"
-                    app:soundID="@string/peach_damage"/>
+                    android:id="@+id/peach_damage_button"
+                    app:soundID="@string/PEACH_DAMAGE"/>
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/death1"
+                    android:text="@string/DEATH1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_death"
-                    app:soundID="@string/peach_death"/>
+                    android:id="@+id/peach_death_button"
+                    app:soundID="@string/PEACH_DEATH"/>
 
             </TableRow>
 
@@ -226,18 +226,18 @@
                 android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/star_ko"
+                    android:text="@string/STAR_KO"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_star_ko"
-                    app:soundID="@string/peach_star_ko"/>
+                    android:id="@+id/peach_star_ko_button"
+                    app:soundID="@string/PEACH_STAR_KO"/>
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/screen_ko"
+                    android:text="@string/SCREEN_KO"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/peach_screen_ko"
-                    app:soundID="@string/peach_screen_ko"/>
+                    android:id="@+id/peach_screen_ko_button"
+                    app:soundID="@string/PEACH_SCREEN_KO"/>
 
             </TableRow>
     </TableLayout>

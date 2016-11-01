@@ -21,27 +21,27 @@ public class SoundActivitySheik extends AppCompatActivity {
         final Intent exitIntent = new Intent(this, MainActivity.class);
 
         ArrayList<Integer> sheikSoundIds = new ArrayList<Integer>();
-        sheikSoundIds.add(R.id.sheik_cheer);
-        sheikSoundIds.add(R.id.sheik_victory);
-        sheikSoundIds.add(R.id.sheik_taunt);
-        sheikSoundIds.add(R.id.sheik_smash1);
-        sheikSoundIds.add(R.id.sheik_smash2);
-        sheikSoundIds.add(R.id.sheik_smash3);
-        sheikSoundIds.add(R.id.sheik_smash4);
-        sheikSoundIds.add(R.id.sheik_smash5);
-        sheikSoundIds.add(R.id.sheik_spot_dodge);
-        sheikSoundIds.add(R.id.sheik_neutral_b);
-        sheikSoundIds.add(R.id.sheik_side_b);
-        sheikSoundIds.add(R.id.sheik_down_b);
-        sheikSoundIds.add(R.id.sheik_up_b);
-        sheikSoundIds.add(R.id.sheik_damage1);
-        sheikSoundIds.add(R.id.sheik_damage2);
-        sheikSoundIds.add(R.id.sheik_damage3);
-        sheikSoundIds.add(R.id.sheik_death1);
-        sheikSoundIds.add(R.id.sheik_death2);
-        sheikSoundIds.add(R.id.sheik_death3);
-        sheikSoundIds.add(R.id.sheik_off_top);
-        sheikSoundIds.add(R.id.sheik_jump);
+        sheikSoundIds.add(R.id.sheik_cheer_button);
+        sheikSoundIds.add(R.id.sheik_victory_button);
+        sheikSoundIds.add(R.id.sheik_taunt_button);
+        sheikSoundIds.add(R.id.sheik_smash1_button);
+        sheikSoundIds.add(R.id.sheik_smash2_button);
+        sheikSoundIds.add(R.id.sheik_smash3_button);
+        sheikSoundIds.add(R.id.sheik_smash4_button);
+        sheikSoundIds.add(R.id.sheik_smash5_button);
+        sheikSoundIds.add(R.id.sheik_spot_dodge_button);
+        sheikSoundIds.add(R.id.sheik_neutral_b_button);
+        sheikSoundIds.add(R.id.sheik_side_b_button);
+        sheikSoundIds.add(R.id.sheik_down_b_button);
+        sheikSoundIds.add(R.id.sheik_up_b_button);
+        sheikSoundIds.add(R.id.sheik_damage1_button);
+        sheikSoundIds.add(R.id.sheik_damage2_button);
+        sheikSoundIds.add(R.id.sheik_damage3_button);
+        sheikSoundIds.add(R.id.sheik_death1_button);
+        sheikSoundIds.add(R.id.sheik_death2_button);
+        sheikSoundIds.add(R.id.sheik_death3_button);
+        sheikSoundIds.add(R.id.sheik_off_top_button);
+        sheikSoundIds.add(R.id.sheik_jump_button);
 
         Button sheikPalette = (Button) this.findViewById(R.id.sheik_banner);
         sheikPalette.setOnClickListener(new View.OnClickListener() {

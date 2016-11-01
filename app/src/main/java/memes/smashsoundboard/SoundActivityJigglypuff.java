@@ -3,7 +3,6 @@ package memes.smashsoundboard;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -11,9 +10,6 @@ import android.widget.Button;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.jar.JarInputStream;
-
-import static memes.smashsoundboard.R.raw.jigglypuff_initial_rollout;
 
 public class SoundActivityJigglypuff extends AppCompatActivity {
 
@@ -28,22 +24,22 @@ public class SoundActivityJigglypuff extends AppCompatActivity {
         final Intent exitIntent = new Intent(this, MainActivity.class); //Click button > Go there
 
         ArrayList<Integer> jigglypuffSoundIds = new ArrayList<Integer>();
-        jigglypuffSoundIds.add(R.id.jigglypuff_cheer);
-        jigglypuffSoundIds.add(R.id.jigglypuff_victory);
-        jigglypuffSoundIds.add(R.id.jigglypuff_taunt);
-        jigglypuffSoundIds.add(R.id.jigglypuff_smash1);
-        jigglypuffSoundIds.add(R.id.jigglypuff_smash2);
-        jigglypuffSoundIds.add(R.id.jigglypuff_smash3);
-        jigglypuffSoundIds.add(R.id.jigglypuff_smash4);
-        jigglypuffSoundIds.add(R.id.jigglypuff_smash5);
-        jigglypuffSoundIds.add(R.id.jigglypuff_rollout);
-        jigglypuffSoundIds.add(R.id.jigglypuff_pound);
-        jigglypuffSoundIds.add(R.id.jigglypuff_rest);
-        jigglypuffSoundIds.add(R.id.jigglypuff_sing);
-        jigglypuffSoundIds.add(R.id.jigglypuff_death1);  //Death percent
-        jigglypuffSoundIds.add(R.id.jigglypuff_death2);  //Uah
-        jigglypuffSoundIds.add(R.id.jigglypuff_star_ko);  //jiggly echo
-        jigglypuffSoundIds.add(R.id.jigglypuff_screen_ko);    //death percent
+        jigglypuffSoundIds.add(R.id.jigglypuff_cheer_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_victory_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_taunt_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_smash1_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_smash2_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_smash3_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_smash4_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_smash5_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_rollout_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_pound_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_rest_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_sing_button);
+        jigglypuffSoundIds.add(R.id.jigglypuff_death1_button);  //Death percent
+        jigglypuffSoundIds.add(R.id.jigglypuff_death2_button);  //Uah
+        jigglypuffSoundIds.add(R.id.jigglypuff_star_ko_button);  //jiggly echo
+        jigglypuffSoundIds.add(R.id.jigglypuff_screen_ko_button);    //death percent
 
         Button jigglypuffPalette = (Button) this.findViewById(R.id.jigglypuff_banner);
         jigglypuffPalette.setOnClickListener(new View.OnClickListener() {

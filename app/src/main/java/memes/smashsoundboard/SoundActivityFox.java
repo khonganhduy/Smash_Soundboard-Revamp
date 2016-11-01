@@ -22,33 +22,33 @@ public class SoundActivityFox extends AppCompatActivity {
 
 //        Fox variables
         ArrayList<Integer> foxSoundIds = new ArrayList<Integer>();
-        foxSoundIds.add(R.id.fox_cheer);
-        foxSoundIds.add(R.id.fox_mission_complete);
-        foxSoundIds.add(R.id.fox_taunt);
-        foxSoundIds.add(R.id.fox_jp_taunt);
-        foxSoundIds.add(R.id.fox_smash1);
-        foxSoundIds.add(R.id.fox_smash2);
-        foxSoundIds.add(R.id.fox_smash3);
-        foxSoundIds.add(R.id.fox_smash4);
-        foxSoundIds.add(R.id.fox_smash5);
-        foxSoundIds.add(R.id.fox_spot_dodge);
-        foxSoundIds.add(R.id.fox_laser);
-        foxSoundIds.add(R.id.fox_illusion);
-        foxSoundIds.add(R.id.fox_shine);
-        foxSoundIds.add(R.id.fox_firefox);
-        foxSoundIds.add(R.id.fox_damage1);
-        foxSoundIds.add(R.id.fox_damage2);
-        foxSoundIds.add(R.id.fox_damage3);
-        foxSoundIds.add(R.id.fox_death1);
-        foxSoundIds.add(R.id.fox_death2);
-        foxSoundIds.add(R.id.fox_death3);
-        foxSoundIds.add(R.id.fox_off_top);
-        foxSoundIds.add(R.id.fox_double_jump);
-        foxSoundIds.add(R.id.fox_gun_draw);
-        foxSoundIds.add(R.id.fox_gun_withdrawal);
-        foxSoundIds.add(R.id.fox_multishine);
+        foxSoundIds.add(R.id.fox_cheer_button);
+        foxSoundIds.add(R.id.fox_mission_complete_button);
+        foxSoundIds.add(R.id.fox_taunt_button);
+        foxSoundIds.add(R.id.fox_jp_taunt_button);
+        foxSoundIds.add(R.id.fox_smash1_button);
+        foxSoundIds.add(R.id.fox_smash2_button);
+        foxSoundIds.add(R.id.fox_smash3_button);
+        foxSoundIds.add(R.id.fox_smash4_button);
+        foxSoundIds.add(R.id.fox_smash5_button);
+        foxSoundIds.add(R.id.fox_spot_dodge_button);
+        foxSoundIds.add(R.id.fox_laser_button);
+        foxSoundIds.add(R.id.fox_illusion_button);
+        foxSoundIds.add(R.id.fox_shine_button);
+        foxSoundIds.add(R.id.fox_firefox_button);
+        foxSoundIds.add(R.id.fox_damage1_button);
+        foxSoundIds.add(R.id.fox_damage2_button);
+        foxSoundIds.add(R.id.fox_damage3_button);
+        foxSoundIds.add(R.id.fox_death1_button);
+        foxSoundIds.add(R.id.fox_death2_button);
+        foxSoundIds.add(R.id.fox_death3_button);
+        foxSoundIds.add(R.id.fox_off_top_button);
+        foxSoundIds.add(R.id.fox_double_jump_button);
+        foxSoundIds.add(R.id.fox_gun_draw_button);
+        foxSoundIds.add(R.id.fox_gun_withdrawal_button);
+        foxSoundIds.add(R.id.fox_multishine_button);
 
-        Button foxPalette = (Button) this.findViewById(R.id.fox_banner);
+        Button foxPalette = (Button) this.findViewById(R.id.fox_banner_button);
         foxPalette.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

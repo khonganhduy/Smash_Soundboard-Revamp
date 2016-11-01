@@ -21,256 +21,256 @@
         android:layout_height="wrap_content"
         android:background="@drawable/fox_palette"
         android:layout_centerHorizontal="true"
-        android:id="@+id/fox_banner"/>
+        android:id="@+id/fox_banner_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/audience_cheer"
-        android:id="@+id/fox_cheer"
-        app:soundID="@string/fox_cheer"
+        android:text="@string/AUDIENCE_CHEER"
+        android:id="@+id/fox_cheer_button"
+        app:soundID="@string/FOX_CHEER"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_banner"/>
+        android:layout_below="@id/fox_banner_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/victory"
-        android:id="@+id/fox_mission_complete"
-        app:soundID="@string/fox_mission_complete"
+        android:text="@string/VICTORY1"
+        android:id="@+id/fox_mission_complete_button"
+        app:soundID="@string/FOX_MISSION_COMPLETE"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_banner"/>
+        android:layout_below="@id/fox_banner_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/taunt"
-        android:id="@+id/fox_taunt"
-        app:soundID="@string/fox_taunt"
+        android:text="@string/TAUNT"
+        android:id="@+id/fox_taunt_button"
+        app:soundID="@string/FOX_TAUNT"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_cheer"/>
+        android:layout_below="@id/fox_cheer_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/jp_taunt"
-        android:id="@+id/fox_jp_taunt"
-        app:soundID="@string/fox_jp_taunt"
+        android:text="@string/JP_TAUNT"
+        android:id="@+id/fox_jp_taunt_button"
+        app:soundID="@string/FOX_JP_TAUNT"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_mission_complete" />
+        android:layout_below="@id/fox_mission_complete_button" />
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/smash1"
-        android:id="@+id/fox_smash1"
-        app:soundID="@string/fox_smash1"
+        android:text="@string/SMASH1"
+        android:id="@+id/fox_smash1_button"
+        app:soundID="@string/FOX_SMASH1"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_taunt"/>
+        android:layout_below="@id/fox_taunt_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/smash2"
-        android:id="@+id/fox_smash2"
-        app:soundID="@string/fox_smash2"
+        android:text="@string/SMASH2"
+        android:id="@+id/fox_smash2_button"
+        app:soundID="@string/FOX_SMASH2"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_jp_taunt"/>
+        android:layout_below="@id/fox_jp_taunt_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/smash3"
-        android:id="@+id/fox_smash3"
-        app:soundID="@string/fox_smash3"
+        android:text="@string/SMASH3"
+        android:id="@+id/fox_smash3_button"
+        app:soundID="@string/FOX_SMASH3"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_smash1"/>
+        android:layout_below="@id/fox_smash1_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/smash4"
-        android:id="@+id/fox_smash4"
-        app:soundID="@string/fox_smash4"
+        android:text="@string/SMASH4"
+        android:id="@+id/fox_smash4_button"
+        app:soundID="@string/FOX_SMASH4"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_smash2"/>
+        android:layout_below="@id/fox_smash2_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/smash5"
-        android:id="@+id/fox_smash5"
-        app:soundID="@string/fox_smash5"
+        android:text="@string/SMASH5"
+        android:id="@+id/fox_smash5_button"
+        app:soundID="@string/FOX_SMASH5"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_smash3"/>
+        android:layout_below="@id/fox_smash3_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/spot_dodge"
-        android:id="@+id/fox_spot_dodge"
-        app:soundID="@string/fox_spot_dodge"
+        android:text="@string/SPOT_DODGE"
+        android:id="@+id/fox_spot_dodge_button"
+        app:soundID="@string/FOX_SPOT_DODGE"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_smash4"/>
+        android:layout_below="@id/fox_smash4_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/neutral_special"
-        android:id="@+id/fox_laser"
-        app:soundID="@string/fox_laser"
+        android:text="@string/NEUTRAL_SPECIAL"
+        android:id="@+id/fox_laser_button"
+        app:soundID="@string/FOX_LASER"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_smash5"/>
+        android:layout_below="@id/fox_smash5_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/side_special"
-        android:id="@+id/fox_illusion"
-        app:soundID="@string/fox_illusion"
+        android:text="@string/SIDE_SPECIAL"
+        android:id="@+id/fox_illusion_button"
+        app:soundID="@string/FOX_ILLUSION"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_spot_dodge"/>
+        android:layout_below="@id/fox_spot_dodge_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/up_special"
-        android:id="@+id/fox_firefox"
-        app:soundID="@string/fox_firefox"
+        android:text="@string/UP_SPECIAL"
+        android:id="@+id/fox_firefox_button"
+        app:soundID="@string/FOX_FIREFOX"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_laser"/>
+        android:layout_below="@id/fox_laser_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/down_special"
-        android:id="@+id/fox_shine"
-        app:soundID="@string/fox_shine"
+        android:text="@string/DOWN_SPECIAL"
+        android:id="@+id/fox_shine_button"
+        app:soundID="@string/FOX_SHINE"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_illusion"/>
+        android:layout_below="@id/fox_illusion_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/damage1"
-        android:id="@+id/fox_damage1"
-        app:soundID="@string/fox_damage1"
+        android:text="@string/DAMAGE1"
+        android:id="@+id/fox_damage1_button"
+        app:soundID="@string/FOX_DAMAGE1"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_firefox"/>
+        android:layout_below="@id/fox_firefox_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/damage2"
-        android:id="@+id/fox_damage2"
-        app:soundID="@string/fox_damage2"
+        android:text="@string/DAMAGE2"
+        android:id="@+id/fox_damage2_button"
+        app:soundID="@string/FOX_DAMAGE2"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_shine"/>
+        android:layout_below="@id/fox_shine_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/damage3"
-        android:id="@+id/fox_damage3"
-        app:soundID="@string/fox_damage3"
+        android:text="@string/DAMAGE3"
+        android:id="@+id/fox_damage3_button"
+        app:soundID="@string/FOX_DAMAGE3"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_damage1"/>
+        android:layout_below="@id/fox_damage1_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/death1"
-        android:id="@+id/fox_death1"
-        app:soundID="@string/fox_death1"
+        android:text="@string/DEATH1"
+        android:id="@+id/fox_death1_button"
+        app:soundID="@string/FOX_DEATH1"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_damage2"/>
+        android:layout_below="@id/fox_damage2_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/death2"
-        android:id="@+id/fox_death2"
-        app:soundID="@string/fox_death2"
+        android:text="@string/DEATH2"
+        android:id="@+id/fox_death2_button"
+        app:soundID="@string/FOX_DEATH2"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_damage3"/>
+        android:layout_below="@id/fox_damage3_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/death3"
-        android:id="@+id/fox_death3"
-        app:soundID="@string/fox_death3"
+        android:text="@string/DEATH3"
+        android:id="@+id/fox_death3_button"
+        app:soundID="@string/FOX_DEATH3"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_death1"/>
+        android:layout_below="@id/fox_death1_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/star_ko"
-        android:id="@+id/fox_off_top"
-        app:soundID="@string/fox_off_top"
+        android:text="@string/STAR_KO"
+        android:id="@+id/fox_off_top_button"
+        app:soundID="@string/FOX_STAR_KO"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_death2"/>
+        android:layout_below="@id/fox_death2_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/double_jump"
-        android:id="@+id/fox_double_jump"
-        app:soundID="@string/fox_double_jump"
+        android:text="@string/DOUBLE_JUMP"
+        android:id="@+id/fox_double_jump_button"
+        app:soundID="@string/FOX_DOUBLE_JUMP"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_death3"/>
+        android:layout_below="@id/fox_death3_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gun_draw"
-        android:id="@+id/fox_gun_draw"
-        app:soundID="@string/fox_gun_draw"
+        android:text="@string/GUN_DRAW"
+        android:id="@+id/fox_gun_draw_button"
+        app:soundID="@string/FOX_GUN_DRAW"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@id/align"
-        android:layout_below="@id/fox_off_top"/>
+        android:layout_below="@id/fox_off_top_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gun_withdrawal"
-        android:id="@+id/fox_gun_withdrawal"
-        app:soundID="@string/fox_gun_withdrawal"
+        android:text="@string/GUN_WITHDRAWAL"
+        android:id="@+id/fox_gun_withdrawal_button"
+        app:soundID="@string/FOX_GUN_WITHDRAWAL"
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@id/align"
-        android:layout_below="@id/fox_double_jump"/>
+        android:layout_below="@id/fox_double_jump_button"/>
 
     <memes.smashsoundboard.SoundButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/multishine"
-        android:id="@+id/fox_multishine"
-        app:soundID="@string/fox_multishine"
+        android:text="@string/MULTISHINE"
+        android:id="@+id/fox_multishine_button"
+        app:soundID="@string/FOX_MULTISHINE"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/fox_gun_draw"/>
+        android:layout_below="@id/fox_gun_draw_button"/>
 
 </RelativeLayout>
 </ScrollView>
