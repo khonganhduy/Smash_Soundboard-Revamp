@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         sectionId.add(R.id.peach_section);
         sectionId.add(R.id.jigglypuff_section);
         sectionId.add(R.id.pika_section);
+        sectionId.add(R.id.captainfalcon_section);
 
         ArrayList<Class> intentName = new ArrayList<Class>();
         intentName.add(SoundActivityFox.class);
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         intentName.add(SoundActivityPeach.class);
         intentName.add(SoundActivityJigglypuff.class);
         intentName.add(SoundActivityPika.class);
+        intentName.add(SoundActivityCaptainFalcon.class);
 
         for (int i = 0; i < sectionId.size(); i++) {
             final SoundButton aButton = (SoundButton) this.findViewById(sectionId.get(i));

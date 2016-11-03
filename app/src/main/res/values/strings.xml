@@ -251,6 +251,8 @@
     <string name="PEACH_CLUB"> golf club</string>
     <string name="PEACH_RACKET">tennis racket</string>
         <!--CaptainFalcon Misc-->
-    <string name="CAPTAINFALCON_QUOTE">android.resource://memes.smashsoundboard/raw/captainfalcon_quote</string>
+    <string name="CAPTAINFALCON_YES_STRING">YES</string>
+    <string name="CAPTAINFALCON_TRIPLE_JAB_STRING">triple jab</string>
+    <string name="CAPTAINFALCON_RAPID_PUNCH_STRING">rapid punch</string>
 
 </resources>

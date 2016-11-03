@@ -1,6 +1,7 @@
 package memes.smashsoundboard;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.Button;
 
 import java.io.IOException;
 import java.util.ArrayList;
+//Test edit #1
 
 public class SoundActivityFox extends AppCompatActivity {
 
@@ -21,7 +23,15 @@ public class SoundActivityFox extends AppCompatActivity {
         final Intent exitIntent = new Intent(this, MainActivity.class);
 
 //        Fox variables
+        Resources res = getResources();
+        int[] foxIDs = res.getIntArray(R.array.FOX_SOUNDS_ARRAY);
         ArrayList<Integer> foxSoundIds = new ArrayList<Integer>();
+        for(int i:foxIDs)
+        {
+            foxSoundIds.add(i);
+        }
+
+        /*
         foxSoundIds.add(R.id.fox_cheer_button);
         foxSoundIds.add(R.id.fox_mission_complete_button);
         foxSoundIds.add(R.id.fox_taunt_button);
@@ -47,6 +57,7 @@ public class SoundActivityFox extends AppCompatActivity {
         foxSoundIds.add(R.id.fox_gun_draw_button);
         foxSoundIds.add(R.id.fox_gun_withdrawal_button);
         foxSoundIds.add(R.id.fox_multishine_button);
+        */
 
         Button foxPalette = (Button) this.findViewById(R.id.fox_banner_button);
         foxPalette.setOnClickListener(new View.OnClickListener() {

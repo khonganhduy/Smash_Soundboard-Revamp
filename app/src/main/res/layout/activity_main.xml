@@ -68,6 +68,13 @@
                 android:id="@+id/pika_section"
                 app:soundID="@string/PIKA_CHAR_CALL"/>
 
+            <memes.smashsoundboard.SoundButton
+                android:background="@drawable/captainfalcon_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/captainfalcon_section"
+                app:soundID="@string/CAPTAINFALCON_CHAR_CALL"/>
+
         </TableRow>
     </TableLayout>
 </ScrollView>

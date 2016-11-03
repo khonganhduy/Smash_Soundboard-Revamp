@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".SoundActivityPeach">
         </activity>
+        <activity android:name=".SoundActivityCaptainFalcon">
+        </activity>
         <activity android:name=".SoundActivityPika">
         </activity>
     </application>
