@@ -187,6 +187,32 @@
     <string name="ICECLIMBERS_DEATH2">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_death2</string>
     <string name="ICECLIMBERS_STAR_KO">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_star_ko</string>
 
+    <!--CaptainFalcon Strings-->
+    <string name="CAPTAINFALCON_CHAR_CALL">android.resource://memes.smashsoundboard/raw/captainfalcon_char_call</string>
+    <string name="CAPTAINFALCON_CHEER">android.resource://memes.smashsoundboard/raw/captainfalcon_cheer</string>
+    <string name="CAPTAINFALCON_VICTORY">android.resource://memes.smashsoundboard/raw/captainfalcon_victory1</string>
+    <string name="CAPTAINFALCON_VICTORY2">android.resource://memes.smashsoundboard/raw/captainfalcon_victory2</string>
+    <string name="CAPTAINFALCON_TAUNT">android.resource://memes.smashsoundboard/raw/captainfalcon_taunt</string>
+    <string name="CAPTAINFALCON_SMASH1">android.resource://memes.smashsoundboard/raw/captainfalcon_smash1</string>
+    <string name="CAPTAINFALCON_SMASH2">android.resource://memes.smashsoundboard/raw/captainfalcon_smash2</string>
+    <string name="CAPTAINFALCON_SMASH3">android.resource://memes.smashsoundboard/raw/captainfalcon_smash3</string>
+    <string name="CAPTAINFALCON_SMASH4">android.resource://memes.smashsoundboard/raw/captainfalcon_smash4</string>
+    <string name="CAPTAINFALCON_SMASH5">android.resource://memes.smashsoundboard/raw/captainfalcon_smash5</string>
+    <string name="CAPTAINFALCON_SPOT_DODGE">android.resource://memes.smashsoundboard/raw/captainfalcon_spot_dodge</string>
+    <string name="CAPTAINFALCON_TRIPLE_JAB">android.resource://memes.smashsoundboard/raw/captainfalcon_triple_jab</string>
+    <string name="CAPTAINFALCON_RAPID_PUNCH">android.resource://memes.smashsoundboard/raw/captainfalcon_rapid_punch</string>
+    <string name="CAPTAINFALCON_FALCON_PUNCH">android.resource://memes.smashsoundboard/raw/captainfalcon_falcon_punch</string>
+    <string name="CAPTAINFALCON_FALCON_BOOST">android.resource://memes.smashsoundboard/raw/captainfalcon_falcon_boost</string>
+    <string name="CAPTAINFALCON_FALCON_KICK">android.resource://memes.smashsoundboard/raw/captainfalcon_falcon_kick</string>
+    <string name="CAPTAINFALCON_FALCON_DIVE">android.resource://memes.smashsoundboard/raw/captainfalcon_falcon_dive</string>
+    <string name="CAPTAINFALCON_YES">android.resource://memes.smashsoundboard/raw/captainfalcon_yes</string>
+    <string name="CAPTAINFALCON_DOUBLE_JUMP">android.resource://memes.smashsoundboard/raw/captainfalcon_double_jump</string>
+    <string name="CAPTAINFALCON_DAMAGE">android.resource://memes.smashsoundboard/raw/captainfalcon_damage</string>
+    <string name="CAPTAINFALCON_DEATH">android.resource://memes.smashsoundboard/raw/captainfalcon_death</string>
+    <string name="CAPTAINFALCON_STAR_KO">android.resource://memes.smashsoundboard/raw/captainfalcon_star_ko</string>
+    <string name="CAPTAINFALCON_SCREEN_KO">android.resource://memes.smashsoundboard/raw/captainfalcon_screen_ko</string>
+    <string name="CAPTAINFALCON_QUOTE">android.resource://memes.smashsoundboard/raw/captainfalcon_quote</string>
+
     <!--Universal/Misc Strings-->
     <string name="AUDIENCE_CHEER">audience cheer</string>
     <string name="VICTORY1">victory line 1</string>
@@ -224,5 +250,7 @@
     <string name="PEACH_FRYING_PAN">frying pan</string>
     <string name="PEACH_CLUB"> golf club</string>
     <string name="PEACH_RACKET">tennis racket</string>
+        <!--CaptainFalcon Misc-->
+    <string name="CAPTAINFALCON_QUOTE">android.resource://memes.smashsoundboard/raw/captainfalcon_quote</string>
 
 </resources>
