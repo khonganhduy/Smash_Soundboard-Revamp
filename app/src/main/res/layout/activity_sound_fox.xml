@@ -22,7 +22,7 @@
         android:background="@drawable/fox_palette"
         android:layout_centerHorizontal="true"
         android:id="@+id/fox_banner_button"/>
-
+    
     <memes.smashsoundboard.SoundButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
