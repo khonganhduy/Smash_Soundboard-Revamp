@@ -26,12 +26,8 @@ public class SoundActivityFox extends AppCompatActivity {
         Resources res = getResources();
         int[] foxIDs = res.getIntArray(R.array.FOX_SOUNDS_ARRAY);
         ArrayList<Integer> foxSoundIds = new ArrayList<Integer>();
-        for(int i:foxIDs)
-        {
-            foxSoundIds.add(i);
-        }
+        ArrayList<Integer> foxSoundRef = new ArrayList<Integer>();
 
-        /*
         foxSoundIds.add(R.id.fox_cheer_button);
         foxSoundIds.add(R.id.fox_mission_complete_button);
         foxSoundIds.add(R.id.fox_taunt_button);
@@ -57,8 +53,16 @@ public class SoundActivityFox extends AppCompatActivity {
         foxSoundIds.add(R.id.fox_gun_draw_button);
         foxSoundIds.add(R.id.fox_gun_withdrawal_button);
         foxSoundIds.add(R.id.fox_multishine_button);
-        */
 
+
+        for(int i:foxIDs)
+        {
+            foxSoundRef.add(i);
+        }
+        for(int i = 0; i < foxSoundIds.size(); i++)
+        {
+            assert foxSoundIds.get(i) == foxSoundRef.get(i) : "Non matching reference: " + foxSoundIds.get(i);
+        }
         Button foxPalette = (Button) this.findViewById(R.id.fox_banner_button);
         foxPalette.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +73,7 @@ public class SoundActivityFox extends AppCompatActivity {
         });
         for (int i = 0; i < foxSoundIds.size(); i++) {
             final SoundButton foxSoundButton = (SoundButton) this.findViewById(foxSoundIds.get(i));
-            if (foxSoundIds.size() - 1 == i) {
+            if (foxSoundButton.getId() == R.id.fox_multishine_button) {
                 foxSoundButton.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
