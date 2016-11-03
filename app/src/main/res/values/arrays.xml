@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/tools" xmlns:app="urn:oasis:names:tc:xliff:document:1.2">
     <integer-array name="FOX_SOUNDS_ARRAY">
-        <item>@+id/fox_cheer_button</item>
-        <item>@+id/fox_mission_complete_button</item>
-        <item>@+id/fox_taunt_button</item>
-        <item>@+id/fox_jp_taunt_button</item>
-        <item>@+id/fox_smash1_button</item>
-        <item>@+id/fox_smash2_button</item>
-        <item>@+id/fox_smash3_button</item>
-        <item>@+id/fox_smash4_button</item>
-        <item>@+id/fox_smash5_button</item>
-        <item>@+id/fox_spot_dodge_button</item>
-        <item>@+id/fox_laser_button</item>
-        <item>@+id/fox_illusion_button</item>
-        <item>@+id/fox_shine_button</item>
-        <item>@+id/fox_firefox_button</item>
-        <item>@+id/fox_damage1_button</item>
-        <item>@+id/fox_damage2_button</item>
-        <item>@+id/fox_damage3_button</item>
-        <item>@+id/fox_death1_button</item>
-        <item>@+id/fox_death2_button</item>
-        <item>@+id/fox_death3_button</item>
-        <item>@+id/fox_off_top_button</item>
-        <item>@+id/fox_double_jump_button</item>
-        <item>@+id/fox_gun_draw_button</item>
-        <item>@+id/fox_gun_withdrawal_button</item>
-        <item>@+id/fox_multishine_button</item>
+        <item>@id/fox_cheer_button</item>
+        <item>@id/fox_mission_complete_button</item>
+        <item>@id/fox_taunt_button</item>
+        <item>@id/fox_jp_taunt_button</item>
+        <item>@id/fox_smash1_button</item>
+        <item>@id/fox_smash2_button</item>
+        <item>@id/fox_smash3_button</item>
+        <item>@id/fox_smash4_button</item>
+        <item>@id/fox_smash5_button</item>
+        <item>@id/fox_spot_dodge_button</item>
+        <item>@id/fox_laser_button</item>
+        <item>@id/fox_illusion_button</item>
+        <item>@id/fox_shine_button</item>
+        <item>@id/fox_firefox_button</item>
+        <item>@id/fox_damage1_button</item>
+        <item>@id/fox_damage2_button</item>
+        <item>@id/fox_damage3_button</item>
+        <item>@id/fox_death1_button</item>
+        <item>@id/fox_death2_button</item>
+        <item>@id/fox_death3_button</item>
+        <item>@id/fox_off_top_button</item>
+        <item>@id/fox_double_jump_button</item>
+        <item>@id/fox_gun_draw_button</item>
+        <item>@id/fox_gun_withdrawal_button</item>
+        <item>@id/fox_multishine_button</item>
     </integer-array>
 </resources>
