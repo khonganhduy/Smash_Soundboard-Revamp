@@ -1,4 +1,4 @@
-/*package memes.smashsoundboard;
+package memes.smashsoundboard;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -20,26 +20,26 @@ public class SoundActivityIceClimbers extends AppCompatActivity {
         setContentView(R.layout.activity_sound_iceclimbers);    //Finds ID of resource layout
         final Intent exitIntent = new Intent(this, MainActivity.class); //Click button > Go there
 
-        ArrayList<Integer> iceClimbersSoundIds = new ArrayList<Integer>();
-        iceClimbersSoundIds.add(R.id.iceClimbers_cheer);
-        iceClimbersSoundIds.add(R.id.iceClimbers_victory);
-        iceClimbersSoundIds.add(R.id.iceClimbers_taunt);
-        iceClimbersSoundIds.add(R.id.iceClimbers_smash1);
-        iceClimbersSoundIds.add(R.id.iceClimbers_smash2);
-        iceClimbersSoundIds.add(R.id.iceClimbers_smash3);
-        iceClimbersSoundIds.add(R.id.iceClimbers_smash4);
-        iceClimbersSoundIds.add(R.id.iceClimbers_smash5);
-        iceClimbersSoundIds.add(R.id.iceClimbers_rollout);
-        iceClimbersSoundIds.add(R.id.iceClimbers_pound);
-        iceClimbersSoundIds.add(R.id.iceClimbers_rest);
-        iceClimbersSoundIds.add(R.id.iceClimbers_sing);
-        iceClimbersSoundIds.add(R.id.iceClimbers_death1);  //Death percent
-        iceClimbersSoundIds.add(R.id.iceClimbers_death2);  //Uah
-        iceClimbersSoundIds.add(R.id.iceClimbers_star_ko);  //jiggly echo
-        iceClimbersSoundIds.add(R.id.iceClimbers_screen_ko);    //death percent
+        ArrayList<Integer> iceclimbersSoundIds = new ArrayList<Integer>();
+        iceclimbersSoundIds.add(R.id.iceclimbers_cheer_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_victory_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_taunt_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_smash1_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_smash2_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_smash3_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_smash4_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_smash5_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_iceshot_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_squallhammer_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_blizzard_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_belay_button);
+        iceclimbersSoundIds.add(R.id.iceclimbers_death1_button);  //Death percent
+        iceclimbersSoundIds.add(R.id.iceclimbers_death2_button);  //Uah
+        iceclimbersSoundIds.add(R.id.iceclimbers_star_ko_button);  //jiggly echo
+        iceclimbersSoundIds.add(R.id.iceclimbers_screen_ko_button);    //death percent
 
-        Button iceClimbersPalette = (Button) this.findViewById(R.id.iceClimbers_banner);
-        iceClimbersPalette.setOnClickListener(new View.OnClickListener() {
+        Button iceclimbersPalette = (Button) this.findViewById(R.id.iceclimbers_banner);
+        iceclimbersPalette.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 player.reset();
@@ -47,12 +47,12 @@ public class SoundActivityIceClimbers extends AppCompatActivity {
             }
         });
 
-        for (int i = 0; i < iceClimbersSoundIds.size(); i++) {
-            final SoundButton iceClimbersSoundButton = (SoundButton) this.findViewById(iceClimbersSoundIds.get(i));
-            iceClimbersSoundButton.setOnClickListener(new View.OnClickListener() {
+        for (int i = 0; i < iceclimbersSoundIds.size(); i++) {
+            final SoundButton iceclimbersSoundButton = (SoundButton) this.findViewById(iceclimbersSoundIds.get(i));
+            iceclimbersSoundButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    playSound(iceClimbersSoundButton, v);
+                    playSound(iceclimbersSoundButton, v);
                 }
             });
         }
@@ -77,4 +77,4 @@ public class SoundActivityIceClimbers extends AppCompatActivity {
         player = null;
     }
 
-}*/
+}

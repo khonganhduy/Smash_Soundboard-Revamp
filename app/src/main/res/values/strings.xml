@@ -168,25 +168,6 @@
     <string name="PIKA_DEATH2">android.resource://memes.smashsoundboard/raw/pika_death2</string>
     <string name="PIKA_STAR_KO">android.resource://memes.smashsoundboard/raw/pika_star_ko</string>
 
-    <!--IceClimbers Strings-->
-    <string name="ICECLIMBERS_CHAR_CALL">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_char_call</string>
-    <string name="ICECLIMBERS_CHEER">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_cheer</string>
-    <string name="ICECLIMBERS_VICTORY">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_victory</string>
-    <string name="ICECLIMBERS_TAUNT">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_taunt</string>
-    <string name="ICECLIMBERS_SMASH1">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_smash1</string>
-    <string name="ICECLIMBERS_SMASH2">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_smash2</string>
-    <string name="ICECLIMBERS_SMASH3">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_smash3</string>
-    <string name="ICECLIMBERS_SMASH4">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_smash4</string>
-    <string name="ICECLIMBERS_SMASH5">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_smash5</string>
-    <string name="ICECLIMBERS_ICEBLOCK">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_iceblock</string>
-    <string name="ICECLIMBERS_SQUALLHAMMER">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_squallhammer</string>
-    <string name="ICECLIMBERS_BLIZZARD">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_blizzard</string>
-    <string name="ICECLIMBERS_BELAY">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_belay</string>
-    <string name="ICECLIMBERS_DAMAGE1">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_damage1</string>
-    <string name="ICECLIMBERS_DEATH1">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_death1</string>
-    <string name="ICECLIMBERS_DEATH2">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_death2</string>
-    <string name="ICECLIMBERS_STAR_KO">android.resource://memes.smashsoundboard/raw/ICECLIMBERS_star_ko</string>
-
     <!--CaptainFalcon Strings-->
     <string name="CAPTAINFALCON_CHAR_CALL">android.resource://memes.smashsoundboard/raw/captainfalcon_char_call</string>
     <string name="CAPTAINFALCON_CHEER">android.resource://memes.smashsoundboard/raw/captainfalcon_cheer</string>
@@ -212,6 +193,25 @@
     <string name="CAPTAINFALCON_STAR_KO">android.resource://memes.smashsoundboard/raw/captainfalcon_star_ko</string>
     <string name="CAPTAINFALCON_SCREEN_KO">android.resource://memes.smashsoundboard/raw/captainfalcon_screen_ko</string>
     <string name="CAPTAINFALCON_QUOTE">android.resource://memes.smashsoundboard/raw/captainfalcon_quote</string>
+
+    <!--IceClimbers Strings-->
+    <string name="ICECLIMBERS_CHAR_CALL">android.resource://memes.smashsoundboard/raw/iceclimbers_char_call</string>
+    <string name="ICECLIMBERS_CHEER">android.resource://memes.smashsoundboard/raw/iceclimbers_cheer</string>
+    <string name="ICECLIMBERS_VICTORY">android.resource://memes.smashsoundboard/raw/iceclimbers_victory</string>
+    <string name="ICECLIMBERS_TAUNT">android.resource://memes.smashsoundboard/raw/iceclimbers_taunt</string>
+    <string name="ICECLIMBERS_SMASH1">android.resource://memes.smashsoundboard/raw/iceclimbers_smash1</string>
+    <string name="ICECLIMBERS_SMASH2">android.resource://memes.smashsoundboard/raw/iceclimbers_smash2</string>
+    <string name="ICECLIMBERS_SMASH3">android.resource://memes.smashsoundboard/raw/iceclimbers_smash3</string>
+    <string name="ICECLIMBERS_SMASH4">android.resource://memes.smashsoundboard/raw/iceclimbers_smash4</string>
+    <string name="ICECLIMBERS_SMASH5">android.resource://memes.smashsoundboard/raw/iceclimbers_smash5</string>
+    <string name="ICECLIMBERS_ICESHOT">android.resource://memes.smashsoundboard/raw/iceclimbers_iceshot</string>
+    <string name="ICECLIMBERS_SQUALLHAMMER">android.resource://memes.smashsoundboard/raw/iceclimbers_squallhammer</string>
+    <string name="ICECLIMBERS_BLIZZARD">android.resource://memes.smashsoundboard/raw/iceclimbers_blizzard</string>
+    <string name="ICECLIMBERS_BELAY">android.resource://memes.smashsoundboard/raw/iceclimbers_belay</string>
+    <string name="ICECLIMBERS_DAMAGE1">android.resource://memes.smashsoundboard/raw/iceclimbers_damage1</string>
+    <string name="ICECLIMBERS_DEATH1">android.resource://memes.smashsoundboard/raw/iceclimbers_death1</string>
+    <string name="ICECLIMBERS_DEATH2">android.resource://memes.smashsoundboard/raw/iceclimbers_death2</string>
+    <string name="ICECLIMBERS_STAR_KO">android.resource://memes.smashsoundboard/raw/iceclimbers_star_ko</string>
 
     <!--Universal/Misc Strings-->
     <string name="AUDIENCE_CHEER">audience cheer</string>
