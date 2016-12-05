@@ -2,12 +2,14 @@ package memes.smashsoundboard;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
 
-public class SoundActivityCaptainFalcon {
+public class SoundActivityCaptainFalcon extends AppCompatActivity {
 
     private static MediaPlayer player = new MediaPlayer();
 
