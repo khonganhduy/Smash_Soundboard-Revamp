@@ -13,9 +13,14 @@ import java.util.TreeMap;
 
 public abstract class SoundActivity extends AppCompatActivity {
     protected MediaPlayer player = new MediaPlayer();
-    //protected ArrayList<Integer> soundIds;
-    protected TreeMap<Integer,Act> soundIds;
-
+    protected class SoundMap extends TreeMap<Integer,Act>
+    {
+        public void add(int id)
+        {
+            put(id, Act.DEF);
+        }
+    }
+    protected SoundMap soundIds;
     abstract protected void addSoundIds();
 
     abstract protected void onCreate(Bundle savedInstanceState);
@@ -24,8 +29,7 @@ public abstract class SoundActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(layoutId);
-        //soundIds = new ArrayList<Integer>();
-        soundIds = new TreeMap<Integer, Act>();
+        soundIds = new SoundMap();
         addSoundIds();
         setExitButton(exitId);
         setSounds();
@@ -61,12 +65,6 @@ public abstract class SoundActivity extends AppCompatActivity {
                 setButtonAction(soundButton);
             }
         }
-        /*
-        for (int i = 0; i < soundIds.size(); i++) {
-            final SoundButton soundButton = (SoundButton) this.findViewById(soundIds.get(i));
-            setButtonAction(soundButton);
-        }
-        */
     }
 
     protected void defaultAction(final SoundButton soundButton)
