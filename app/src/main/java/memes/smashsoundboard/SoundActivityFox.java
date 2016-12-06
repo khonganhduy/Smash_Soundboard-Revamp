@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 //Test edit #1
 
+/*
 public class SoundActivityFox extends AppCompatActivity {
 
     private static final MediaPlayer player = new MediaPlayer();
@@ -23,10 +24,7 @@ public class SoundActivityFox extends AppCompatActivity {
         final Intent exitIntent = new Intent(this, MainActivity.class);
 
 //        Fox variables
-        Resources res = getResources();
-        int[] foxIDs = res.getIntArray(R.array.FOX_SOUNDS_ARRAY);
         ArrayList<Integer> foxSoundIds = new ArrayList<Integer>();
-        ArrayList<Integer> foxSoundRef = new ArrayList<Integer>();
 
         foxSoundIds.add(R.id.fox_cheer_button);
         foxSoundIds.add(R.id.fox_mission_complete_button);
@@ -54,16 +52,6 @@ public class SoundActivityFox extends AppCompatActivity {
         foxSoundIds.add(R.id.fox_gun_withdrawal_button);
         foxSoundIds.add(R.id.fox_multishine_button);
 
-
-        for(int i:foxIDs)
-        {
-            foxSoundRef.add(i);
-        }
-        for(int i = 0; i < foxSoundIds.size(); i++)
-        {
-            if(foxSoundIds.get(i) != foxSoundRef.get(i))
-                System.out.println("Non matching reference: " + foxSoundIds.get(i) + "    Array id: " + foxSoundRef.get(i));
-        }
         Button foxPalette = (Button) this.findViewById(R.id.fox_banner_button);
         foxPalette.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,6 +101,76 @@ public class SoundActivityFox extends AppCompatActivity {
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+}
+*/
+
+public class SoundActivityFox extends SoundActivity{
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState,R.layout.activity_sound_fox, R.id.fox_banner_button);
+    }
+
+    @Override
+    protected void addSoundIds() {
+
+//        Fox variables
+
+        soundIds.add(R.id.fox_cheer_button);
+        soundIds.add(R.id.fox_mission_complete_button);
+        soundIds.add(R.id.fox_taunt_button);
+        soundIds.add(R.id.fox_jp_taunt_button);
+        soundIds.add(R.id.fox_smash1_button);
+        soundIds.add(R.id.fox_smash2_button);
+        soundIds.add(R.id.fox_smash3_button);
+        soundIds.add(R.id.fox_smash4_button);
+        soundIds.add(R.id.fox_smash5_button);
+        soundIds.add(R.id.fox_spot_dodge_button);
+        soundIds.add(R.id.fox_laser_button);
+        soundIds.add(R.id.fox_illusion_button);
+        soundIds.add(R.id.fox_shine_button);
+        soundIds.add(R.id.fox_firefox_button);
+        soundIds.add(R.id.fox_damage1_button);
+        soundIds.add(R.id.fox_damage2_button);
+        soundIds.add(R.id.fox_damage3_button);
+        soundIds.add(R.id.fox_death1_button);
+        soundIds.add(R.id.fox_death2_button);
+        soundIds.add(R.id.fox_death3_button);
+        soundIds.add(R.id.fox_off_top_button);
+        soundIds.add(R.id.fox_double_jump_button);
+        soundIds.add(R.id.fox_gun_draw_button);
+        soundIds.add(R.id.fox_gun_withdrawal_button);
+        soundIds.add(R.id.fox_multishine_button);
+    }
+
+    protected void setButtonAction(final SoundButton soundButton)
+    {
+        if (soundButton.getId() == R.id.fox_multishine_button) {
+            soundButton.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    switch (event.getAction()) {
+                        case MotionEvent.ACTION_DOWN:
+                            playSound(soundButton, v);
+                            player.setLooping(true);
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            player.reset();
+                            break;
+                        case MotionEvent.ACTION_CANCEL:
+                            player.reset();
+                            break;
+                    }
+                    return false;
+                }
+            });
+        } else {
+            soundButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    playSound(soundButton, v);
+                }
+            });
         }
     }
 }
