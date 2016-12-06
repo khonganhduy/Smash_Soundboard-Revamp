@@ -3,12 +3,9 @@ package memes.smashsoundboard;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -51,6 +48,16 @@ public abstract class SoundActivity extends AppCompatActivity {
             final SoundButton soundButton = (SoundButton) this.findViewById(soundIds.get(i));
             setButtonAction(soundButton);
         }
+    }
+
+    protected void defaultAction(final SoundButton soundButton)
+    {
+        soundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playSound(soundButton, v);
+            }
+        });
     }
 
     protected void playSound(SoundButton button, View view) {
