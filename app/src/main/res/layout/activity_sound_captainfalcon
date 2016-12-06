@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SoundActivityCaptainFalcon">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/captainfalcon_banner_button"
+            android:background="@drawable/captainfalcon_palette" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/AUDIENCE_CHEER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_cheer_button"
+                    app:soundID="@string/CAPTAINFALCON_CHEER"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/VICTORY1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_victory1_button"
+                    app:soundID="@string/CAPTAINFALCON_VICTORY"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/VICTORY2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_victory2_button"
+                    app:soundID="@string/CAPTAINFALCON_VICTORY2"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/TAUNT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_taunt_button"
+                    app:soundID="@string/CAPTAINFALCON_TAUNT"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/SMASH1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_smash1_button"
+                    app:soundID="@string/CAPTAINFALCON_SMASH1"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/SMASH2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_smash2_button"
+                    app:soundID="@string/CAPTAINFALCON_SMASH2"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/SMASH3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_smash3_button"
+                    app:soundID="@string/CAPTAINFALCON_SMASH3"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/SMASH4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_smash4_button"
+                    app:soundID="@string/CAPTAINFALCON_SMASH4"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/SMASH5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_smash5_button"
+                    app:soundID="@string/CAPTAINFALCON_SMASH5"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/SPOT_DODGE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_spot_dodge_button"
+                    app:soundID="@string/CAPTAINFALCON_SPOT_DODGE"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/CAPTAINFALCON_TRIPLE_JAB_STRING"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_triple_jab_button"
+                    app:soundID="@string/CAPTAINFALCON_TRIPLE_JAB"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/CAPTAINFALCON_RAPID_PUNCH_STRING"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_rapid_punch_button"
+                    app:soundID="@string/CAPTAINFALCON_RAPID_PUNCH"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/NEUTRAL_SPECIAL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_falcon_punch_button"
+                    app:soundID="@string/CAPTAINFALCON_FALCON_PUNCH"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/SIDE_SPECIAL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_raptor_boost_button"
+                    app:soundID="@string/CAPTAINFALCON_FALCON_BOOST"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/DOWN_SPECIAL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_falcon_kick_button"
+                    app:soundID="@string/CAPTAINFALCON_FALCON_KICK"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/UP_SPECIAL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_falcon_dive_button"
+                    app:soundID="@string/CAPTAINFALCON_FALCON_DIVE"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/CAPTAINFALCON_YES_STRING"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_yes_button"
+                    app:soundID="@string/CAPTAINFALCON_YES"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/DOUBLE_JUMP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_double_jump_button"
+                    app:soundID="@string/CAPTAINFALCON_DOUBLE_JUMP"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/DAMAGE1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_damage_button"
+                    app:soundID="@string/CAPTAINFALCON_DAMAGE"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/DEATH1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_death_button"
+                    app:soundID="@string/CAPTAINFALCON_DEATH"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/STAR_KO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_star_ko_button"
+                    app:soundID="@string/CAPTAINFALCON_STAR_KO"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/SCREEN_KO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_screen_ko_button"
+                    app:soundID="@string/CAPTAINFALCON_SCREEN_KO"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/QUOTE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/captainfalcon_quote_button"
+                    app:soundID="@string/CAPTAINFALCON_QUOTE"/>
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
