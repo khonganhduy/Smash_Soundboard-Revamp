@@ -26,6 +26,7 @@ public abstract class SoundActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(layoutId);
+        soundIds = new ArrayList<Integer>();
         addSoundIds();
         setExitButton(exitId);
         setSounds();
