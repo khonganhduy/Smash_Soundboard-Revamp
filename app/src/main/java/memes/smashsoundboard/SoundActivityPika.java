@@ -14,7 +14,7 @@ import java.util.ArrayList;
 /**
  * Created by Akabe on 10/29/2016.
  */
-/*
+
 public class SoundActivityPika extends AppCompatActivity {
     private static final MediaPlayer player = new MediaPlayer();
     MediaPlayer sBashRelese = new MediaPlayer();
@@ -120,4 +120,3 @@ public class SoundActivityPika extends AppCompatActivity {
         player.setOnCompletionListener(null);
     }
 }
-*/

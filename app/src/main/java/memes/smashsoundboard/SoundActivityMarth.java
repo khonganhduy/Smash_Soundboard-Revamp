@@ -120,7 +120,7 @@ import java.util.ArrayList;
         player.release();
         player = null;
     }
-}
+}*/
 public class SoundActivityMarth extends SoundActivity {
         private static MediaPlayer player = new MediaPlayer();
         private MediaPlayer release = new MediaPlayer();
@@ -219,4 +219,3 @@ public class SoundActivityMarth extends SoundActivity {
             }
     }
 
-*/

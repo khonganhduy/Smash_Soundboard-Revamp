@@ -11,7 +11,7 @@ import android.widget.Button;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/*public class SoundActivitySheik extends AppCompatActivity {
+public class SoundActivitySheik extends AppCompatActivity {
 
     private static final MediaPlayer player = new MediaPlayer();
 
@@ -96,4 +96,3 @@ import java.util.ArrayList;
         }
     }
 }
-*/

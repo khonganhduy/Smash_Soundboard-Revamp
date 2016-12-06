@@ -4,7 +4,7 @@ package memes.smashsoundboard;
 import android.os.Bundle;
 import android.view.View;
 
-/*public class SoundActivityPeach extends SoundActivity{
+public class SoundActivityPeach extends SoundActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState,R.layout.activity_sound_fox, R.id.fox_banner_button);
     }
@@ -49,4 +49,4 @@ import android.view.View;
                 }
             });
         }
-    }*/
+    }
