@@ -213,6 +213,25 @@
     <string name="ICECLIMBERS_DEATH2">android.resource://memes.smashsoundboard/raw/iceclimbers_death2</string>
     <string name="ICECLIMBERS_STAR_KO">android.resource://memes.smashsoundboard/raw/iceclimbers_star_ko</string>
 
+    <!--IceClimbers Strings-->
+    <string name="SAMUS_CHAR_CALL">android.resource://memes.smashsoundboard/raw/samus_char_call</string>
+    <string name="SAMUS_CHEER">android.resource://memes.smashsoundboard/raw/samus_cheer</string>
+    <string name="SAMUS_VICTORY">android.resource://memes.smashsoundboard/raw/samus_victory</string>
+    <string name="SAMUS_TAUNT">android.resource://memes.smashsoundboard/raw/samus_taunt</string>
+    <string name="SAMUS_SMASH1">android.resource://memes.smashsoundboard/raw/samus_smash1</string>
+    <string name="SAMUS_SMASH2">android.resource://memes.smashsoundboard/raw/samus_smash2</string>
+    <string name="SAMUS_SMASH3">android.resource://memes.smashsoundboard/raw/samus_smash3</string>
+    <string name="SAMUS_SMASH4">android.resource://memes.smashsoundboard/raw/samus_smash4</string>
+    <string name="SAMUS_SMASH5">android.resource://memes.smashsoundboard/raw/samus_smash5</string>
+    <string name="SAMUS_CHARGESHOT">android.resource://memes.smashsoundboard/raw/samus_chargeshot</string>
+    <string name="SAMUS_MISSILE">android.resource://memes.smashsoundboard/raw/samus_missile</string>
+    <string name="SAMUS_BOMB">android.resource://memes.smashsoundboard/raw/samus_bomb</string>
+    <string name="SAMUS_SCREWATTACK">android.resource://memes.smashsoundboard/raw/samus_screwattack</string>
+    <string name="SAMUS_DAMAGE1">android.resource://memes.smashsoundboard/raw/samus_damage1</string>
+    <string name="SAMUS_DEATH1">android.resource://memes.smashsoundboard/raw/samus_death1</string>
+    <string name="SAMUS_DEATH2">android.resource://memes.smashsoundboard/raw/samus_death2</string>
+    <string name="SAMUS_STAR_KO">android.resource://memes.smashsoundboard/raw/samus_star_ko</string>
+
     <!--Universal/Misc Strings-->
     <string name="AUDIENCE_CHEER">audience cheer</string>
     <string name="VICTORY1">victory line 1</string>

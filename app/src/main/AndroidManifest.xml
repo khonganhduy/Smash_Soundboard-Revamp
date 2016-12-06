@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".SoundActivityPika">
         </activity>
+        <activity android:name=".SoundActivitySamus">
+        </activity>
     </application>
 
 </manifest>

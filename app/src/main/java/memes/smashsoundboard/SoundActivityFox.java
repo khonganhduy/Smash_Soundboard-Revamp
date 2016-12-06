@@ -62,7 +62,7 @@ public class SoundActivityFox extends AppCompatActivity {
         for(int i = 0; i < foxSoundIds.size(); i++)
         {
             if(foxSoundIds.get(i) != foxSoundRef.get(i))
-                System.out.println("Non matching reference: " + foxSoundIds.get(i));
+                System.out.println("Non matching reference: " + foxSoundIds.get(i) + "    Array id: " + foxSoundRef.get(i));
         }
         Button foxPalette = (Button) this.findViewById(R.id.fox_banner_button);
         foxPalette.setOnClickListener(new View.OnClickListener() {

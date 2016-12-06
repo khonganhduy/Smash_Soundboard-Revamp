@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SoundActivityPeach">
+    tools:context=".SoundActivityJigglypuff">
 
 
     <LinearLayout
@@ -15,8 +15,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/iceclimbers_banner"
-            android:background="@drawable/iceclimbers_palette" />
+            android:id="@+id/samus_banner"
+            android:background="@drawable/samus_palette" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -31,134 +31,74 @@
                     android:text="@string/AUDIENCE_CHEER"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_cheer_button"
-                    app:soundID="@string/ICECLIMBERS_CHEER"/>
+                    android:id="@+id/samus_cheer_button"
+                    app:soundID="@string/SAMUS_CHEER"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/VICTORY1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_victory1_button"
-                    app:soundID="@string/ICECLIMBERS_VICTORY"/>
+                    android:id="@+id/samus_victory_button"
+                    app:soundID="@string/SAMUS_VICTORY"/>
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
-
-                <memes.smashsoundboard.SoundButton
-                    android:text="@string/VICTORY2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_victory2_button"
-                    app:soundID="@string/ICECLIMBERS_VICTORY2"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/TAUNT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_taunt_button"
-                    app:soundID="@string/ICECLIMBERS_TAUNT"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                    android:id="@+id/samus_taunt_button"
+                    app:soundID="@string/SAMUS_TAUNT"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SMASH1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_smash1_button"
-                    app:soundID="@string/ICECLIMBERS_SMASH1"/>
+                    android:id="@+id/samus_smash1_button"
+                    app:soundID="@string/SAMUS_SMASH1"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SMASH2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_smash2_button"
-                    app:soundID="@string/ICECLIMBERS_SMASH2"/>
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                    android:id="@+id/samus_smash2_button"
+                    app:soundID="@string/SAMUS_SMASH2"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SMASH3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_smash3_button"
-                    app:soundID="@string/ICECLIMBERS_SMASH3"/>
+                    android:id="@+id/samus_smash3_button"
+                    app:soundID="@string/SAMUS_SMASH3"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SMASH4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_smash4_button"
-                    app:soundID="@string/ICECLIMBERS_SMASH4"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                    android:id="@+id/samus_smash4_button"
+                    app:soundID="@string/SAMUS_SMASH4"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SMASH5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_smash5_button"
-                    app:soundID="@string/ICECLIMBERS_SMASH5"/>
-
-                <memes.smashsoundboard.SoundButton
-                    android:text="@string/ICECLIMBERS_FRYING_PAN"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_pan_button"
-                    app:soundID="@string/ICECLIMBERS_PAN"/>
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <memes.smashsoundboard.SoundButton
-                    android:text="@string/ICECLIMBERS_CLUB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_golf_club_button"
-                    app:soundID="@string/ICECLIMBERS_GOLF_CLUB"/>
-
-                <memes.smashsoundboard.SoundButton
-                    android:text="@string/ICECLIMBERS_RACKET"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_tennis_racket_button"
-                    app:soundID="@string/ICECLIMBERS_TENNIS_RACKET"/>
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <memes.smashsoundboard.SoundButton
-                    android:text="@string/JUMP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_jump_button"
-                    app:soundID="@string/ICECLIMBERS_JUMP"/>
-
-                <memes.smashsoundboard.SoundButton
-                    android:text="@string/DOUBLE_JUMP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_double_jump_button"
-                    app:soundID="@string/ICECLIMBERS_DOUBLE_JUMP"/>
-
+                    android:id="@+id/samus_smash5_button"
+                    app:soundID="@string/SAMUS_SMASH5"/>
             </TableRow>
 
             <TableRow
@@ -169,15 +109,15 @@
                     android:text="@string/NEUTRAL_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_toad_button"
-                    app:soundID="@string/ICECLIMBERS_ICESHOT"/>
+                    android:id="@+id/samus_rollout_button"
+                    app:soundID="@string/SAMUS_CHARGESHOT"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SIDE_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_bomber_button"
-                    app:soundID="@string/ICECLIMBERS_SQUALLHAMMER"/>
+                    android:id="@+id/samus_pound_button"
+                    app:soundID="@string/SAMUS_MISSILE"/>
 
             </TableRow>
 
@@ -189,15 +129,15 @@
                     android:text="@string/DOWN_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_pull_button"
-                    app:soundID="@string/ICECLIMBERS_BLIZZARD"/>
+                    android:id="@+id/samus_rest_button"
+                    app:soundID="@string/SAMUS_BOMB"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/UP_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_parasol_button"
-                    app:soundID="@string/ICECLIMBERS_BELAY"/>
+                    android:id="@+id/samus_sing_button"
+                    app:soundID="@string/SAMUS_SCREWATTACK"/>
 
             </TableRow>
 
@@ -206,18 +146,18 @@
                 android:layout_height="match_parent" >
 
                 <memes.smashsoundboard.SoundButton
-                    android:text="@string/DAMAGE1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_damage_button"
-                    app:soundID="@string/ICECLIMBERS_DAMAGE"/>
-
-                <memes.smashsoundboard.SoundButton
                     android:text="@string/DEATH1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_death_button"
-                    app:soundID="@string/ICECLIMBERS_DEATH"/>
+                    android:id="@+id/samus_death1_button"
+                    app:soundID="@string/SAMUS_DEATH1"/>
+
+                <memes.smashsoundboard.SoundButton
+                    android:text="@string/DEATH2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/samus_death2_button"
+                    app:soundID="@string/SAMUS_DEATH2"/>
 
             </TableRow>
 
@@ -229,15 +169,15 @@
                     android:text="@string/STAR_KO"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_star_ko_button"
-                    app:soundID="@string/ICECLIMBERS_STAR_KO"/>
+                    android:id="@+id/samus_star_ko_button"
+                    app:soundID="@string/SAMUS_STAR_KO"/>
 
                 <memes.smashsoundboard.SoundButton
                     android:text="@string/SCREEN_KO"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iceclimbers_screen_ko_button"
-                    app:soundID="@string/ICECLIMBERS_SCREEN_KO"/>
+                    android:id="@+id/samus_screen_ko_button"
+                    app:soundID="@string/SAMUS_SCREEN_KO"/>
 
             </TableRow>
         </TableLayout>
