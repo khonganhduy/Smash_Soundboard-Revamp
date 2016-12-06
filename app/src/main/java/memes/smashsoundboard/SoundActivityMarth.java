@@ -158,7 +158,7 @@ public class SoundActivityMarth extends SoundActivity {
             soundIds.add(R.id.marth_quote_button);
         }
 
-        protected void setButtonAction(final SoundButton soundButton) {
+        protected void setCustomAction(final SoundButton soundButton) {
             if (soundButton.getId() == R.id.marth_neutral_b_button) {
                 soundButton.setOnTouchListener(new View.OnTouchListener() {
                     @Override

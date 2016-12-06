@@ -4,9 +4,9 @@ package memes.smashsoundboard;
 import android.os.Bundle;
 import android.view.View;
 
-public class SoundActivityCaptainFalcon extends SoundActivity{
+public class SoundActivityCaptainFalcon extends SoundActivity {
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState,R.layout.activity_sound_captainfalcon, R.id.captainfalcon_banner_button);
+        super.onCreate(savedInstanceState, R.layout.activity_sound_captainfalcon, R.id.captainfalcon_banner_button);
     }
 
     @Override
@@ -37,13 +37,6 @@ public class SoundActivityCaptainFalcon extends SoundActivity{
         soundIds.add(R.id.captainfalcon_quote_button); //Come on
     }
 
-    protected void setButtonAction(final SoundButton soundButton)
-    {
-            soundButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    playSound(soundButton, v);
-                }
-            });
-        }
+    protected void setCustomAction(final SoundButton soundButton) {
     }
+}

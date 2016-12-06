@@ -39,7 +39,7 @@ public class SoundActivityFox extends SoundActivity {
         soundIds.put(R.id.fox_multishine_button, Act.CUSTOM);
     }
 
-    protected void setButtonAction(final SoundButton soundButton) {
+    protected void setCustomAction(final SoundButton soundButton) {
         if (soundButton.getId() == R.id.fox_multishine_button) {
             soundButton.setOnTouchListener(new View.OnTouchListener() {
                 @Override

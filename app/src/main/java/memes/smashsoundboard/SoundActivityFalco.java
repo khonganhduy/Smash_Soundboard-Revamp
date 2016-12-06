@@ -47,7 +47,7 @@ public class SoundActivityFalco extends SoundActivity {
         soundIds.put(R.id.falco_multishine_button, Act.CUSTOM);
     }
 
-    protected void setButtonAction(final SoundButton soundButton) {
+    protected void setCustomAction(final SoundButton soundButton) {
         if (soundButton.getId() == R.id.falco_multishine_button) {
             soundButton.setOnTouchListener(new View.OnTouchListener() {
                 @Override

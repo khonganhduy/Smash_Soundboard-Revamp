@@ -48,7 +48,7 @@ public abstract class SoundActivity extends AppCompatActivity {
         });
     }
 
-    abstract protected void setButtonAction(SoundButton soundButton);
+    abstract protected void setCustomAction(SoundButton soundButton);
 
     protected void setSounds() {
         Iterator<Integer> ids = soundIds.keySet().iterator();
@@ -59,7 +59,7 @@ public abstract class SoundActivity extends AppCompatActivity {
             if (soundIds.get(id) == Act.DEF) {
                 defaultAction(soundButton);
             } else {
-                setButtonAction(soundButton);
+                setCustomAction(soundButton);
             }
         }
     }

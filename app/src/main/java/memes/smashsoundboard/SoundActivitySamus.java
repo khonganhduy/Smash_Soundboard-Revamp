@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
+/*
 public class SoundActivitySamus extends AppCompatActivity {
 
     private static MediaPlayer player = new MediaPlayer();
@@ -78,3 +78,4 @@ public class SoundActivitySamus extends AppCompatActivity {
     }
 
 }
+*/

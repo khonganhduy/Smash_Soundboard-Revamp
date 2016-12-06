@@ -39,7 +39,7 @@ public class SoundActivityPeach extends SoundActivity{
 
     }
 
-    protected void setButtonAction(final SoundButton soundButton)
+    protected void setCustomAction(final SoundButton soundButton)
     {
 
             soundButton.setOnClickListener(new View.OnClickListener() {
