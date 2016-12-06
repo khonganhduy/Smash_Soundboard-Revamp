@@ -11,7 +11,7 @@ import android.widget.Button;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class SoundActivityJigglypuff extends AppCompatActivity {
+/*public class SoundActivityJigglypuff extends AppCompatActivity {
 
     private static MediaPlayer player = new MediaPlayer();
     private MediaPlayer rollOutCharge = new MediaPlayer();
@@ -133,4 +133,4 @@ public class SoundActivityJigglypuff extends AppCompatActivity {
         player = null;
     }
 
-}
+}*/

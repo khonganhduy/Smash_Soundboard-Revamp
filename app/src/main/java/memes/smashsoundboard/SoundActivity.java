@@ -50,6 +50,7 @@ public abstract class SoundActivity extends AppCompatActivity {
         while(ids.hasNext())
         {
             int id = ids.next();
+
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
             if(soundIds.get(id) == Act.DEF)
             {
