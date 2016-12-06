@@ -13,8 +13,7 @@ public class SoundActivityCaptainFalcon extends AppCompatActivity {
 
     private static MediaPlayer player = new MediaPlayer();
 
-    protected void onCreate(Bundle saveInstanceState)
-    {
+    protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_sound_captainfalcon);
         final Intent exitIntent = new Intent(this, MainActivity.class);
@@ -44,7 +43,7 @@ public class SoundActivityCaptainFalcon extends AppCompatActivity {
         captainfalconSoundIds.add(R.id.captainfalcon_screen_ko_button);
         captainfalconSoundIds.add(R.id.captainfalcon_quote_button); //Come on
 
-        Button captainfalconPalette = (Button) this.findViewById(R.id.captainfalcon_banner);
+        Button captainfalconPalette = (Button) this.findViewById(R.id.captainfalcon_banner_button);
         captainfalconPalette.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,3 +51,5 @@ public class SoundActivityCaptainFalcon extends AppCompatActivity {
                 startActivity(exitIntent);
             }
         });
+    }
+}
