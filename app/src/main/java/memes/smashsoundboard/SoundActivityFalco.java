@@ -14,8 +14,9 @@ import java.util.ArrayList;
 public class SoundActivityFalco extends SoundActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState,R.layout.activity_sound_falco, R.id.falco_banner);
+        super.onCreate(savedInstanceState, R.layout.activity_sound_falco, R.id.falco_banner);
     }
+
     protected void addSoundIds() {
 
 //        Falco variables
@@ -43,29 +44,29 @@ public class SoundActivityFalco extends SoundActivity {
         soundIds.add(R.id.falco_gun_draw_button);
         soundIds.add(R.id.falco_gun_withdrawal_button);
 
-        soundIds.put(R.id.falco_multishine_button,Act.CUSTOM);
+        soundIds.put(R.id.falco_multishine_button, Act.CUSTOM);
     }
-    protected void setButtonAction(final SoundButton soundButton)
-    {
-            if (soundButton.getId() == R.id.falco_multishine_button) {
-                soundButton.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        switch (event.getAction()) {
-                            case MotionEvent.ACTION_DOWN:
-                                playSound(soundButton, v);
-                                player.setLooping(true);
-                                break;
-                            case MotionEvent.ACTION_UP:
-                                player.reset();
-                                break;
-                            case MotionEvent.ACTION_CANCEL:
-                                player.reset();
-                                break;
-                        }
-                        return false;
+
+    protected void setButtonAction(final SoundButton soundButton) {
+        if (soundButton.getId() == R.id.falco_multishine_button) {
+            soundButton.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    switch (event.getAction()) {
+                        case MotionEvent.ACTION_DOWN:
+                            playSound(soundButton, v);
+                            player.setLooping(true);
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            player.reset();
+                            break;
+                        case MotionEvent.ACTION_CANCEL:
+                            player.reset();
+                            break;
                     }
-                });
+                    return false;
+                }
+            });
         }
     }
 }

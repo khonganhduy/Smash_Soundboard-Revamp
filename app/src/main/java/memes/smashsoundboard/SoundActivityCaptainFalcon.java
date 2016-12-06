@@ -12,8 +12,6 @@ public class SoundActivityCaptainFalcon extends SoundActivity{
     @Override
     protected void addSoundIds() {
 
-//        Fox variables
-
         soundIds.add(R.id.captainfalcon_cheer_button);
         soundIds.add(R.id.captainfalcon_victory1_button);
         soundIds.add(R.id.captainfalcon_victory2_button);

@@ -1,11 +1,12 @@
 package memes.smashsoundboard;
+
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class SoundActivityFox extends SoundActivity{
+public class SoundActivityFox extends SoundActivity {
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState,R.layout.activity_sound_fox, R.id.fox_banner_button);
+        super.onCreate(savedInstanceState, R.layout.activity_sound_fox, R.id.fox_banner_button);
     }
 
     @Override
@@ -35,7 +36,7 @@ public class SoundActivityFox extends SoundActivity{
         soundIds.add(R.id.fox_gun_draw_button);
         soundIds.add(R.id.fox_gun_withdrawal_button);
 
-        soundIds.put(R.id.fox_multishine_button,Act.CUSTOM);
+        soundIds.put(R.id.fox_multishine_button, Act.CUSTOM);
     }
 
     protected void setButtonAction(final SoundButton soundButton) {

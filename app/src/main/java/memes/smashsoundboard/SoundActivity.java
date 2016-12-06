@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.TreeMap;
@@ -13,29 +14,29 @@ import java.util.TreeMap;
 
 public abstract class SoundActivity extends AppCompatActivity {
     protected MediaPlayer player = new MediaPlayer();
-    protected class SoundMap extends TreeMap<Integer,Act>
-    {
-        public void add(int id)
-        {
+
+    protected class SoundMap extends TreeMap<Integer, Act> {
+        public void add(int id) {
             put(id, Act.DEF);
         }
     }
+
     protected SoundMap soundIds;
+
     abstract protected void addSoundIds();
 
     abstract protected void onCreate(Bundle savedInstanceState);
 
-    protected void onCreate(Bundle savedInstanceState, int layoutId, int exitId)
-    {
+    protected void onCreate(Bundle savedInstanceState, int layoutId, int exitId) {
         super.onCreate(savedInstanceState);
         setContentView(layoutId);
         soundIds = new SoundMap();
         addSoundIds();
         setExitButton(exitId);
         setSounds();
-    };
+    }
 
-    protected void setExitButton(int RId){
+    protected void setExitButton(int RId) {
         final Intent exitIntent = new Intent(this, MainActivity.class);
         Button palette = (Button) this.findViewById(RId);
         palette.setOnClickListener(new View.OnClickListener() {
@@ -51,23 +52,18 @@ public abstract class SoundActivity extends AppCompatActivity {
 
     protected void setSounds() {
         Iterator<Integer> ids = soundIds.keySet().iterator();
-        while(ids.hasNext())
-        {
+        while (ids.hasNext()) {
             int id = ids.next();
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
-            if(soundIds.get(id) == Act.DEF)
-            {
+            if (soundIds.get(id) == Act.DEF) {
                 defaultAction(soundButton);
-            }
-            else
-            {
+            } else {
                 setButtonAction(soundButton);
             }
         }
     }
 
-    protected void defaultAction(final SoundButton soundButton)
-    {
+    protected void defaultAction(final SoundButton soundButton) {
         soundButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
