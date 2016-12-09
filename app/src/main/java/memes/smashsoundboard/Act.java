@@ -1,5 +1,5 @@
 package memes.smashsoundboard;
 
 public enum Act {
-    DEF,CUSTOM;
+    DEF,HOLD,LOOP,CUSTOM;
 }

@@ -1,15 +1,11 @@
 package memes.smashsoundboard;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class SoundActivityJigglypuff extends SoundActivity {
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,22 +17,24 @@ public class SoundActivityJigglypuff extends SoundActivity {
 
     @Override
     protected void addSoundIds() {
-        soundIds.add(R.id.jigglypuff_cheer_button);
-        soundIds.add(R.id.jigglypuff_victory_button);
-        soundIds.add(R.id.jigglypuff_taunt_button);
-        soundIds.add(R.id.jigglypuff_smash1_button);
-        soundIds.add(R.id.jigglypuff_smash2_button);
-        soundIds.add(R.id.jigglypuff_smash3_button);
-        soundIds.add(R.id.jigglypuff_smash4_button);
-        soundIds.add(R.id.jigglypuff_smash5_button);
-        soundIds.add(R.id.jigglypuff_rollout_button);
-        soundIds.add(R.id.jigglypuff_pound_button);
-        soundIds.add(R.id.jigglypuff_rest_button);
-        soundIds.add(R.id.jigglypuff_sing_button);
-        soundIds.add(R.id.jigglypuff_death1_button);  //Death percent
-        soundIds.add(R.id.jigglypuff_death2_button);  //Uah
-        soundIds.add(R.id.jigglypuff_star_ko_button);  //jiggly echo
-        soundIds.add(R.id.jigglypuff_screen_ko_button);    //death percent
+        addingButtonIds.add(R.id.jigglypuff_cheer_button);
+        addingButtonIds.add(R.id.jigglypuff_victory_button);
+        addingButtonIds.add(R.id.jigglypuff_taunt_button);
+        addingButtonIds.add(R.id.jigglypuff_smash1_button);
+        addingButtonIds.add(R.id.jigglypuff_smash2_button);
+        addingButtonIds.add(R.id.jigglypuff_smash3_button);
+        addingButtonIds.add(R.id.jigglypuff_smash4_button);
+        addingButtonIds.add(R.id.jigglypuff_smash5_button);
+
+        addingButtonIds.put(R.id.jigglypuff_rollout_button, Act.CUSTOM);
+
+        addingButtonIds.add(R.id.jigglypuff_pound_button);
+        addingButtonIds.add(R.id.jigglypuff_rest_button);
+        addingButtonIds.add(R.id.jigglypuff_sing_button);
+        addingButtonIds.add(R.id.jigglypuff_death1_button);  //Death percent
+        addingButtonIds.add(R.id.jigglypuff_death2_button);  //Uah
+        addingButtonIds.add(R.id.jigglypuff_star_ko_button);  //jiggly echo
+        addingButtonIds.add(R.id.jigglypuff_screen_ko_button);    //death percent
 
         rollOutCharge = MediaPlayer.create(SoundActivityJigglypuff.this, R.raw.jigglypuff_rollout_charge);
         rollOutRelease = MediaPlayer.create(SoundActivityJigglypuff.this, R.raw.jigglypuff_rollout_release);

@@ -11,32 +11,32 @@ public class SoundActivityFox extends SoundActivity {
 
     @Override
     protected void addSoundIds() {
-        soundIds.add(R.id.fox_cheer_button);
-        soundIds.add(R.id.fox_mission_complete_button);
-        soundIds.add(R.id.fox_taunt_button);
-        soundIds.add(R.id.fox_jp_taunt_button);
-        soundIds.add(R.id.fox_smash1_button);
-        soundIds.add(R.id.fox_smash2_button);
-        soundIds.add(R.id.fox_smash3_button);
-        soundIds.add(R.id.fox_smash4_button);
-        soundIds.add(R.id.fox_smash5_button);
-        soundIds.add(R.id.fox_spot_dodge_button);
-        soundIds.add(R.id.fox_laser_button);
-        soundIds.add(R.id.fox_illusion_button);
-        soundIds.add(R.id.fox_shine_button);
-        soundIds.add(R.id.fox_firefox_button);
-        soundIds.add(R.id.fox_damage1_button);
-        soundIds.add(R.id.fox_damage2_button);
-        soundIds.add(R.id.fox_damage3_button);
-        soundIds.add(R.id.fox_death1_button);
-        soundIds.add(R.id.fox_death2_button);
-        soundIds.add(R.id.fox_death3_button);
-        soundIds.add(R.id.fox_off_top_button);
-        soundIds.add(R.id.fox_double_jump_button);
-        soundIds.add(R.id.fox_gun_draw_button);
-        soundIds.add(R.id.fox_gun_withdrawal_button);
+        addingButtonIds.add(R.id.fox_cheer_button);
+        addingButtonIds.add(R.id.fox_mission_complete_button);
+        addingButtonIds.add(R.id.fox_taunt_button);
+        addingButtonIds.add(R.id.fox_jp_taunt_button);
+        addingButtonIds.add(R.id.fox_smash1_button);
+        addingButtonIds.add(R.id.fox_smash2_button);
+        addingButtonIds.add(R.id.fox_smash3_button);
+        addingButtonIds.add(R.id.fox_smash4_button);
+        addingButtonIds.add(R.id.fox_smash5_button);
+        addingButtonIds.add(R.id.fox_spot_dodge_button);
+        addingButtonIds.add(R.id.fox_laser_button);
+        addingButtonIds.add(R.id.fox_illusion_button);
+        addingButtonIds.add(R.id.fox_shine_button);
+        addingButtonIds.add(R.id.fox_firefox_button);
+        addingButtonIds.add(R.id.fox_damage1_button);
+        addingButtonIds.add(R.id.fox_damage2_button);
+        addingButtonIds.add(R.id.fox_damage3_button);
+        addingButtonIds.add(R.id.fox_death1_button);
+        addingButtonIds.add(R.id.fox_death2_button);
+        addingButtonIds.add(R.id.fox_death3_button);
+        addingButtonIds.add(R.id.fox_off_top_button);
+        addingButtonIds.add(R.id.fox_double_jump_button);
+        addingButtonIds.add(R.id.fox_gun_draw_button);
+        addingButtonIds.add(R.id.fox_gun_withdrawal_button);
 
-        soundIds.put(R.id.fox_multishine_button, Act.CUSTOM);
+        addingButtonIds.put(R.id.fox_multishine_button, Act.CUSTOM);
     }
 
     protected void setCustomAction(final SoundButton soundButton) {
