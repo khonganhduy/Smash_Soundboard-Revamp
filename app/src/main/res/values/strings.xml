@@ -13,7 +13,7 @@
     <string name="FOX_SMASH4">android.resource://memes.smashsoundboard/raw/fox_smash4</string>
     <string name="FOX_SMASH5">android.resource://memes.smashsoundboard/raw/fox_smash5</string>
     <string name="FOX_SPOT_DODGE">android.resource://memes.smashsoundboard/raw/fox_spot_dodge</string>
-    <string name="FOX_LASER">android.resource://memes.smashsoundboard/raw/fox_laser</string>
+    <string name="FOX_LASER">android.resource://memes.smashsoundboard/raw/fox_laser.ogg</string>
     <string name="FOX_ILLUSION">android.resource://memes.smashsoundboard/raw/fox_illusion</string>
     <string name="FOX_SHINE">android.resource://memes.smashsoundboard/raw/fox_shine</string>
     <string name="FOX_FIREFOX">android.resource://memes.smashsoundboard/raw/fox_firefox</string>
@@ -108,25 +108,25 @@
     <string name="MARTH_COUNTER2">android.resource://memes.smashsoundboard/raw/marth_counter2</string>
 
     <!--Jigglypuff strings-->
-    <string name="PUFF_CHAR_CALL">android.resource://memes.smashsoundboard/raw/puff_char_call.ogg</string>
-    <string name="JIGGLYPUFF_CHEER">android.resource://memes.smashsoundboard/raw/jigglypuff_cheer.ogg</string>
-    <string name="JIGGLYPUFF_VICTORY">android.resource://memes.smashsoundboard/raw/jigglypuff_victory.ogg</string>
-    <string name="JIGGLYPUFF_TAUNT">android.resource://memes.smashsoundboard/raw/jigglypuff_taunt.ogg</string>
-    <string name="JIGGLYPUFF_SMASH1">android.resource://memes.smashsoundboard/raw/jigglypuff_smash1.ogg</string>
-    <string name="JIGGLYPUFF_SMASH2">android.resource://memes.smashsoundboard/raw/jigglypuff_smash2.ogg</string>
-    <string name="JIGGLYPUFF_SMASH3">android.resource://memes.smashsoundboard/raw/jigglypuff_smash3.ogg</string>
-    <string name="JIGGLYPUFF_SMASH4">android.resource://memes.smashsoundboard/raw/jigglypuff_smash4.ogg</string>
-    <string name="JIGGLYPUFF_SMASH5">android.resource://memes.smashsoundboard/raw/jigglypuff_smash5.ogg</string>
-    <string name="JIGGLYPUFF_ROLLOUT_STARTUP">android.resource://memes.smashsoundboard/raw/jigglypuff_initial_rollout.ogg</string>
-    <string name="JIGGLYPUFF_ROLLOUT_HOLD">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_charge.ogg</string>
-    <string name="JIGGLYPUFF_ROLLOUT_RELEASE">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_release.ogg</string>
-    <string name="JIGGLYPUFF_POUND">android.resource://memes.smashsoundboard/raw/jigglypuff_pound.ogg</string>
-    <string name="JIGGLYPUFF_REST">android.resource://memes.smashsoundboard/raw/jigglypuff_rest.ogg</string>
-    <string name="JIGGLYPUFF_SING">android.resource://memes.smashsoundboard/raw/jigglypuff_sing.ogg</string>
-    <string name="JIGGLYPUFF_DEATH1">android.resource://memes.smashsoundboard/raw/jigglypuff_death1.ogg</string>
-    <string name="JIGGLYPUFF_DEATH2">android.resource://memes.smashsoundboard/raw/jigglypuff_death2.ogg</string>
-    <string name="JIGGLYPUFF_STAR_KO">android.resource://memes.smashsoundboard/raw/jigglypuff_star_ko.ogg</string>
-    <string name="JIGGLYPUFF_SCREEN_KO">android.resource://memes.smashsoundboard/raw/jigglypuff_screen_ko.ogg</string>
+    <string name="PUFF_CHAR_CALL">android.resource://memes.smashsoundboard/raw/puff_char_call</string>
+    <string name="JIGGLYPUFF_CHEER">android.resource://memes.smashsoundboard/raw/jigglypuff_cheer</string>
+    <string name="JIGGLYPUFF_VICTORY">android.resource://memes.smashsoundboard/raw/jigglypuff_victory</string>
+    <string name="JIGGLYPUFF_TAUNT">android.resource://memes.smashsoundboard/raw/jigglypuff_taunt</string>
+    <string name="JIGGLYPUFF_SMASH1">android.resource://memes.smashsoundboard/raw/jigglypuff_smash1</string>
+    <string name="JIGGLYPUFF_SMASH2">android.resource://memes.smashsoundboard/raw/jigglypuff_smash2</string>
+    <string name="JIGGLYPUFF_SMASH3">android.resource://memes.smashsoundboard/raw/jigglypuff_smash3</string>
+    <string name="JIGGLYPUFF_SMASH4">android.resource://memes.smashsoundboard/raw/jigglypuff_smash4</string>
+    <string name="JIGGLYPUFF_SMASH5">android.resource://memes.smashsoundboard/raw/jigglypuff_smash5</string>
+    <string name="JIGGLYPUFF_ROLLOUT_STARTUP">android.resource://memes.smashsoundboard/raw/jigglypuff_initial_rollout</string>
+    <string name="JIGGLYPUFF_ROLLOUT_HOLD">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_charge</string>
+    <string name="JIGGLYPUFF_ROLLOUT_RELEASE">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_release</string>
+    <string name="JIGGLYPUFF_POUND">android.resource://memes.smashsoundboard/raw/jigglypuff_pound</string>
+    <string name="JIGGLYPUFF_REST">android.resource://memes.smashsoundboard/raw/jigglypuff_rest</string>
+    <string name="JIGGLYPUFF_SING">android.resource://memes.smashsoundboard/raw/jigglypuff_sing</string>
+    <string name="JIGGLYPUFF_DEATH1">android.resource://memes.smashsoundboard/raw/jigglypuff_death1</string>
+    <string name="JIGGLYPUFF_DEATH2">android.resource://memes.smashsoundboard/raw/jigglypuff_death2</string>
+    <string name="JIGGLYPUFF_STAR_KO">android.resource://memes.smashsoundboard/raw/jigglypuff_star_ko</string>
+    <string name="JIGGLYPUFF_SCREEN_KO">android.resource://memes.smashsoundboard/raw/jigglypuff_screen_ko</string>
 
     <!--Peach strings-->
     <string name="PEACH_CHAR_CALL">android.resource://memes.smashsoundboard/raw/peach_char_call</string>

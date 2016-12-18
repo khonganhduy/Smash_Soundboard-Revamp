@@ -1,6 +1,7 @@
 package memes.smashsoundboard;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -10,6 +11,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.net.Uri;
+import android.content.Context;
+import android.content.CursorLoader;
+import android.provider.MediaStore;
+import android.database.Cursor;
+
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -25,6 +32,7 @@ public abstract class SoundActivity extends AppCompatActivity {
     protected boolean isPlaying;
     protected SoundMap addButtonIds;
     protected HashMap<Integer, Integer> soundChains, loadedSoundChains;
+    protected AssetManager am = this.getAssets();
 
     protected class SoundMap extends TreeMap<Integer, Act> {
         public void add(int id) {
@@ -130,7 +138,7 @@ public abstract class SoundActivity extends AppCompatActivity {
             int id = ids.next();
             boolean loaded = false;
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
-            final int soundId = soundPlayer.load(soundButton.getSoundID().getPath(), 1);
+            final int soundId = soundPlayer.load(getRealPathFromURI(this, soundButton.getSoundID()), 1);
             switch(addButtonIds.get(id))
             {
                 case DEF:
@@ -225,6 +233,15 @@ public abstract class SoundActivity extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    private String getRealPathFromURI(Context context, Uri contentUri) {
+        String[] proj = {MediaStore.Audio.Media.DATA };
+        CursorLoader loader = new CursorLoader(context, contentUri, proj, null, null, null);
+        Cursor cursor = loader.loadInBackground();
+        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA);
+        cursor.moveToFirst();
+        return cursor.getString(column_index);
     }
 
     protected int getStartSound(SoundButton button)
