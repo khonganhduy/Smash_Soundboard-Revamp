@@ -29,7 +29,7 @@ public abstract class SoundActivity extends AppCompatActivity {
 
     AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
     protected int lastAudio;
-    protected boolean isPlaying;
+    protected boolean isPlaying, loadedSound = true;
 
 
 
@@ -117,11 +117,22 @@ public abstract class SoundActivity extends AppCompatActivity {
 
     protected void loadSoundChain(int id, int firstSound){
         int lastReference = firstSound;
+
         while(soundChains.containsKey(id))
         {
+            while(!loadedSound){}
             int nextSoundToLoad = soundChains.get(id);
             String soundPath = getString(nextSoundToLoad);
             final int sound = soundPlayer.load(soundPath, 1);
+            loadedSound = false;
+            soundPlayer.setOnLoadCompleteListener(
+                    new SoundPool.OnLoadCompleteListener() {
+                        @Override
+                        public void onLoadComplete(SoundPool soundPool, int i, int i1) {
+                            loadedSound = true;
+                        }
+                    }
+            );
             loadedSoundChains.put(lastReference, sound);
             id = nextSoundToLoad;
             lastReference = sound;
@@ -136,10 +147,17 @@ public abstract class SoundActivity extends AppCompatActivity {
     protected void setSounds() {
         Iterator<Integer> ids = addButtonIds.keySet().iterator();
         while (ids.hasNext()) {
-            int id = ids.next();
-
+            while(!loadedSound){}
+            final int id = ids.next();
+            loadedSound = false;
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
             final int soundId = soundPlayer.load(soundButton.getSoundID().getPath(), 1);
+            soundPlayer.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
+                @Override
+                public void onLoadComplete(SoundPool soundPool, int i, int i1) {
+                    loadedSound = true;
+                }
+            });
             switch(addButtonIds.get(id))
             {
                 case DEF:
