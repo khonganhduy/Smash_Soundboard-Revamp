@@ -9,17 +9,17 @@ import android.widget.Button;
 public class SoundButton extends Button {
 
     private Uri soundID;
-    private String soundPath;
+    private int soundPath;
 
     public SoundButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray attributes = context.obtainStyledAttributes(attrs,R.styleable.SoundButton);
         soundID = Uri.parse(attributes.getString(R.styleable.SoundButton_soundID));
-        soundPath = attributes.getString(R.styleable.SoundButton_soundID);
+        soundPath = R.styleable.SoundButton_soundID;
         attributes.recycle();
     }
 
-    public String getSoundPath()
+    public int getSoundPath()
     {
         return soundPath;
     }

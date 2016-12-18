@@ -119,7 +119,7 @@ public abstract class SoundActivity extends AppCompatActivity {
     protected void loadSoundChain(int id, int firstSound){
         int lastReference = firstSound;
         while(soundChains.containsKey(id))
-        { 
+        {
             int nextSoundToLoad = soundChains.get(id);
             String soundPath = getString(nextSoundToLoad);
             final int sound = soundPlayer.load(soundPath, 1);
@@ -135,7 +135,7 @@ public abstract class SoundActivity extends AppCompatActivity {
             int id = ids.next();
             boolean loaded = false;
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
-            final int soundId = soundPlayer.load(soundButton.getSoundPath(), 1);
+            final int soundId = soundPlayer.load(this, soundButton.getSoundPath(), 1);
             switch(addButtonIds.get(id))
             {
                 case DEF:
