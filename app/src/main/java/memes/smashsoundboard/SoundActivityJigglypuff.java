@@ -12,9 +12,6 @@ public class SoundActivityJigglypuff extends SoundActivity {
         super.onCreate(savedInstanceState, R.layout.activity_sound_jigglypuff, R.id.jigglypuff_banner);
     }
 
-    private MediaPlayer rollOutCharge = new MediaPlayer();
-    private MediaPlayer rollOutRelease = new MediaPlayer();
-
     @Override
     protected void addSoundIds() {
         addButtonIds.add(R.id.jigglypuff_cheer_button);
