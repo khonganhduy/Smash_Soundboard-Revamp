@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.view.MotionEvent;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import java.io.IOException;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.TreeMap;
 //Inheritence test
@@ -39,11 +40,54 @@ public abstract class SoundActivity extends AppCompatActivity {
         }
     }
 
-    protected SoundMap addingButtonIds, soundToAction;
+    protected class SoundTimer extends Thread{
+
+        private int id;
+        private int loops;
+        protected SoundTimer(int Rid, int loop)
+        {
+            id = Rid;
+            loops = loop;
+        }
+        protected SoundTimer(int Rid)
+        {
+            id = Rid;
+            loops = 1;
+        }
+        protected long getSoundDuration()
+        {
+            MediaPlayer timer = MediaPlayer.create(SoundActivity.this, id);
+            long time = timer.getDuration() * loops;
+            timer.release();
+            return time;
+        }
+        public void run(){
+            try
+            {
+                wait(getSoundDuration());
+            }
+            catch (InterruptedException e)
+            {
+                return;
+            }
+        }
+    }
 
 
+
+
+    protected SoundMap addButtonIds;
+    protected HashMap<Integer, Integer> soundChains;
+    protected HashMap<Integer, Integer> loadedSoundChains;
     //Methods
 
+    /**
+     * Use:
+     * addButtonIds.add(buttonID) to add a button with default action
+     * addButtonIds.put(buttonID, Act) to add a button with a different action
+     * soundChains.put(sound, nextSound) to chain nextSound to play after sound.
+     * nextSound should always be the integer to the path of a string
+     */
     abstract protected void addSoundIds();
 
     abstract protected void onCreate(Bundle savedInstanceState);
@@ -51,8 +95,9 @@ public abstract class SoundActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState, int layoutId, int exitId) {
         super.onCreate(savedInstanceState);
         setContentView(layoutId);
-        addingButtonIds = new SoundMap();
-        soundToAction = new SoundMap();
+        addButtonIds = new SoundMap();
+        soundChains = new HashMap<>();
+        loadedSoundChains = new HashMap<>();
         addSoundIds();
         setExitButton(exitId);
         setSounds();
@@ -70,56 +115,95 @@ public abstract class SoundActivity extends AppCompatActivity {
         });
     }
 
-    abstract protected Act getCustomAction(SoundButton soundButton);
+    protected void loadSoundChain(int id, int firstSound){
+        int lastReference = firstSound;
+        while(soundChains.containsKey(id))
+        {
+            int nextSoundToLoad = soundChains.get(id);
+            String soundPath = getString(nextSoundToLoad);
+            final int sound = soundPlayer.load(soundPath, 1);
+            loadedSoundChains.put(lastReference, sound);
+            id = nextSoundToLoad;
+            lastReference = sound;
+        }
+    }
+
+    protected void setChainLogic(SoundButton soundButton, int firstSoundId)
+    {
+        //Override needed
+    }
 
     protected void setSounds() {
-        Iterator<Integer> ids = addingButtonIds.keySet().iterator();
+        Iterator<Integer> ids = addButtonIds.keySet().iterator();
         while (ids.hasNext()) {
             int id = ids.next();
 
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
             final int soundId = soundPlayer.load(soundButton.getSoundID().getPath(), 1);
-            soundToAction.put(soundId, addingButtonIds.get(id));
-            soundButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    playSound(soundId, v);
-                }
-            });
+            switch(addButtonIds.get(id))
+            {
+                case DEF:
+                    soundButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            playSound(soundId, v, 0);
+                        }
+                    });
+                    break;
+                case LOOP:
+                    soundButton.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            switch (event.getAction()) {
+                                case MotionEvent.ACTION_DOWN:
+                                    playSound(soundId, v, -1);
+                                    break;
+                                case MotionEvent.ACTION_UP:
+                                    stopSound();
+                                    break;
+                                case MotionEvent.ACTION_CANCEL:
+                                    stopSound();
+                                    break;
+                            }
+                            return false;
+                        }
+                    });
+                    break;
+                case CHAIN:
+                    loadSoundChain(soundButton.getId(),soundId);
+                    setChainLogic(soundButton,soundId);
+            }
         }
     }
-
-    protected void playSound(int soundId, View view) {
-        Act action = soundToAction.get(soundId);
-        float volume =  ((float)audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)) /
-                audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+    protected void stopSound()
+    {
         if(isPlaying)
             soundPlayer.stop(lastAudio);
-        if (action == Act.DEF) {
-            lastAudio = soundPlayer.play(soundId, volume, volume, 1, 0, 1f);
-            isPlaying = true;
-        } else {
+        isPlaying = false;
+    }
 
-        }
-    /*
-        try {
-            player.reset();
-            player.setDataSource(view.getContext(), button.getSoundID());
-            player.prepare();
-            player.start();
+    protected float getVolume()
+    {
+        return ((float) audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)) /
+                audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+    }
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    */
-
+    /**
+     *
+     * @param soundId
+     * @param view
+     * @param loop 0 = No Looping, -1 = Loops until stopped, Any other value x = Loops x times
+     */
+    protected void playSound(int soundId, View view, int loop) {
+        float volume = getVolume();
+        stopSound();
+        lastAudio = soundPlayer.play(soundId, volume, volume, 1, loop, 1f);
     }
 
     public void onDestroy()
     {
         super.onDestroy();
-        isPlaying = false;
+        stopSound();
         soundPlayer.release();
-
     }
 }

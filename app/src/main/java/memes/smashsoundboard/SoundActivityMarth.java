@@ -118,93 +118,79 @@ public void onDestroy() {
 }
 }*/
 public class SoundActivityMarth extends SoundActivity {
-        private static MediaPlayer player = new MediaPlayer();
-        private MediaPlayer release = new MediaPlayer();
+    private static MediaPlayer player = new MediaPlayer();
+    private MediaPlayer release = new MediaPlayer();
 
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState, R.layout.activity_sound_marth, R.id.marth_banner);
-        }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState, R.layout.activity_sound_marth, R.id.marth_banner);
+    }
 
-        @Override
-        protected void addSoundIds() {
+    @Override
+    protected void addSoundIds() {
 
 //        Marth variables
 
-            addingButtonIds.add(R.id.marth_cheer_button);
-            addingButtonIds.add(R.id.marth_victory_button);
-            addingButtonIds.add(R.id.marth_taunt_button);
-            addingButtonIds.add(R.id.marth_smash1_button);
-            addingButtonIds.add(R.id.marth_smash2_button);
-            addingButtonIds.add(R.id.marth_smash3_button);
-            addingButtonIds.add(R.id.marth_smash4_button);
-            addingButtonIds.add(R.id.marth_smash5_button);
-            addingButtonIds.add(R.id.marth_spot_dodge_button);
-            addingButtonIds.put(R.id.marth_neutral_b_button, Act.CUSTOM);
-            addingButtonIds.add(R.id.marth_side_b_button);
-            addingButtonIds.add(R.id.marth_down_b_button);
-            addingButtonIds.add(R.id.marth_counter1_button);
-            addingButtonIds.add(R.id.marth_counter2_button);
-            addingButtonIds.add(R.id.marth_up_b_button);
-            addingButtonIds.add(R.id.marth_damage1_button);
-            addingButtonIds.add(R.id.marth_damage2_button);
-            addingButtonIds.add(R.id.marth_damage3_button);
-            addingButtonIds.add(R.id.marth_death1_button);
-            addingButtonIds.add(R.id.marth_death2_button);
-            addingButtonIds.add(R.id.marth_off_top_button);
-            addingButtonIds.add(R.id.marth_quote_button);
-        }
+        addButtonIds.add(R.id.marth_cheer_button);
+        addButtonIds.add(R.id.marth_victory_button);
+        addButtonIds.add(R.id.marth_taunt_button);
+        addButtonIds.add(R.id.marth_smash1_button);
+        addButtonIds.add(R.id.marth_smash2_button);
+        addButtonIds.add(R.id.marth_smash3_button);
+        addButtonIds.add(R.id.marth_smash4_button);
+        addButtonIds.add(R.id.marth_smash5_button);
+        addButtonIds.add(R.id.marth_spot_dodge_button);
 
-        protected void setCustomAction(final SoundButton soundButton) {
-            if (soundButton.getId() == R.id.marth_neutral_b_button) {
-                soundButton.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        switch (event.getAction()) {
-                            case MotionEvent.ACTION_DOWN:
-                                playSound(soundButton, v);
-                                player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                    @Override
-                                    public void onCompletion(MediaPlayer mp) {
-                                        playMarthNeutralBRelease();
-                                    }
-                                });
-                                break;
-                            case MotionEvent.ACTION_UP:
-                                playSoundOnRelease();
-                                break;
-                            case MotionEvent.ACTION_CANCEL:
-                                playSoundOnRelease();
-                                break;
-                        }
-                        return false;
-                    }
-                });
-            }
-        }
+        addButtonIds.put(R.id.marth_neutral_b_button, Act.CHAIN);
+        addButtonIds.add(R.id.marth_side_b_button);
 
+        addButtonIds.add(R.id.marth_down_b_button);
+        addButtonIds.add(R.id.marth_counter1_button);
+        addButtonIds.add(R.id.marth_counter2_button);
+        addButtonIds.add(R.id.marth_up_b_button);
+        addButtonIds.add(R.id.marth_damage1_button);
+        addButtonIds.add(R.id.marth_damage2_button);
+        addButtonIds.add(R.id.marth_damage3_button);
+        addButtonIds.add(R.id.marth_death1_button);
+        addButtonIds.add(R.id.marth_death2_button);
+        addButtonIds.add(R.id.marth_off_top_button);
+        addButtonIds.add(R.id.marth_quote_button);
 
-            private void playMarthNeutralBRelease () {
-                try {
-                    release.stop();
-                    release.prepare();
-                    release.start();
-                    player.reset();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            private void playSoundOnRelease () {
-                release.start();
-                player.reset();
-                player.setOnCompletionListener(null);
-            }
-
-            public void onDestroy () {
-                super.onDestroy();
-                player.release();
-                player = null;
-            }
+        soundChains.put(R.id.marth_neutral_b_button, R.string.MARTH_NEUTRAL_B_RELEASE);
     }
+
+    protected void setChainLogic(SoundButton soundButton, final int firstSoundId) {
+        final int releaseSound = loadedSoundChains.get(firstSoundId);
+        final SoundTimer timer = new SoundTimer(R.string.MARTH_NEUTRAL_B);
+        soundButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                boolean released = false;
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        playSound(firstSoundId, v, 0);
+                        timer.start();
+                        while (timer.isAlive()) {
+                        }
+                        if (!timer.isInterrupted())
+                            released = true;
+                        playSound(releaseSound, v, 0);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        timer.interrupt();
+                        if (!released)
+                            playSound(releaseSound, v, 0);
+                        break;
+                    case MotionEvent.ACTION_CANCEL:
+                        timer.interrupt();
+                        if (!released)
+                            playSound(releaseSound, v, 0);
+                        break;
+                }
+                return false;
+            }
+        });
+
+    }
+
+}
 

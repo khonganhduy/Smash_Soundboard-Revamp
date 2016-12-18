@@ -1,122 +1,80 @@
 package memes.smashsoundboard;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by Akabe on 10/29/2016.
  */
 
-public class SoundActivityPika extends AppCompatActivity {
+public class SoundActivityPika extends SoundActivity {
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState, R.layout.activity_sound_pika, R.id.pika_banner);
+    }
+
     private static final MediaPlayer player = new MediaPlayer();
     MediaPlayer sBashRelese = new MediaPlayer();
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sound_pika);
-        final Intent exitIntent = new Intent(this, MainActivity.class);
+    protected void addSoundIds() {
 
 //        Fox variables
-        ArrayList<Integer> pikaSoundIds = new ArrayList<Integer>();
-        pikaSoundIds.add(R.id.pika_cheer_button);
-        pikaSoundIds.add(R.id.pika_victory_button);
-        pikaSoundIds.add(R.id.pika_taunt_button);
-        pikaSoundIds.add(R.id.pika_smash1_button);
-        pikaSoundIds.add(R.id.pika_smash2_button);
-        pikaSoundIds.add(R.id.pika_smash3_button);
-        pikaSoundIds.add(R.id.pika_smash4_button);
-        pikaSoundIds.add(R.id.pika_smash5_button);
-        pikaSoundIds.add(R.id.pika_tjolt_button);
-        pikaSoundIds.add(R.id.pika_sbash_button);
-        pikaSoundIds.add(R.id.pika_thunder_button);
-        pikaSoundIds.add(R.id.pika_qatk_button);
-        pikaSoundIds.add(R.id.pika_damage1_button);
-        pikaSoundIds.add(R.id.pika_death1_button);
-        pikaSoundIds.add(R.id.pika_death2_button);
-        pikaSoundIds.add(R.id.pika_star_ko_button);
+        addButtonIds.add(R.id.pika_cheer_button);
+        addButtonIds.add(R.id.pika_victory_button);
+        addButtonIds.add(R.id.pika_taunt_button);
+        addButtonIds.add(R.id.pika_smash1_button);
+        addButtonIds.add(R.id.pika_smash2_button);
+        addButtonIds.add(R.id.pika_smash3_button);
+        addButtonIds.add(R.id.pika_smash4_button);
+        addButtonIds.add(R.id.pika_smash5_button);
+        addButtonIds.add(R.id.pika_tjolt_button);
 
-        Button pikaPalette = (Button) this.findViewById(R.id.pika_banner);
-        pikaPalette.setOnClickListener(new View.OnClickListener() {
+        addButtonIds.put(R.id.pika_skullbash_button, Act.CHAIN);
+
+        addButtonIds.add(R.id.pika_thunder_button);
+        addButtonIds.add(R.id.pika_qatk_button);
+        addButtonIds.add(R.id.pika_damage1_button);
+        addButtonIds.add(R.id.pika_death1_button);
+        addButtonIds.add(R.id.pika_death2_button);
+        addButtonIds.add(R.id.pika_star_ko_button);
+
+        soundChains.put(R.id.pika_skullbash_button, R.string.PIKA_SKULLBASH_RELEASE);
+
+    }
+
+    protected void setChainLogic(SoundButton soundButton, final int firstSoundId) {
+        final int releaseSound = loadedSoundChains.get(firstSoundId);
+        final SoundTimer timer = new SoundTimer(R.string.PIKA_SKULLBASH_INITIAL);
+        soundButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                player.reset();
-                startActivity(exitIntent);
+            public boolean onTouch(View v, MotionEvent event) {
+                boolean released = false;
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        playSound(firstSoundId, v, 0);
+                        timer.start();
+                        while (timer.isAlive()) {
+                        }
+                        if (!timer.isInterrupted())
+                            playSound(releaseSound, v, 0);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        timer.interrupt();
+                        if (!released)
+                            playSound(releaseSound, v, 0);
+                        break;
+                    case MotionEvent.ACTION_CANCEL:
+                        timer.interrupt();
+                        if (!released)
+                            playSound(releaseSound, v, 0);
+                        break;
+                }
+                return false;
             }
         });
-
-        sBashRelese = MediaPlayer.create(SoundActivityPika.this, R.raw.pika_skullbash_release);
-        for (int i = 0; i < pikaSoundIds.size(); i++) {
-            final SoundButton pikaSoundButton = (SoundButton) this.findViewById(pikaSoundIds.get(i));
-            if (pikaSoundIds.get(i) == R.id.pika_sbash_button) {
-                pikaSoundButton.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        switch (event.getAction()) {
-                            case MotionEvent.ACTION_DOWN:
-                                playSound(pikaSoundButton, v);
-                                player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                    @Override
-                                    public void onCompletion(MediaPlayer mp) {
-                                        playPikaSBashRelease();
-                                    }
-                                });
-                                break;
-                            case MotionEvent.ACTION_UP:
-                                playSoundOnRelease();
-                                break;
-                            case MotionEvent.ACTION_CANCEL:
-                                playSoundOnRelease();
-                                break;
-                        }
-                        return false;
-                    }
-                });
-            } else {
-                pikaSoundButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        playSound(pikaSoundButton, v);
-                    }
-                });
-            }
-        }
-    }
-    private void playSound(SoundButton button, View view)
-    {
-        try {
-            player.reset();
-            player.setDataSource(view.getContext(), button.getSoundID());
-            player.prepare();
-            player.start();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void playPikaSBashRelease(){
-        try {
-            sBashRelese.stop();
-            sBashRelese.prepare();
-            sBashRelese.start();
-            player.reset();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void playSoundOnRelease() {
-        sBashRelese.start();
-        player.reset();
-        player.setOnCompletionListener(null);
     }
 }

@@ -116,8 +116,8 @@
                     android:text="@string/SIDE_SPECIAL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/pika_sbash_button"
-                    app:soundID="@string/PIKA_SBASH"/>
+                    android:id="@+id/pika_skullbash_button"
+                    app:soundID="@string/PIKA_SKULLBASH_INITIAL"/>
 
             </TableRow>
 

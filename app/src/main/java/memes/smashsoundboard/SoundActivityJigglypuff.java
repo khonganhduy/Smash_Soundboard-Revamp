@@ -17,88 +17,58 @@ public class SoundActivityJigglypuff extends SoundActivity {
 
     @Override
     protected void addSoundIds() {
-        addingButtonIds.add(R.id.jigglypuff_cheer_button);
-        addingButtonIds.add(R.id.jigglypuff_victory_button);
-        addingButtonIds.add(R.id.jigglypuff_taunt_button);
-        addingButtonIds.add(R.id.jigglypuff_smash1_button);
-        addingButtonIds.add(R.id.jigglypuff_smash2_button);
-        addingButtonIds.add(R.id.jigglypuff_smash3_button);
-        addingButtonIds.add(R.id.jigglypuff_smash4_button);
-        addingButtonIds.add(R.id.jigglypuff_smash5_button);
+        addButtonIds.add(R.id.jigglypuff_cheer_button);
+        addButtonIds.add(R.id.jigglypuff_victory_button);
+        addButtonIds.add(R.id.jigglypuff_taunt_button);
+        addButtonIds.add(R.id.jigglypuff_smash1_button);
+        addButtonIds.add(R.id.jigglypuff_smash2_button);
+        addButtonIds.add(R.id.jigglypuff_smash3_button);
+        addButtonIds.add(R.id.jigglypuff_smash4_button);
+        addButtonIds.add(R.id.jigglypuff_smash5_button);
 
-        addingButtonIds.put(R.id.jigglypuff_rollout_button, Act.CUSTOM);
+        addButtonIds.put(R.id.jigglypuff_rollout_button, Act.CHAIN);
 
-        addingButtonIds.add(R.id.jigglypuff_pound_button);
-        addingButtonIds.add(R.id.jigglypuff_rest_button);
-        addingButtonIds.add(R.id.jigglypuff_sing_button);
-        addingButtonIds.add(R.id.jigglypuff_death1_button);  //Death percent
-        addingButtonIds.add(R.id.jigglypuff_death2_button);  //Uah
-        addingButtonIds.add(R.id.jigglypuff_star_ko_button);  //jiggly echo
-        addingButtonIds.add(R.id.jigglypuff_screen_ko_button);    //death percent
+        addButtonIds.add(R.id.jigglypuff_pound_button);
+        addButtonIds.add(R.id.jigglypuff_rest_button);
+        addButtonIds.add(R.id.jigglypuff_sing_button);
+        addButtonIds.add(R.id.jigglypuff_death1_button);  //Death percent
+        addButtonIds.add(R.id.jigglypuff_death2_button);  //Uah
+        addButtonIds.add(R.id.jigglypuff_star_ko_button);  //jiggly echo
+        addButtonIds.add(R.id.jigglypuff_screen_ko_button);    //death percent
 
-        rollOutCharge = MediaPlayer.create(SoundActivityJigglypuff.this, R.raw.jigglypuff_rollout_charge);
-        rollOutRelease = MediaPlayer.create(SoundActivityJigglypuff.this, R.raw.jigglypuff_rollout_release);
-
+        soundChains.put(R.id.jigglypuff_rollout_button, R.string.JIGGLYPUFF_ROLLOUT_HOLD);
+        soundChains.put(R.string.JIGGLYPUFF_ROLLOUT_HOLD, R.string.JIGGLYPUFF_ROLLOUT_RELEASE);
     }
 
-    protected void setCustomAction(final SoundButton soundButton) {
-        if (soundButton.getId() == R.id.jigglypuff_rollout_button) {
-            soundButton.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    switch (event.getAction()) {
-                        case MotionEvent.ACTION_DOWN:
-                            playSound(soundButton, v);
-                            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                @Override
-                                public void onCompletion(MediaPlayer mp) {
-                                    playRollOutCharge();
-                                    rollOutCharge.setLooping(true);
-                                }
-                            });
-                            break;
-                        case MotionEvent.ACTION_UP:
-                            playSoundOnRelease();
-                            break;
-                        case MotionEvent.ACTION_CANCEL:
-                            playSoundOnRelease();
-                            break;
-                    }
-                    return false;
+    @Override
+    protected void setChainLogic(SoundButton soundButton, final int firstSoundId) {
+        final int loopSound = loadedSoundChains.get(firstSoundId);
+        final int releaseSound = loadedSoundChains.get(loopSound);
+        final SoundTimer timer = new SoundTimer(R.string.JIGGLYPUFF_ROLLOUT_STARTUP);
+        soundButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        playSound(firstSoundId, v, 0);
+                        timer.start();
+                        while (timer.isAlive()) {
+                        }
+                        if (!timer.isInterrupted())
+                            playSound(loopSound, v, -1);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        timer.interrupt();
+                        playSound(releaseSound, v, 0);
+                        break;
+                    case MotionEvent.ACTION_CANCEL:
+                        timer.interrupt();
+                        playSound(releaseSound, v, 0);
+                        break;
                 }
-            });
-        }
-    }
-
-    private void playRollOutCharge() {
-        try {
-            rollOutCharge.stop();
-            rollOutCharge.prepare();
-            rollOutCharge.start();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void playSoundOnRelease() {
-        player.setOnCompletionListener(null);
-        rollOutCharge.stop();
-        rollOutRelease.start();
-        player.reset();
-    }
-
-    public void onDestroy() {
-        super.onDestroy();
-        rollOutCharge.stop();
-        rollOutCharge.release();
-        rollOutCharge = null;
-        rollOutRelease.stop();
-        rollOutRelease.release();
-        rollOutRelease = null;
-        player.stop();
-        player.release();
-        player = null;
+                return false;
+            }
+        });
     }
 
 }

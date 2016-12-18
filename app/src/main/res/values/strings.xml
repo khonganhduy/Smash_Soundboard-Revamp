@@ -68,6 +68,7 @@
     <string name="SHEIK_SMASH5">android.resource://memes.smashsoundboard/raw/sheik_smash5</string>
     <string name="SHEIK_SPOT_DODGE">android.resource://memes.smashsoundboard/raw/sheik_spot_dodge</string>
     <string name="SHEIK_NEUTRAL_B">android.resource://memes.smashsoundboard/raw/sheik_neutral_b</string>
+    <string name="SHEIK_NEUTRAL_B_RELEASE">android.resource://memes.smashsoundboard/raw/sheik_neutral_b</string>
     <string name="SHEIK_SIDE_B">android.resource://memes.smashsoundboard/raw/sheik_side_b</string>
     <string name="SHEIK_DOWN_B">android.resource://memes.smashsoundboard/raw/sheik_down_b</string>
     <string name="SHEIK_UP_B">android.resource://memes.smashsoundboard/raw/sheik_up_b</string>
@@ -92,6 +93,7 @@
     <string name="MARTH_SMASH5">android.resource://memes.smashsoundboard/raw/marth_smash5</string>
     <string name="MARTH_SPOT_DODGE">android.resource://memes.smashsoundboard/raw/marth_spot_dodge</string>
     <string name="MARTH_NEUTRAL_B">android.resource://memes.smashsoundboard/raw/marth_neutral_b</string>
+    <string name="MARTH_NEUTRAL_B_RELEASE">android.resource://memes.smashsoundboard/raw/marth_neutral_b_release</string>
     <string name="MARTH_SIDE_B">android.resource://memes.smashsoundboard/raw/marth_side_b</string>
     <string name="MARTH_DOWN_B">android.resource://memes.smashsoundboard/raw/marth_down_b</string>
     <string name="MARTH_UP_B">android.resource://memes.smashsoundboard/raw/marth_up_b</string>
@@ -115,7 +117,9 @@
     <string name="JIGGLYPUFF_SMASH3">android.resource://memes.smashsoundboard/raw/jigglypuff_smash3</string>
     <string name="JIGGLYPUFF_SMASH4">android.resource://memes.smashsoundboard/raw/jigglypuff_smash4</string>
     <string name="JIGGLYPUFF_SMASH5">android.resource://memes.smashsoundboard/raw/jigglypuff_smash5</string>
-    <string name="JIGGLYPUFF_INITIAL_ROLLOUT">android.resource://memes.smashsoundboard/raw/jigglypuff_initial_rollout</string>
+    <string name="JIGGLYPUFF_ROLLOUT_STARTUP">android.resource://memes.smashsoundboard/raw/jigglypuff_initial_rollout</string>
+    <string name="JIGGLYPUFF_ROLLOUT_HOLD">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_charge</string>
+    <string name="JIGGLYPUFF_ROLLOUT_RELEASE">android.resource://memes.smashsoundboard/raw/jigglypuff_rollout_release</string>
     <string name="JIGGLYPUFF_POUND">android.resource://memes.smashsoundboard/raw/jigglypuff_pound</string>
     <string name="JIGGLYPUFF_REST">android.resource://memes.smashsoundboard/raw/jigglypuff_rest</string>
     <string name="JIGGLYPUFF_SING">android.resource://memes.smashsoundboard/raw/jigglypuff_sing</string>
@@ -149,7 +153,7 @@
     <string name="PEACH_STAR_KO">android.resource://memes.smashsoundboard/raw/peach_star_ko</string>
     <string name="PEACH_SCREEN_KO">android.resource://memes.smashsoundboard/raw/peach_screen_ko</string>
 
-    <!--Pika String-->
+    <!--Pika Strings-->
     <string name="PIKA_CHAR_CALL">android.resource://memes.smashsoundboard/raw/pika_char_call</string>
     <string name="PIKA_CHEER">android.resource://memes.smashsoundboard/raw/pika_cheer</string>
     <string name="PIKA_VICTORY">android.resource://memes.smashsoundboard/raw/pika_victory</string>
@@ -160,7 +164,8 @@
     <string name="PIKA_SMASH4">android.resource://memes.smashsoundboard/raw/pika_smash4</string>
     <string name="PIKA_SMASH5">android.resource://memes.smashsoundboard/raw/pika_smash5</string>
     <string name="PIKA_TJOLT">android.resource://memes.smashsoundboard/raw/pika_tjolt</string>
-    <string name="PIKA_SBASH">android.resource://memes.smashsoundboard/raw/pika_skullbash_initial</string>
+    <string name="PIKA_SKULLBASH_INITIAL">android.resource://memes.smashsoundboard/raw/pika_skullbash_initial</string>
+    <string name="PIKA_SKULLBASH_RELEASE">android.resource://memes.smashsoundboard/raw/pika_skullbash_rlease</string>
     <string name="PIKA_THUNDER">android.resource://memes.smashsoundboard/raw/pika_thunder</string>
     <string name="PIKA_QATK">android.resource://memes.smashsoundboard/raw/pika_qatk</string>
     <string name="PIKA_DAMAGE1">android.resource://memes.smashsoundboard/raw/pika_damage</string>
@@ -213,7 +218,7 @@
     <string name="ICECLIMBERS_DEATH2">android.resource://memes.smashsoundboard/raw/iceclimbers_death2</string>
     <string name="ICECLIMBERS_STAR_KO">android.resource://memes.smashsoundboard/raw/iceclimbers_star_ko</string>
 
-    <!--IceClimbers Strings-->
+    <!--Samus Strings-->
     <string name="SAMUS_CHAR_CALL">android.resource://memes.smashsoundboard/raw/samus_char_call</string>
     <string name="SAMUS_CHEER">android.resource://memes.smashsoundboard/raw/samus_cheer</string>
     <string name="SAMUS_VICTORY">android.resource://memes.smashsoundboard/raw/samus_victory</string>
