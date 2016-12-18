@@ -18,21 +18,11 @@ import java.util.TreeMap;
 
 public abstract class SoundActivity extends AppCompatActivity {
     //protected MediaPlayer player = new MediaPlayer();
-    AudioAttributes audioAttribute = new AudioAttributes.Builder()
-            .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-            .setUsage(AudioAttributes.USAGE_MEDIA)
-            .build();
-    protected SoundPool soundPlayer = new SoundPool.Builder()
-            .setMaxStreams(5)
-            .setAudioAttributes(audioAttribute)
-            .build();
-
-    AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+    private AudioAttributes audioAttribute;
+    protected SoundPool soundPlayer;
+    protected AudioManager audioManager;
     protected int lastAudio;
-    protected boolean isPlaying, loadedSound = true;
-
-
-
+    protected boolean isPlaying;
 
     protected class SoundMap extends TreeMap<Integer, Act> {
         public void add(int id) {
@@ -94,6 +84,15 @@ public abstract class SoundActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState, int layoutId, int exitId) {
         super.onCreate(savedInstanceState);
+        audioAttribute = new AudioAttributes.Builder()
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .setUsage(AudioAttributes.USAGE_MEDIA)
+                .build();
+        soundPlayer = new SoundPool.Builder()
+                .setMaxStreams(5)
+                .setAudioAttributes(audioAttribute)
+                .build();
+        audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         setContentView(layoutId);
         addButtonIds = new SoundMap();
         soundChains = new HashMap<>();
@@ -117,22 +116,11 @@ public abstract class SoundActivity extends AppCompatActivity {
 
     protected void loadSoundChain(int id, int firstSound){
         int lastReference = firstSound;
-
         while(soundChains.containsKey(id))
         {
-            while(!loadedSound){}
             int nextSoundToLoad = soundChains.get(id);
             String soundPath = getString(nextSoundToLoad);
             final int sound = soundPlayer.load(soundPath, 1);
-            loadedSound = false;
-            soundPlayer.setOnLoadCompleteListener(
-                    new SoundPool.OnLoadCompleteListener() {
-                        @Override
-                        public void onLoadComplete(SoundPool soundPool, int i, int i1) {
-                            loadedSound = true;
-                        }
-                    }
-            );
             loadedSoundChains.put(lastReference, sound);
             id = nextSoundToLoad;
             lastReference = sound;
@@ -147,17 +135,10 @@ public abstract class SoundActivity extends AppCompatActivity {
     protected void setSounds() {
         Iterator<Integer> ids = addButtonIds.keySet().iterator();
         while (ids.hasNext()) {
-            while(!loadedSound){}
             final int id = ids.next();
-            loadedSound = false;
+            boolean loaded = false;
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
             final int soundId = soundPlayer.load(soundButton.getSoundID().getPath(), 1);
-            soundPlayer.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
-                @Override
-                public void onLoadComplete(SoundPool soundPool, int i, int i1) {
-                    loadedSound = true;
-                }
-            });
             switch(addButtonIds.get(id))
             {
                 case DEF:
