@@ -11,11 +11,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.net.Uri;
-import android.content.Context;
-import android.content.CursorLoader;
-import android.provider.MediaStore;
-import android.database.Cursor;
+
 
 
 import java.util.HashMap;
@@ -32,6 +28,8 @@ public abstract class SoundActivity extends AppCompatActivity {
     protected boolean isPlaying;
     protected SoundMap addButtonIds;
     protected HashMap<Integer, Integer> soundChains, loadedSoundChains;
+
+
 
     protected class SoundMap extends TreeMap<Integer, Act> {
         public void add(int id) {
@@ -119,6 +117,7 @@ public abstract class SoundActivity extends AppCompatActivity {
     }
 
     protected void loadSoundChain(int id, int firstSound){
+        AssetManager am = this.getAssets();
         int lastReference = firstSound;
         while(soundChains.containsKey(id))
         {
@@ -132,12 +131,13 @@ public abstract class SoundActivity extends AppCompatActivity {
     }
 
     protected void setSounds() {
+        AssetManager am = this.getAssets();
         Iterator<Integer> ids = addButtonIds.keySet().iterator();
         while (ids.hasNext()) {
             int id = ids.next();
             boolean loaded = false;
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
-            final int soundId = soundPlayer.load(getRealPathFromURI(SoundActivity.this, soundButton.getSoundID()), 1);
+            final int soundId = soundPlayer.load(soundButton.getSoundPath(), 1);
             switch(addButtonIds.get(id))
             {
                 case DEF:
@@ -232,15 +232,6 @@ public abstract class SoundActivity extends AppCompatActivity {
                     break;
             }
         }
-    }
-
-    private String getRealPathFromURI(Context context, Uri contentUri) {
-        String[] proj = {MediaStore.Audio.Media.DATA };
-        CursorLoader loader = new CursorLoader(context, contentUri, proj, null, null, null);
-        Cursor cursor = loader.loadInBackground();
-        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA);
-        cursor.moveToFirst();
-        return cursor.getString(column_index);
     }
 
     protected int getStartSound(SoundButton button)
