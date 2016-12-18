@@ -117,7 +117,6 @@ public abstract class SoundActivity extends AppCompatActivity {
     }
 
     protected void loadSoundChain(int id, int firstSound){
-        AssetManager am = this.getAssets();
         int lastReference = firstSound;
         while(soundChains.containsKey(id))
         {
@@ -131,7 +130,6 @@ public abstract class SoundActivity extends AppCompatActivity {
     }
 
     protected void setSounds() {
-        AssetManager am = this.getAssets();
         Iterator<Integer> ids = addButtonIds.keySet().iterator();
         while (ids.hasNext()) {
             int id = ids.next();
