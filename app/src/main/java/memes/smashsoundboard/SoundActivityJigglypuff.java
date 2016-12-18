@@ -23,7 +23,7 @@ public class SoundActivityJigglypuff extends SoundActivity {
         addButtonIds.add(R.id.jigglypuff_smash4_button);
         addButtonIds.add(R.id.jigglypuff_smash5_button);
 
-        addButtonIds.put(R.id.jigglypuff_rollout_button, Act.CHAIN);
+        addButtonIds.put(R.id.jigglypuff_rollout_button, Act.CHAIN_LOOP);
 
         addButtonIds.add(R.id.jigglypuff_pound_button);
         addButtonIds.add(R.id.jigglypuff_rest_button);

@@ -130,8 +130,7 @@ public abstract class SoundActivity extends AppCompatActivity {
             final int id = ids.next();
             boolean loaded = false;
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
-            final int soundId = soundPlayer.load(soundButton.getSoundID().getPath(), 1);
-            final int releaseSound;
+            final int releaseSound, loopSound, soundId = soundPlayer.load(soundButton.getSoundID().getPath(), 1);
             final SoundTimer timer;
             switch(addButtonIds.get(id))
             {
@@ -197,7 +196,7 @@ public abstract class SoundActivity extends AppCompatActivity {
                     break;
                 case CHAIN_LOOP:
                     loadSoundChain(soundButton.getId(),soundId);
-                    final int loopSound = loadedSoundChains.get(soundId);
+                    loopSound = loadedSoundChains.get(soundId);
                     releaseSound = loadedSoundChains.get(loopSound);
                     timer = new SoundTimer(getStartSound(soundButton));
                     soundButton.setOnTouchListener(new View.OnTouchListener() {
