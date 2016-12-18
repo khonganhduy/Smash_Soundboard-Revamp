@@ -137,7 +137,7 @@ public abstract class SoundActivity extends AppCompatActivity {
             int id = ids.next();
             boolean loaded = false;
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
-            final int soundId = soundPlayer.load(getRealPathFromURI(this, soundButton.getSoundID()), 1);
+            final int soundId = soundPlayer.load(getRealPathFromURI(SoundActivity.this, soundButton.getSoundID()), 1);
             switch(addButtonIds.get(id))
             {
                 case DEF:
