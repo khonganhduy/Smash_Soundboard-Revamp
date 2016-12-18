@@ -127,11 +127,10 @@ public abstract class SoundActivity extends AppCompatActivity {
     protected void setSounds() {
         Iterator<Integer> ids = addButtonIds.keySet().iterator();
         while (ids.hasNext()) {
-            final int id = ids.next();
+            int id = ids.next();
             boolean loaded = false;
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
-            final int releaseSound, loopSound, soundId = soundPlayer.load(soundButton.getSoundID().getPath(), 1);
-            final SoundTimer timer;
+            final int soundId = soundPlayer.load(soundButton.getSoundID().getPath(), 1);
             switch(addButtonIds.get(id))
             {
                 case DEF:
@@ -163,9 +162,9 @@ public abstract class SoundActivity extends AppCompatActivity {
                     break;
                 case CHAIN:
                     loadSoundChain(soundButton.getId(),soundId);
-                    releaseSound = loadedSoundChains.get(soundId);
-                    timer = new SoundTimer(getStartSound(soundButton));
                     soundButton.setOnTouchListener(new View.OnTouchListener() {
+                        int releaseSound = loadedSoundChains.get(soundId);
+                        SoundTimer timer = new SoundTimer(getStartSound(soundButton));
                         @Override
                         public boolean onTouch(View v, MotionEvent event) {
                             boolean released = false;
@@ -196,10 +195,10 @@ public abstract class SoundActivity extends AppCompatActivity {
                     break;
                 case CHAIN_LOOP:
                     loadSoundChain(soundButton.getId(),soundId);
-                    loopSound = loadedSoundChains.get(soundId);
-                    releaseSound = loadedSoundChains.get(loopSound);
-                    timer = new SoundTimer(getStartSound(soundButton));
                     soundButton.setOnTouchListener(new View.OnTouchListener() {
+                        int loopSound = loadedSoundChains.get(soundId);
+                        int releaseSound = loadedSoundChains.get(loopSound);
+                        SoundTimer timer = new SoundTimer(getStartSound(soundButton));;
                         @Override
                         public boolean onTouch(View v, MotionEvent event) {
                             switch (event.getAction()) {
