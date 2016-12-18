@@ -32,7 +32,6 @@ public abstract class SoundActivity extends AppCompatActivity {
     protected boolean isPlaying;
     protected SoundMap addButtonIds;
     protected HashMap<Integer, Integer> soundChains, loadedSoundChains;
-    protected AssetManager am = this.getAssets();
 
     protected class SoundMap extends TreeMap<Integer, Act> {
         public void add(int id) {
