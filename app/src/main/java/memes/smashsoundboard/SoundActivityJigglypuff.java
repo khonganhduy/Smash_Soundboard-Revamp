@@ -36,36 +36,10 @@ public class SoundActivityJigglypuff extends SoundActivity {
         soundChains.put(R.id.jigglypuff_rollout_button, R.string.JIGGLYPUFF_ROLLOUT_HOLD);
         soundChains.put(R.string.JIGGLYPUFF_ROLLOUT_HOLD, R.string.JIGGLYPUFF_ROLLOUT_RELEASE);
     }
-
     @Override
-    protected void setChainLogic(SoundButton soundButton, final int firstSoundId) {
-        final int loopSound = loadedSoundChains.get(firstSoundId);
-        final int releaseSound = loadedSoundChains.get(loopSound);
-        final SoundTimer timer = new SoundTimer(R.string.JIGGLYPUFF_ROLLOUT_STARTUP);
-        soundButton.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        playSound(firstSoundId, v, 0);
-                        timer.start();
-                        while (timer.isAlive()) {
-                        }
-                        if (!timer.isInterrupted())
-                            playSound(loopSound, v, -1);
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        timer.interrupt();
-                        playSound(releaseSound, v, 0);
-                        break;
-                    case MotionEvent.ACTION_CANCEL:
-                        timer.interrupt();
-                        playSound(releaseSound, v, 0);
-                        break;
-                }
-                return false;
-            }
-        });
+    protected int getStartSound(SoundButton button)
+    {
+        return R.string.JIGGLYPUFF_ROLLOUT_STARTUP;
     }
 
 }

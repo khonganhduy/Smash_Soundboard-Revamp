@@ -23,6 +23,8 @@ public abstract class SoundActivity extends AppCompatActivity {
     protected AudioManager audioManager;
     protected int lastAudio;
     protected boolean isPlaying;
+    protected SoundMap addButtonIds;
+    protected HashMap<Integer, Integer> soundChains, loadedSoundChains;
 
     protected class SoundMap extends TreeMap<Integer, Act> {
         public void add(int id) {
@@ -63,12 +65,6 @@ public abstract class SoundActivity extends AppCompatActivity {
         }
     }
 
-
-
-
-    protected SoundMap addButtonIds;
-    protected HashMap<Integer, Integer> soundChains;
-    protected HashMap<Integer, Integer> loadedSoundChains;
     //Methods
 
     /**
@@ -77,6 +73,7 @@ public abstract class SoundActivity extends AppCompatActivity {
      * addButtonIds.put(buttonID, Act) to add a button with a different action
      * soundChains.put(sound, nextSound) to chain nextSound to play after sound.
      * nextSound should always be the integer to the path of a string
+     * Chain logic needs to be manually set
      */
     abstract protected void addSoundIds();
 
@@ -127,11 +124,6 @@ public abstract class SoundActivity extends AppCompatActivity {
         }
     }
 
-    protected void setChainLogic(SoundButton soundButton, int firstSoundId)
-    {
-        //Override needed
-    }
-
     protected void setSounds() {
         Iterator<Integer> ids = addButtonIds.keySet().iterator();
         while (ids.hasNext()) {
@@ -139,6 +131,8 @@ public abstract class SoundActivity extends AppCompatActivity {
             boolean loaded = false;
             final SoundButton soundButton = (SoundButton) this.findViewById(id);
             final int soundId = soundPlayer.load(soundButton.getSoundID().getPath(), 1);
+            final int releaseSound;
+            final SoundTimer timer;
             switch(addButtonIds.get(id))
             {
                 case DEF:
@@ -170,10 +164,76 @@ public abstract class SoundActivity extends AppCompatActivity {
                     break;
                 case CHAIN:
                     loadSoundChain(soundButton.getId(),soundId);
-                    setChainLogic(soundButton,soundId);
+                    releaseSound = loadedSoundChains.get(soundId);
+                    timer = new SoundTimer(getStartSound(soundButton));
+                    soundButton.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            boolean released = false;
+                            switch (event.getAction()) {
+                                case MotionEvent.ACTION_DOWN:
+                                    playSound(soundId, v, 0);
+                                    timer.start();
+                                    while (timer.isAlive()) {
+                                    }
+                                    if (!timer.isInterrupted())
+                                        released = true;
+                                    playSound(releaseSound, v, 0);
+                                    break;
+                                case MotionEvent.ACTION_UP:
+                                    timer.interrupt();
+                                    if (!released)
+                                        playSound(releaseSound, v, 0);
+                                    break;
+                                case MotionEvent.ACTION_CANCEL:
+                                    timer.interrupt();
+                                    if (!released)
+                                        playSound(releaseSound, v, 0);
+                                    break;
+                            }
+                            return false;
+                        }
+                    });
+                    break;
+                case CHAIN_LOOP:
+                    loadSoundChain(soundButton.getId(),soundId);
+                    final int loopSound = loadedSoundChains.get(soundId);
+                    releaseSound = loadedSoundChains.get(loopSound);
+                    timer = new SoundTimer(getStartSound(soundButton));
+                    soundButton.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            switch (event.getAction()) {
+                                case MotionEvent.ACTION_DOWN:
+                                    playSound(soundId, v, 0);
+                                    timer.start();
+                                    while (timer.isAlive()) {
+                                    }
+                                    if (!timer.isInterrupted())
+                                        playSound(loopSound, v, -1);
+                                    break;
+                                case MotionEvent.ACTION_UP:
+                                    timer.interrupt();
+                                    playSound(releaseSound, v, 0);
+                                    break;
+                                case MotionEvent.ACTION_CANCEL:
+                                    timer.interrupt();
+                                    playSound(releaseSound, v, 0);
+                                    break;
+                            }
+                            return false;
+                        }
+                    });
+                    break;
             }
         }
     }
+
+    protected int getStartSound(SoundButton button)
+    {
+        return 0;
+    }
+
     protected void stopSound()
     {
         if(isPlaying)

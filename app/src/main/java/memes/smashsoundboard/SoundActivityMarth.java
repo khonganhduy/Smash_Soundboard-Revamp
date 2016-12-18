@@ -157,40 +157,10 @@ public class SoundActivityMarth extends SoundActivity {
 
         soundChains.put(R.id.marth_neutral_b_button, R.string.MARTH_NEUTRAL_B_RELEASE);
     }
-
-    protected void setChainLogic(SoundButton soundButton, final int firstSoundId) {
-        final int releaseSound = loadedSoundChains.get(firstSoundId);
-        final SoundTimer timer = new SoundTimer(R.string.MARTH_NEUTRAL_B);
-        soundButton.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                boolean released = false;
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        playSound(firstSoundId, v, 0);
-                        timer.start();
-                        while (timer.isAlive()) {
-                        }
-                        if (!timer.isInterrupted())
-                            released = true;
-                        playSound(releaseSound, v, 0);
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        timer.interrupt();
-                        if (!released)
-                            playSound(releaseSound, v, 0);
-                        break;
-                    case MotionEvent.ACTION_CANCEL:
-                        timer.interrupt();
-                        if (!released)
-                            playSound(releaseSound, v, 0);
-                        break;
-                }
-                return false;
-            }
-        });
-
+    @Override
+    protected int getStartSound(SoundButton button)
+    {
+        return R.string.MARTH_NEUTRAL_B;
     }
-
 }
 

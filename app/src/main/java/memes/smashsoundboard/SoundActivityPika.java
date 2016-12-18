@@ -45,36 +45,9 @@ public class SoundActivityPika extends SoundActivity {
         soundChains.put(R.id.pika_skullbash_button, R.string.PIKA_SKULLBASH_RELEASE);
 
     }
-
-    protected void setChainLogic(SoundButton soundButton, final int firstSoundId) {
-        final int releaseSound = loadedSoundChains.get(firstSoundId);
-        final SoundTimer timer = new SoundTimer(R.string.PIKA_SKULLBASH_INITIAL);
-        soundButton.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                boolean released = false;
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        playSound(firstSoundId, v, 0);
-                        timer.start();
-                        while (timer.isAlive()) {
-                        }
-                        if (!timer.isInterrupted())
-                            playSound(releaseSound, v, 0);
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        timer.interrupt();
-                        if (!released)
-                            playSound(releaseSound, v, 0);
-                        break;
-                    case MotionEvent.ACTION_CANCEL:
-                        timer.interrupt();
-                        if (!released)
-                            playSound(releaseSound, v, 0);
-                        break;
-                }
-                return false;
-            }
-        });
+    @Override
+    protected int getStartSound(SoundButton button)
+    {
+        return R.string.PIKA_SKULLBASH_INITIAL;
     }
 }
